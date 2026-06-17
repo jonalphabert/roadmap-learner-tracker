@@ -1,0 +1,99 @@
+{
+  "slug": "your-roadmap-slug",
+  "title": "Your Roadmap Title",
+  "category": "Finance",
+  "tagline": "One punchy line shown on the dashboard card.",
+  "description": "A paragraph shown at the top of the roadmap page. Explain who this is for and what they'll be able to do at the end. Keep it concrete.",
+  "difficulty": "Beginner",
+  "duration": "10 months",
+  "outcome": "The single sentence shown in the completion celebration — the tangible thing they can do once every task is checked off.",
+  "stages": [
+    {
+      "id": "stage-1",
+      "index": "01",
+      "title": "First Stage Title",
+      "duration": "Month 1",
+      "summary": "Two sentences describing what this stage is about and why it comes first.",
+      "objectives": [
+        "Optional. A concrete thing the learner can do after this stage.",
+        "Another measurable objective."
+      ],
+      "caseStudies": [
+        "Optional. A real example the stage references, with one line of why it matters."
+      ],
+      "mistakes": [
+        "Optional. A common mistake to avoid at this stage.",
+        "Another pitfall."
+      ],
+      "tasks": [
+        {
+          "id": "s1-t1",
+          "title": "A reading task — title shows on the row",
+          "type": "reading",
+          "summary": "One line shown under the task on the row and at the top of the detail panel.",
+          "whatYouGain": "The concrete capability or insight you walk away with. Shown as the gold block at the top of the detail panel — write it to motivate.",
+          "details": [
+            "Optional. Each string becomes a bullet under 'What to do' in the detail panel.",
+            "Keep them actionable."
+          ],
+          "resources": [
+            {
+              "label": "Resource name — Author or Source",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s1-t2",
+          "title": "An exercise task with a linked resource",
+          "type": "exercise",
+          "summary": "Exercises are hands-on. Tell them what to produce.",
+          "whatYouGain": "What skill this exercise builds.",
+          "details": [
+            "Step or instruction one.",
+            "Step or instruction two."
+          ],
+          "resources": [
+            {
+              "label": "A free website or tool",
+              "kind": "Website",
+              "tier": "Highly Recommended",
+              "url": "https://example.com"
+            }
+          ]
+        },
+        {
+          "id": "s1-t3",
+          "title": "A project task with a checklist",
+          "type": "project",
+          "summary": "Projects are milestones — the deliverable that proves the stage stuck.",
+          "whatYouGain": "The milestone artifact or confidence gained.",
+          "details": [
+            "Describe the deliverable and how to know it's good."
+          ],
+          "checklist": [
+            "Optional. Renders as a checklist card in the detail panel.",
+            "Use it for scorecards, criteria, or sub-steps.",
+            "These are visual only — they are not separately tracked."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "index": "02",
+      "title": "Second Stage Title",
+      "duration": "Month 2",
+      "summary": "A minimal stage. Only id, index, title, duration, summary, and tasks are required.",
+      "tasks": [
+        {
+          "id": "s2-t1",
+          "title": "A concept task — the minimal task shape",
+          "type": "concept",
+          "summary": "Only id, title, type, and summary are required on a task. Everything else is optional."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter Variable", system-ui, sans-serif;
+    --font-fraunces: "Fraunces Variable", Georgia, serif;
+    --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+
+    --background: 80 14% 97%;
+    --foreground: 158 48% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 158 48% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 48% 11%;
+
+    --primary: 159 61% 26%;
+    --primary-foreground: 80 30% 97%;
+
+    --secondary: 150 16% 93%;
+    --secondary-foreground: 158 40% 18%;
+
+    --muted: 140 12% 94%;
+    --muted-foreground: 157 10% 38%;
+
+    --accent: 150 22% 90%;
+    --accent-foreground: 158 45% 16%;
+
+    --gold: 43 64% 45%;
+    --gold-foreground: 40 55% 13%;
+
+    --destructive: 0 68% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 110 12% 88%;
+    --input: 110 12% 86%;
+    --ring: 159 61% 26%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 159 30% 7%;
+    --foreground: 80 20% 94%;
+    --card: 158 28% 9%;
+    --card-foreground: 80 20% 94%;
+    --popover: 158 28% 9%;
+    --popover-foreground: 80 20% 94%;
+    --primary: 152 48% 52%;
+    --primary-foreground: 158 40% 8%;
+    --secondary: 158 18% 16%;
+    --secondary-foreground: 80 20% 94%;
+    --muted: 158 16% 15%;
+    --muted-foreground: 150 10% 62%;
+    --accent: 158 18% 18%;
+    --accent-foreground: 80 20% 94%;
+    --gold: 43 70% 55%;
+    --gold-foreground: 40 55% 10%;
+    --destructive: 0 62% 48%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 158 16% 18%;
+    --input: 158 16% 20%;
+    --ring: 152 48% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+  }
+}
+
+@layer utilities {
+  /* Faint ledger grid used behind the dashboard hero */
+  .bg-ledger {
+    background-image:
+      linear-gradient(to right, hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Respect reduced motion globally for any imperative (GSAP) animation guards */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

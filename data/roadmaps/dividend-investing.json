@@ -1,0 +1,853 @@
+{
+  "slug": "dividend-investing",
+  "title": "Long-Term Dividend Investing",
+  "category": "Finance",
+  "tagline": "Become an independent dividend-growth investor in ~10 months.",
+  "description": "A first-principles path from complete beginner to independent analyst. You learn to read businesses, not tickers: understand money and markets, read financial statements, master dividend safety and growth, value a company sensibly, manage risk, build a portfolio, and finish by analysing real stocks on your own. Built for the long-term owner, not the trader.",
+  "difficulty": "Beginner",
+  "duration": "10 months",
+  "outcome": "Produce a complete, decision-grade investment report on three real dividend stocks and a personal investing framework you keep for life.",
+  "stages": [
+    {
+      "id": "stage-1",
+      "index": "01",
+      "title": "Money, Markets & the Investor Mindset",
+      "duration": "Month 1",
+      "summary": "Build the temperament of an owner and understand what stocks, markets, and dividends fundamentally are.",
+      "objectives": [
+        "Understand compounding, inflation, and total return over decades.",
+        "Know what a share, an index, and a dividend actually represent.",
+        "Tell investing apart from speculating and trading."
+      ],
+      "mistakes": [
+        "Confusing a high yield with high quality — a 9% yield usually signals an expected cut, not free money.",
+        "Believing investing is about predicting prices rather than owning good businesses.",
+        "Underestimating compounding because early growth looks boring; the magic is in the final decade.",
+        "Treating a price drop as a loss when, for a long-term net buyer, it is an opportunity."
+      ],
+      "tasks": [
+        {
+          "id": "s1-t1",
+          "title": "Read “The Psychology of Money”",
+          "type": "reading",
+          "summary": "Set your temperament before touching any numbers.",
+          "whatYouGain": "A calm, long-horizon temperament — the biggest predictor of investing success, and the mental armour to hold through fear.",
+          "details": [
+            "Read it as a human, not an analyst. It frames behaviour, patience, and the role of luck and time.",
+            "Take note of the chapters on compounding and on ‘enough’ — they will anchor your decisions for decades."
+          ],
+          "resources": [
+            {
+              "label": "The Psychology of Money — Morgan Housel",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s1-t2",
+          "title": "Read “The Little Book of Common Sense Investing”",
+          "type": "reading",
+          "summary": "Understand why most people fail, and the index you are trying to beat.",
+          "whatYouGain": "Clarity on why most active investors lose to a simple index, so every stock you later pick must clear that bar.",
+          "details": [
+            "Bogle's lessons on costs, churn, and emotion are the guardrails for any stock-picker.",
+            "Even as a future stock-picker, you must understand low-cost indexing as your benchmark."
+          ],
+          "resources": [
+            {
+              "label": "The Little Book of Common Sense Investing — John C. Bogle",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s1-t3",
+          "title": "Read The Intelligent Investor, chapters 8 & 20",
+          "type": "reading",
+          "summary": "The two chapters that are the philosophical bedrock: Mr. Market and margin of safety.",
+          "whatYouGain": "Two mental models you'll use forever: treating the market as a moody business partner, and never buying without a margin of safety.",
+          "details": [
+            "Chapter 8 — The Investor and Market Fluctuations: the 'Mr. Market' metaphor.",
+            "Chapter 20 — Margin of Safety: the single most important idea in investing.",
+            "Skip the rest for now; you will return to the full book in Stage 5."
+          ],
+          "resources": [
+            {
+              "label": "The Intelligent Investor — Benjamin Graham",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s1-t4",
+          "title": "Build a compounding spreadsheet",
+          "type": "exercise",
+          "summary": "Model $10,000 at 7% for 30 vs 40 years and feel the difference.",
+          "whatYouGain": "A visceral, first-hand feel for how compounding explodes in the final decade — proof that time in the market beats timing it.",
+          "details": [
+            "Columns: year, contribution, return rate, dividends reinvested, balance.",
+            "Compare a 30-year vs 40-year horizon to see how the last decade dominates.",
+            "Run the Rule of 72 by hand for 4%, 7%, and 10% returns (years to double ≈ 72 ÷ return%)."
+          ]
+        },
+        {
+          "id": "s1-t5",
+          "title": "Open a brokerage account & explore a quote page",
+          "type": "exercise",
+          "summary": "Find a real stock's price, market cap, dividend yield, and ex-dividend date.",
+          "whatYouGain": "Fluency with a real brokerage and quote page, so terms like yield, market cap, and ex-dividend date stop being abstract.",
+          "details": [
+            "Don't fund it heavily yet — this is reconnaissance.",
+            "Locate and write down: price, market cap, dividend yield, payout frequency, ex-dividend date."
+          ]
+        },
+        {
+          "id": "s1-t6",
+          "title": "Milestone: write your Investing Policy Statement",
+          "type": "project",
+          "summary": "A one-page statement of goals, horizon, contributions, and your crash-reaction plan.",
+          "whatYouGain": "Your own written constitution — a rulebook that keeps you rational when markets are not.",
+          "details": [
+            "Include: goals, time horizon, target monthly contribution, your behaviour plan for a 30% drawdown, and a one-sentence philosophy.",
+            "You will revise this document at the end of every stage. It is your North Star and your defence against future panic."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "index": "02",
+      "title": "Understanding Businesses & Moats",
+      "duration": "Month 2",
+      "summary": "Learn to read a business model and the competitive advantage that makes a dividend durable.",
+      "objectives": [
+        "Describe how any company makes money in plain language.",
+        "Identify moat type and width: brands, switching costs, network effects, cost advantages, scale.",
+        "Judge pricing power and capital intensity."
+      ],
+      "caseStudies": [
+        "Coca-Cola — brand moat, pricing power, and unmatched global distribution made a simple product a great compounder.",
+        "Procter & Gamble — a portfolio of trusted everyday brands producing steady cash that funds 65+ years of raises."
+      ],
+      "mistakes": [
+        "Buying products you love instead of businesses that make money.",
+        "Assuming today's moat is permanent — moats erode (Kodak had a wide moat, and film).",
+        "Ignoring capital intensity: two firms with equal profits can have very different free cash flow.",
+        "Straying outside your circle of competence because a story sounds exciting."
+      ],
+      "tasks": [
+        {
+          "id": "s2-t1",
+          "title": "Read “The Little Book That Builds Wealth”",
+          "type": "reading",
+          "summary": "The clearest book ever written on economic moats.",
+          "whatYouGain": "A reusable lens for spotting durable competitive advantage — the thing that keeps a dividend growing for decades.",
+          "details": [
+            "This is the lens you will use to judge competitive advantage forever.",
+            "Learn the five moat sources: intangible assets, switching costs, network effects, cost advantage, efficient scale."
+          ],
+          "resources": [
+            {
+              "label": "The Little Book That Builds Wealth — Pat Dorsey",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s2-t2",
+          "title": "Read “Common Stocks and Uncommon Profits”",
+          "type": "reading",
+          "summary": "Fisher's qualitative 'scuttlebutt' method complements the numbers.",
+          "whatYouGain": "The qualitative 'scuttlebutt' skill: judging a business by what customers, suppliers, and rivals reveal, not just its numbers.",
+          "resources": [
+            {
+              "label": "Common Stocks and Uncommon Profits — Philip Fisher",
+              "kind": "Paid book",
+              "tier": "Highly Recommended"
+            }
+          ]
+        },
+        {
+          "id": "s2-t3",
+          "title": "Begin “The Essays of Warren Buffett”",
+          "type": "reading",
+          "summary": "Start the business-quality and owner-earnings sections — your ongoing scripture.",
+          "whatYouGain": "Direct exposure to how the best capital allocator alive thinks about owning businesses and owner earnings.",
+          "details": [
+            "This book is read over years, not a weekend. Begin the business-quality passages now."
+          ],
+          "resources": [
+            {
+              "label": "The Essays of Warren Buffett — ed. Lawrence Cunningham",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s2-t4",
+          "title": "Analyse 3 companies you use weekly",
+          "type": "exercise",
+          "summary": "How do they make money? Who is the customer? What's the moat? What could kill them?",
+          "whatYouGain": "The ability to explain any business model in plain language — and to notice when you can't, which is itself a red flag.",
+          "details": [
+            "Pick your phone maker, your bank, and a grocery brand.",
+            "Write four sentences each: business model, customer, moat, and the biggest 10-year threat."
+          ]
+        },
+        {
+          "id": "s2-t5",
+          "title": "Run a moat-rating drill",
+          "type": "exercise",
+          "summary": "Rate each company on all five moat types: none / narrow / wide.",
+          "whatYouGain": "A repeatable way to grade a moat's type and width, turning a fuzzy gut feeling into a defensible rating.",
+          "details": [
+            "Justify each rating in a single sentence. Apply the 'explain it in 3 jargon-free sentences' test."
+          ]
+        },
+        {
+          "id": "s2-t6",
+          "title": "Milestone: one-page business breakdown",
+          "type": "project",
+          "summary": "Pick one company: model, moat width, pricing power, risks, and the 20-year ownership test.",
+          "whatYouGain": "Your first end-to-end business analysis, and a sharper sense of which companies you'd happily own for 20 years.",
+          "details": [
+            "Ask Buffett's question: would you want to own this whole business for 20 years even if the market closed for a decade?",
+            "If the answer is no, you have learned something important about that company."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-3",
+      "index": "03",
+      "title": "Reading Financial Statements",
+      "duration": "Months 3–4",
+      "summary": "The longest foundational stage. Everything later depends on reading the three statements fluently.",
+      "objectives": [
+        "Read and link the income statement, balance sheet, and cash flow statement.",
+        "Compute and interpret ROE, ROIC, debt-to-equity, interest coverage, and margins.",
+        "Distinguish accounting profit from real cash — the difference that protects dividends."
+      ],
+      "caseStudies": [
+        "Johnson & Johnson — a Dividend King; study its fortress balance sheet and how consistent free cash flow funds 60+ years of raises.",
+        "Microsoft — how the shift to cloud/subscriptions transformed the cash flow statement into a free-cash-flow machine."
+      ],
+      "mistakes": [
+        "Trusting net income over cash flow — earnings can be massaged; sustained cash is hard to fake.",
+        "Looking at one year instead of the 5–10 year trend.",
+        "Being dazzled by high ROE that is really just high leverage — check ROIC and debt together.",
+        "Treating goodwill as real, liquid value."
+      ],
+      "tasks": [
+        {
+          "id": "s3-t1",
+          "title": "Read “Financial Statements” by Thomas Ittelson",
+          "type": "reading",
+          "summary": "Builds the three statements from a startup's first transactions — best book for a technical mind.",
+          "whatYouGain": "Genuine fluency in the three financial statements — the literacy everything else in investing is built on.",
+          "resources": [
+            {
+              "label": "Financial Statements — Thomas Ittelson",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s3-t2",
+          "title": "Read “Warren Buffett and the Interpretation of Financial Statements”",
+          "type": "reading",
+          "summary": "Which lines on the statements signal a durable competitive advantage.",
+          "whatYouGain": "An eye for the specific statement lines that betray, or fake, a durable competitive advantage.",
+          "resources": [
+            {
+              "label": "Warren Buffett and the Interpretation of Financial Statements — Mary Buffett & David Clark",
+              "kind": "Paid book",
+              "tier": "Highly Recommended"
+            }
+          ]
+        },
+        {
+          "id": "s3-t3",
+          "title": "Pull a 10-K and build a 5-year free-cash-flow sheet",
+          "type": "exercise",
+          "summary": "From SEC EDGAR, compute FCF = Operating Cash Flow − Capital Expenditures yourself.",
+          "whatYouGain": "The hands-on skill of pulling a real 10-K and computing free cash flow yourself, instead of trusting a website's number.",
+          "details": [
+            "Read the Management's Discussion & Analysis (MD&A) first — the company explaining itself in plain English.",
+            "Tabulate 5 years of revenue, net income, operating cash flow, capex, and your computed FCF."
+          ],
+          "resources": [
+            {
+              "label": "SEC EDGAR — 10-K and 10-Q filings",
+              "kind": "Website",
+              "tier": "Essential",
+              "url": "https://www.sec.gov/edgar"
+            }
+          ]
+        },
+        {
+          "id": "s3-t4",
+          "title": "Compute the full ratio set over 5 years",
+          "type": "exercise",
+          "summary": "ROE, ROIC, debt-to-equity, interest coverage, and three margins — trends matter more than any single year.",
+          "whatYouGain": "A diagnostic toolkit of ratios — and the habit of reading 5-year trends rather than a single snapshot.",
+          "details": [
+            "ROIC above the cost of capital, sustained, is the quantitative fingerprint of a moat.",
+            "Interest coverage below ~3x is a warning sign."
+          ],
+          "resources": [
+            {
+              "label": "Aswath Damodaran — free NYU lectures & spreadsheets",
+              "kind": "Website",
+              "tier": "Highly Recommended",
+              "url": "https://pages.stern.nyu.edu/~adamodar/"
+            }
+          ]
+        },
+        {
+          "id": "s3-t5",
+          "title": "Run the earnings-quality test",
+          "type": "exercise",
+          "summary": "Plot net income vs operating cash flow over 5 years — do they move together?",
+          "whatYouGain": "A fast lie-detector for earnings quality: whether reported profit is actually backed by cash.",
+          "details": [
+            "If profit rises but cash does not, investigate before trusting the earnings."
+          ]
+        },
+        {
+          "id": "s3-t6",
+          "title": "Milestone: three-statement health check",
+          "type": "project",
+          "summary": "A 2–3 page write-up of 5-year trends, your ratios, your FCF, and a verdict on dividend capacity.",
+          "whatYouGain": "Confidence to judge, on your own, whether a company truly generates the cash to sustain and grow its dividend.",
+          "details": [
+            "End with one paragraph: is this company's cash generation capable of sustaining and growing a dividend?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "index": "04",
+      "title": "The Heart of Dividend Investing",
+      "duration": "Months 5–6",
+      "summary": "The core of your specialisation: dividend metrics, safety, traps, sectors, taxes, and inflation.",
+      "objectives": [
+        "Master yield, growth, payout ratio, and free-cash-flow coverage — and what each signals.",
+        "Assess dividend safety and spot dividend traps before they cut.",
+        "Understand how staples, utilities, REITs, and banks behave differently."
+      ],
+      "caseStudies": [
+        "Realty Income — a REIT analysed on AFFO, not EPS; why a high payout ratio is structural, not dangerous.",
+        "PepsiCo — a Dividend King combining snacks and beverages; staples-sector dividend growth.",
+        "Unilever & Nestlé — international staples; currency effects, foreign withholding tax, and geographic resilience."
+      ],
+      "mistakes": [
+        "Yield chasing — a collapsing price mechanically inflates the yield right before a cut.",
+        "Judging REITs and utilities by the wrong metric (use AFFO/FFO for REITs, not EPS).",
+        "Prioritising starting yield over dividend growth over a 30-year horizon.",
+        "Ignoring the free-cash-flow payout ratio, which is more honest than the earnings-based one.",
+        "Assuming a long streak guarantees safety — always re-underwrite the business."
+      ],
+      "tasks": [
+        {
+          "id": "s4-t1",
+          "title": "Read “The Single Best Investment”",
+          "type": "reading",
+          "summary": "The clearest articulation of the dividend-growth philosophy: quality + yield + growth.",
+          "whatYouGain": "The core dividend-growth philosophy in one place: buy quality, at a fair yield, that grows — the spine of this whole roadmap.",
+          "resources": [
+            {
+              "label": "The Single Best Investment — Lowell Miller",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s4-t2",
+          "title": "Read “The Ultimate Dividend Playbook”",
+          "type": "reading",
+          "summary": "A rigorous, practical framework for evaluating dividend safety and growth.",
+          "whatYouGain": "A rigorous framework for separating safe, growing dividends from fragile ones.",
+          "resources": [
+            {
+              "label": "The Ultimate Dividend Playbook — Josh Peters",
+              "kind": "Paid book",
+              "tier": "Highly Recommended"
+            },
+            {
+              "label": "Berkshire Hathaway shareholder letters",
+              "kind": "Shareholder letter",
+              "tier": "Essential",
+              "url": "https://www.berkshirehathaway.com/letters/letters.html"
+            }
+          ]
+        },
+        {
+          "id": "s4-t3",
+          "title": "Calculate yield & payout ratios for 5 companies",
+          "type": "exercise",
+          "summary": "Both earnings-based and FCF-based payout ratios across different sectors.",
+          "whatYouGain": "The exact calculations behind yield and payout ratios, and an intuition for what 'normal' looks like in each sector.",
+          "details": [
+            "Dividend Yield = Annual Dividend per Share ÷ Share Price.",
+            "Payout Ratio = Dividends ÷ Net Income; FCF Payout = Dividends ÷ Free Cash Flow.",
+            "Notice how a 'normal' payout ratio differs by sector."
+          ]
+        },
+        {
+          "id": "s4-t4",
+          "title": "Build a Dividend Tracker spreadsheet",
+          "type": "exercise",
+          "summary": "Yield, yield on cost, payout ratios, growth streak, 5-year dividend CAGR, projected income.",
+          "whatYouGain": "A personal dividend tracker you'll reuse for life, turning scattered data into a clear income picture.",
+          "details": [
+            "Columns: ticker, shares, cost basis, price, dividend/share, yield, yield on cost, payout ratio, FCF payout, growth streak, 5-yr dividend CAGR, projected annual income.",
+            "This becomes a tool you use for life."
+          ],
+          "resources": [
+            {
+              "label": "Simply Safe Dividends — educational articles",
+              "kind": "Website",
+              "tier": "Optional",
+              "url": "https://www.simplysafedividends.com/"
+            }
+          ]
+        },
+        {
+          "id": "s4-t5",
+          "title": "Analyse cash flow for dividend coverage",
+          "type": "exercise",
+          "summary": "Show 5 years of free cash flow vs dividends paid for one company.",
+          "whatYouGain": "The single most honest test of dividend safety: whether free cash flow comfortably covers the payout.",
+          "details": [
+            "Is the dividend comfortably covered by cash? Is coverage trending safer or riskier?"
+          ]
+        },
+        {
+          "id": "s4-t6",
+          "title": "Run a spot-the-trap drill",
+          "type": "exercise",
+          "summary": "Find 3 stocks yielding 8%+ and diagnose why — without buying.",
+          "whatYouGain": "Trap radar — the ability to look at a juicy 8% yield and diagnose the danger before it cuts.",
+          "details": [
+            "Is the high yield caused by a falling price signalling distress, or a payout exceeding free cash flow?"
+          ]
+        },
+        {
+          "id": "s4-t7",
+          "title": "Milestone: Dividend-Safety Scorecard",
+          "type": "project",
+          "summary": "Score 5 companies across 3+ sectors on five safety dimensions and rank them.",
+          "whatYouGain": "A repeatable scorecard that ranks dividend safety across companies and sectors, so picks are evidence-based, not hopeful.",
+          "details": [
+            "Score each 1–5, rank safest to riskiest, and justify the top and bottom names in a paragraph each."
+          ],
+          "checklist": [
+            "FCF payout ratio comfortable for this type of business?",
+            "Balance sheet sound, with strong interest coverage?",
+            "Business model stable/recurring rather than cyclical?",
+            "Long, unbroken dividend-growth history?",
+            "Revenue and free cash flow growing, so the dividend can keep rising?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-5",
+      "index": "05",
+      "title": "Business Valuation",
+      "duration": "Month 7",
+      "summary": "Know roughly whether you are paying a fair, full, or foolish price. Concepts over heavy math.",
+      "objectives": [
+        "Interpret multiples: P/E, P/B, EV/EBITDA, PEG — and their limits.",
+        "Understand the logic of the Dividend Discount Model and Discounted Cash Flow.",
+        "Use a margin of safety as the bridge between value and price."
+      ],
+      "caseStudies": [
+        "Coca-Cola — a wonderful business bought at a fair price and held for decades; 'fair' still has a ceiling.",
+        "Microsoft in 2000 — a great business at a ~60x P/E went nowhere for over a decade. Price always matters."
+      ],
+      "mistakes": [
+        "False precision — a DCF output of '$147.32' implies confidence you do not have; think in ranges.",
+        "Garbage-in assumptions reverse-engineered to justify a desired answer.",
+        "Using the wrong multiple (P/B on a brand company; P/E on a cyclical at peak earnings).",
+        "Confusing a low multiple with cheapness — sometimes it correctly reflects a dying business.",
+        "Overpaying for quality 'because it's the best business'."
+      ],
+      "tasks": [
+        {
+          "id": "s5-t1",
+          "title": "Read “The Five Rules for Successful Stock Investing”",
+          "type": "reading",
+          "summary": "Ties business quality directly to valuation, without heavy math.",
+          "whatYouGain": "An intuition for tying business quality to a sensible price, without drowning in spreadsheets.",
+          "resources": [
+            {
+              "label": "The Five Rules for Successful Stock Investing — Pat Dorsey",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s5-t2",
+          "title": "Read “The Little Book of Valuation”",
+          "type": "reading",
+          "summary": "Damodaran makes DCF and multiples intuitive; pair with his free spreadsheets.",
+          "whatYouGain": "Working command of both relative and intrinsic valuation, plus the free tools to do it yourself.",
+          "resources": [
+            {
+              "label": "The Little Book of Valuation — Aswath Damodaran",
+              "kind": "Paid book",
+              "tier": "Highly Recommended"
+            }
+          ]
+        },
+        {
+          "id": "s5-t3",
+          "title": "Compare multiples across 3 peers",
+          "type": "exercise",
+          "summary": "P/E, P/B (if relevant), EV/EBITDA, and yield vs each company's 10-year average.",
+          "whatYouGain": "The skill of judging cheap vs expensive against a company's own history and its peers — context, not just a raw multiple.",
+          "details": [
+            "Who is cheap, fair, or expensive relative to its own history — and why?"
+          ]
+        },
+        {
+          "id": "s5-t4",
+          "title": "Build a simple Dividend Discount Model and stress-test it",
+          "type": "exercise",
+          "summary": "Value ≈ next dividend ÷ (required return − growth). Change growth by ±1% and watch it swing.",
+          "whatYouGain": "A simple valuation model for stable growers, and a healthy humility about how much assumptions swing the answer.",
+          "details": [
+            "The lesson is humility: small assumption changes move the answer a lot. Works only for stable growers."
+          ]
+        },
+        {
+          "id": "s5-t5",
+          "title": "Build a one-page Discounted Cash Flow",
+          "type": "exercise",
+          "summary": "Present value of future free cash flows; learn the engine, then distrust any tortured DCF.",
+          "whatYouGain": "Understanding of the DCF engine from the inside — enough to use it, and enough to distrust a tortured one.",
+          "resources": [
+            {
+              "label": "Aswath Damodaran — valuation spreadsheets",
+              "kind": "Website",
+              "tier": "Highly Recommended",
+              "url": "https://pages.stern.nyu.edu/~adamodar/"
+            }
+          ]
+        },
+        {
+          "id": "s5-t6",
+          "title": "Milestone: two-method fair-value estimate",
+          "type": "project",
+          "summary": "One relative valuation and one intrinsic valuation, giving a range and a margin-of-safety buy price.",
+          "whatYouGain": "The ability to produce a fair-value range and a disciplined buy price you'll wait for instead of chasing.",
+          "details": [
+            "End with: fairly valued / overvalued / undervalued — and the buy price you would wait for."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-6",
+      "index": "06",
+      "title": "Risk Management & Macroeconomics",
+      "duration": "Month 8",
+      "summary": "Identify real risks (not short-term volatility), understand the macro forces that move dividend stocks, and build behavioural defences.",
+      "objectives": [
+        "Separate permanent loss of capital from temporary volatility.",
+        "Understand how interest rates, inflation, and the cycle affect dividend stocks.",
+        "Defend against your own biases with written process and automation."
+      ],
+      "caseStudies": [
+        "JPMorgan Chase — cyclical/financial risk: strong dividends in good times, real vulnerability in crises and to regulation.",
+        "A moat-erosion cautionary tale (e.g. Kodak or GE) — a famous name and long streak did not prevent permanent loss."
+      ],
+      "mistakes": [
+        "Equating volatility with risk — a volatile durable business is safer than a stable-looking decaying one.",
+        "Becoming a macro forecaster and tinkering on rate predictions.",
+        "Underestimating your own behaviour in panics and manias.",
+        "Assuming 'blue chip' means 'safe forever'."
+      ],
+      "tasks": [
+        {
+          "id": "s6-t1",
+          "title": "Read “The Most Important Thing”",
+          "type": "reading",
+          "summary": "The deepest accessible book on risk, cycles, and second-level thinking.",
+          "whatYouGain": "A deeper definition of risk — permanent loss, not volatility — and second-level thinking that sees what the crowd misses.",
+          "resources": [
+            {
+              "label": "The Most Important Thing — Howard Marks",
+              "kind": "Paid book",
+              "tier": "Essential"
+            },
+            {
+              "label": "Oaktree memos — Howard Marks",
+              "kind": "Website",
+              "tier": "Essential",
+              "url": "https://www.oaktreecapital.com/insights/memos"
+            }
+          ]
+        },
+        {
+          "id": "s6-t2",
+          "title": "Read the key parts of “Thinking, Fast and Slow”",
+          "type": "reading",
+          "summary": "The science of the cognitive biases that wreck investors.",
+          "whatYouGain": "Names for the cognitive biases that quietly sabotage investors: the first step to defending against your own brain.",
+          "resources": [
+            {
+              "label": "Thinking, Fast and Slow — Daniel Kahneman",
+              "kind": "Paid book",
+              "tier": "Highly Recommended"
+            }
+          ]
+        },
+        {
+          "id": "s6-t3",
+          "title": "Run a risk-categorisation drill",
+          "type": "exercise",
+          "summary": "For one holding, list every way it could become a permanent loss vs a temporary drop.",
+          "whatYouGain": "A clear separation between a temporary price drop and a real, permanent loss of capital — the only risk that matters long term.",
+          "details": [
+            "Permanent loss is the only risk that matters long term. Separate it clearly from volatility."
+          ]
+        },
+        {
+          "id": "s6-t4",
+          "title": "Analyse interest-rate sensitivity",
+          "type": "exercise",
+          "summary": "Explain how rising rates would affect a utility, a REIT, a bank, and a staple — and why.",
+          "whatYouGain": "An understanding of how interest rates move different dividend sectors, so rate news becomes legible instead of scary.",
+          "details": [
+            "Interest rates are the gravity of all asset prices and raise borrowing costs for debt-heavy firms."
+          ]
+        },
+        {
+          "id": "s6-t5",
+          "title": "Do a behavioural self-audit",
+          "type": "exercise",
+          "summary": "Revisit your crash-reaction plan; be honest about how you felt in the last drawdown.",
+          "whatYouGain": "An honest read on your own behaviour under stress, and stronger written rules to govern your next downturn.",
+          "details": [
+            "Strengthen your written rules so process, not emotion, governs your next downturn."
+          ]
+        },
+        {
+          "id": "s6-t6",
+          "title": "Milestone: pre-mortem on a “safe” stock",
+          "type": "project",
+          "summary": "Imagine a beloved holding failed in 10 years and write what went wrong.",
+          "whatYouGain": "Inoculation against overconfidence — practice arguing against your own favourite holdings before the market does.",
+          "details": [
+            "Arguing against your own favourites is the best inoculation against overconfidence."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-7",
+      "index": "07",
+      "title": "Portfolio Construction",
+      "duration": "Month 9",
+      "summary": "Assemble holdings into a resilient, diversified, income-growing portfolio with clear rules.",
+      "objectives": [
+        "Diversify across sectors and geographies without diluting into mediocrity.",
+        "Set position-sizing, reinvestment (DRIP), rebalancing, and sell rules.",
+        "Balance current income against future dividend growth."
+      ],
+      "caseStudies": [
+        "Apple — a modest dividend plus enormous buybacks; the textbook case for shareholder yield and capital allocation.",
+        "A full model portfolio — assemble the case-study companies and find the sector and geographic gaps."
+      ],
+      "mistakes": [
+        "Over-diversifying into a closet index of names you cannot follow, or under-diversifying into correlated bets.",
+        "Letting one sector dominate (e.g. all high-yield REITs and utilities).",
+        "Reaching for yield at the portfolio level, dragging up risk.",
+        "Selling for the wrong reasons — reacting to price, not to the business.",
+        "Overtrading and over-rebalancing, incurring taxes and interrupting compounding."
+      ],
+      "tasks": [
+        {
+          "id": "s7-t1",
+          "title": "Revisit the portfolio chapters of “The Single Best Investment”",
+          "type": "reading",
+          "summary": "Portfolio-level guidance for building a dividend-growth machine.",
+          "whatYouGain": "Portfolio-level thinking: how individual good picks combine into a resilient income machine.",
+          "resources": [
+            {
+              "label": "The Single Best Investment — Lowell Miller",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s7-t2",
+          "title": "Study the Bogleheads wiki",
+          "type": "reading",
+          "summary": "Timeless, jargon-free material on allocation, account location, and behaviour.",
+          "whatYouGain": "Timeless, jargon-free principles on allocation, account placement, and staying the course.",
+          "resources": [
+            {
+              "label": "Bogleheads wiki",
+              "kind": "Website",
+              "tier": "Highly Recommended",
+              "url": "https://www.bogleheads.org/wiki/Main_Page"
+            }
+          ]
+        },
+        {
+          "id": "s7-t3",
+          "title": "Run a sector-mapping drill",
+          "type": "exercise",
+          "summary": "Map 15–20 quality dividend payers to sectors; find overconcentration and gaps.",
+          "whatYouGain": "A map of your sector exposure that reveals hidden overconcentration and gaps before they hurt you.",
+          "details": [
+            "Deliberately spread across staples, healthcare, utilities, financials, tech, and REITs."
+          ]
+        },
+        {
+          "id": "s7-t4",
+          "title": "Design a position-sizing model",
+          "type": "exercise",
+          "summary": "Target weights with a per-stock cap (~5–8%) and a per-sector cap.",
+          "whatYouGain": "Sensible rules for how big each position and sector can grow — diversification without diluting into mediocrity.",
+          "details": [
+            "Compute the projected blended yield and weighted dividend-growth rate."
+          ]
+        },
+        {
+          "id": "s7-t5",
+          "title": "Project a reinvestment scenario",
+          "type": "exercise",
+          "summary": "Model 25 years with dividends reinvested and growing vs not reinvesting.",
+          "whatYouGain": "Hard numbers on the reinvestment flywheel, quantifying exactly what reinvested dividends add over decades.",
+          "details": [
+            "Quantify the gap. The dividends-buy-shares-that-pay-dividends flywheel is where wealth is built."
+          ]
+        },
+        {
+          "id": "s7-t6",
+          "title": "Write your sell rules",
+          "type": "exercise",
+          "summary": "A numbered list you would follow under stress.",
+          "whatYouGain": "A pre-committed sell checklist that lets process, not panic, decide when you exit.",
+          "checklist": [
+            "Sell when the original thesis breaks (moat erosion, deteriorating financials).",
+            "Sell when the dividend is cut or its safety collapses.",
+            "Sell when wildly overvalued with clearly better uses for the capital.",
+            "Do NOT sell because the price dropped and nothing else changed.",
+            "Do NOT sell out of boredom, a scary headline, or a hot tip elsewhere."
+          ]
+        },
+        {
+          "id": "s7-t7",
+          "title": "Milestone: build a model dividend-growth portfolio",
+          "type": "project",
+          "summary": "15–25 holdings with weights, caps, projected yield and growth, plus reinvestment and rebalancing policy.",
+          "whatYouGain": "A complete model portfolio — a full dress rehearsal for managing real money with real rules.",
+          "details": [
+            "Attach your sell-rule checklist. This is a dry run of the real thing."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-8",
+      "index": "08",
+      "title": "Independent Analysis & Your Framework",
+      "duration": "Month 10",
+      "summary": "Integrate everything into one repeatable process, then produce a decision-grade report on your own.",
+      "objectives": [
+        "Run a single, repeatable workflow on any stock from scratch.",
+        "Produce a complete investment report independently.",
+        "Codify your personal investment philosophy."
+      ],
+      "mistakes": [
+        "Skipping the primary sources — read the 10-K and the shareholder letter yourself.",
+        "Reaching a decision without writing down the single most important reason for it.",
+        "Treating the framework as fixed — revisit and refine it every year."
+      ],
+      "tasks": [
+        {
+          "id": "s8-t1",
+          "title": "Revisit “The Essays of Warren Buffett”",
+          "type": "reading",
+          "summary": "Read the capital-allocation passages again — they land differently now.",
+          "whatYouGain": "A second, wiser pass through Buffett's capital-allocation thinking, which reads differently now that you have the tools.",
+          "resources": [
+            {
+              "label": "The Essays of Warren Buffett — ed. Lawrence Cunningham",
+              "kind": "Paid book",
+              "tier": "Essential"
+            }
+          ]
+        },
+        {
+          "id": "s8-t2",
+          "title": "Read a full 10-K and shareholder letter",
+          "type": "exercise",
+          "summary": "The habit that separates independent investors from tip-followers.",
+          "whatYouGain": "The defining habit of an independent investor: reading primary sources yourself instead of following tips.",
+          "details": [
+            "Do this for every company you seriously consider. Take notes on moat, capital allocation, and risks."
+          ]
+        },
+        {
+          "id": "s8-t3",
+          "title": "Internalise the independent stock-analysis checklist",
+          "type": "concept",
+          "summary": "Use this for every stock, every time. A 'no' or 'I can't tell' is itself an answer.",
+          "whatYouGain": "A single repeatable checklist you can run on any stock, forever — your personal analytical engine.",
+          "checklist": [
+            "Business quality: can I explain how it makes money in 3 plain sentences, within my competence?",
+            "Moat: what type and width, and is it widening or eroding? Pricing power?",
+            "Management: sensible capital allocation, dividend treated as a commitment, candid with owners?",
+            "Financial health: 5–10 yr trends in revenue, margins, ROIC, FCF; manageable debt; good earnings quality?",
+            "Dividend sustainability: comfortable FCF payout (AFFO for REITs); growth record; no trap signals?",
+            "Valuation: multiples vs history and peers; intrinsic estimate as a range; margin of safety today?",
+            "Risks: top 3 paths to permanent loss; rate and cycle sensitivity; disruption risk?",
+            "Growth prospects: where does future growth come from, and how long is the runway?",
+            "Fair value estimate: conservative range, and my buy price with margin of safety.",
+            "Decision: Buy, Hold, or Avoid — and the single most important reason."
+          ]
+        },
+        {
+          "id": "s8-t4",
+          "title": "Write your Personal Investment Framework",
+          "type": "project",
+          "summary": "One to two pages: philosophy, what you buy, what you pay, sizing, sell rules, behaviour, routine.",
+          "whatYouGain": "Your written investment framework: the difference between owning a few dividend stocks and having a process that compounds for 40 years.",
+          "details": [
+            "This is the real final deliverable — the difference between owning some dividend stocks and having a process that compounds for 40 years."
+          ]
+        },
+        {
+          "id": "s8-t5",
+          "title": "Capstone: three-stock investment report",
+          "type": "project",
+          "summary": "Analyse three real dividend stocks from three sectors and justify Buy / Hold / Avoid for each.",
+          "whatYouGain": "Proof you can do it alone — three full, decision-grade analyses and the confidence that you no longer need anyone's stock tips.",
+          "details": [
+            "Three companies, three distinct sectors (e.g. a staple, a REIT or utility, a financial or tech grower).",
+            "Work from primary sources: read each latest 10-K and shareholder letter; pull the data yourself.",
+            "For each, a 2–4 page report running the full checklist: business & moat, 5–10 yr financials, dividend safety, two-method valuation with a buy price, top-3 risks and a pre-mortem, and a justified Buy/Hold/Avoid.",
+            "Finish with a half-page portfolio note: how the three would fit together, and which you would act on first."
+          ]
+        }
+      ]
+    }
+  ]
+}
