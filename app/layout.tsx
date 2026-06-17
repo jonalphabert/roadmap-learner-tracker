@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 // Self-hosted variable fonts (no external requests, works offline).
 import "@fontsource-variable/inter";
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
+import { ServiceWorkerRegister } from "@/components/service-worker-register";
 
 export const metadata: Metadata = {
   title: "Compound — Learning roadmaps that track themselves",
@@ -19,6 +20,15 @@ export const metadata: Metadata = {
     ],
     apple: "/brand/apple-icon.png",
   },
+  appleWebApp: {
+    capable: true,
+    title: "Compound",
+    statusBarStyle: "default",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1a7a4f",
 };
 
 export default function RootLayout({
@@ -28,7 +38,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen font-sans antialiased">{children}</body>
+      <body className="min-h-screen font-sans antialiased">
+        {children}
+        <ServiceWorkerRegister />
+      </body>
     </html>
   );
 }
