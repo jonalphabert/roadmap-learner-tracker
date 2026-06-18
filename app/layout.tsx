@@ -6,6 +6,7 @@ import "@fontsource-variable/fraunces";
 import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 
 export const metadata: Metadata = {
   title: "Compound — Learning roadmaps that track themselves",
@@ -28,7 +29,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1a7a4f",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f6ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d1d15" },
+  ],
 };
 
 export default function RootLayout({
@@ -37,7 +41,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Applies the saved/preferred theme before paint to avoid a flash. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="min-h-screen font-sans antialiased">
         {children}
         <ServiceWorkerRegister />

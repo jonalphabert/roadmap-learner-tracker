@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { ThemeToggle } from "@/components/theme-toggle";
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
@@ -25,9 +27,10 @@ export function SiteHeader() {
           >
             Roadmaps
           </Link>
-          <span className="hidden rounded-md px-3 py-1.5 sm:inline">
+          <span className="hidden rounded-md px-3 py-1.5 lg:inline">
             Progress saved on this device
           </span>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
