@@ -16,6 +16,7 @@ import {
 
 import type { Roadmap, RoadmapStage, RoadmapTask } from "@/lib/types";
 import { useProgress } from "@/hooks/use-progress";
+import { recordWork } from "@/lib/activity";
 import { fireConfetti } from "@/lib/confetti";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -209,6 +210,15 @@ export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
     progress.toggle(task.id);
 
     if (!nextDone) return;
+
+    // Checking off a task is the clearest "I worked on this" signal — it keeps
+    // the streak alive and points the dashboard's resume nudge at this stage.
+    recordWork({
+      slug: roadmap.slug,
+      title: roadmap.title,
+      stageIndex: stage.index,
+      stageTitle: stage.title,
+    });
 
     const roadmapDoneBefore = allTaskIds.every((id) =>
       progress.completed.has(id),

@@ -2,6 +2,7 @@ import { getCategoryGroups, getSiteStats } from "@/data/roadmaps";
 import { SiteHeader } from "@/components/site-header";
 import { CategorySection } from "@/components/category-section";
 import { Reveal } from "@/components/reveal";
+import { MomentumBanner } from "@/components/momentum-banner";
 
 export default function DashboardPage() {
   const groups = getCategoryGroups();
@@ -39,6 +40,9 @@ export default function DashboardPage() {
           </div>
         </div>
       </section>
+
+      {/* Streak + resume nudge — overlaps the hero's lower edge */}
+      <MomentumBanner />
 
       {/* Catalogue grouped by category */}
       <main className="container py-14">
