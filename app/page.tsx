@@ -2,6 +2,7 @@ import { getCategoryGroups, getSiteStats } from "@/data/roadmaps";
 import { SiteHeader } from "@/components/site-header";
 import { CategorySection } from "@/components/category-section";
 import { Reveal } from "@/components/reveal";
+import { MomentumBanner } from "@/components/momentum-banner";
 
 export default function DashboardPage() {
   const groups = getCategoryGroups();
@@ -40,8 +41,11 @@ export default function DashboardPage() {
         </div>
       </section>
 
+
       {/* Catalogue grouped by category */}
       <main className="container py-14">
+        {/* Streak counter + "pick up where you left off" nudge */}
+        <MomentumBanner />
         <Reveal className="space-y-16" stagger={0.12} y={24}>
           {groups.map((group) => (
             <CategorySection key={group.name} group={group} />
