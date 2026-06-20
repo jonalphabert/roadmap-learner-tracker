@@ -7,6 +7,16 @@
 
 const ACTIVITY_KEY = "compound:activity:v1";
 
+// Broadcast on every write so multiple readers in the same tab (the navbar
+// streak chip and the dashboard banner) refresh together. The browser's native
+// "storage" event only fires in *other* tabs, so we need our own for this one.
+export const ACTIVITY_EVENT = "compound:activity-changed";
+
+function notify() {
+  if (typeof window === "undefined") return;
+  window.dispatchEvent(new Event(ACTIVITY_EVENT));
+}
+
 export interface LastWorked {
   /** Roadmap the learner last touched. */
   slug: string;
@@ -78,6 +88,7 @@ function write(state: ActivityState) {
   if (typeof window === "undefined") return;
   try {
     window.localStorage.setItem(ACTIVITY_KEY, JSON.stringify(state));
+    notify();
   } catch {
     // Storage full or blocked (e.g. private mode) — fail silently.
   }

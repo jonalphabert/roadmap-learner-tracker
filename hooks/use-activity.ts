@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import {
+  ACTIVITY_EVENT,
   getActivity,
   recordVisit,
   type ActivityState,
@@ -19,6 +20,16 @@ export function useActivity(record = false) {
   useEffect(() => {
     setActivity(record ? recordVisit() : getActivity());
     setHydrated(true);
+
+    // Stay in sync when another reader writes (same tab via ACTIVITY_EVENT) or
+    // another tab updates storage. Re-read without recording a fresh visit.
+    const refresh = () => setActivity(getActivity());
+    window.addEventListener(ACTIVITY_EVENT, refresh);
+    window.addEventListener("storage", refresh);
+    return () => {
+      window.removeEventListener(ACTIVITY_EVENT, refresh);
+      window.removeEventListener("storage", refresh);
+    };
   }, [record]);
 
   return { hydrated, activity };

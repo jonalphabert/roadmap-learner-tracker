@@ -41,11 +41,11 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      {/* Streak + resume nudge — overlaps the hero's lower edge */}
-      <MomentumBanner />
 
       {/* Catalogue grouped by category */}
       <main className="container py-14">
+        {/* Streak counter + "pick up where you left off" nudge */}
+        <MomentumBanner />
         <Reveal className="space-y-16" stagger={0.12} y={24}>
           {groups.map((group) => (
             <CategorySection key={group.name} group={group} />

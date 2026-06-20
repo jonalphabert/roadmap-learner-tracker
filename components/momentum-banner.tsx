@@ -25,7 +25,7 @@ export function MomentumBanner() {
   if (!showStreak && !showResume) return null;
 
   return (
-    <div className="container -mt-6 sm:-mt-8">
+    <div className="mb-12 sm:mb-14">
       <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-5">
         {showStreak ? <StreakBadge streak={streak} longest={longestStreak} /> : <span />}
 

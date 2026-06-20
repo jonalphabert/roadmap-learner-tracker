@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { ThemeToggle } from "@/components/theme-toggle";
+import { NavStreak } from "@/components/nav-streak";
 
 export function SiteHeader() {
   return (
@@ -30,6 +31,7 @@ export function SiteHeader() {
           <span className="hidden rounded-md px-3 py-1.5 lg:inline">
             Progress saved on this device
           </span>
+          <NavStreak />
           <ThemeToggle />
         </nav>
       </div>
