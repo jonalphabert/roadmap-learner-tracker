@@ -59,7 +59,16 @@
               "label": "A free website or tool",
               "kind": "Website",
               "tier": "Highly Recommended",
-              "url": "https://example.com"
+              "urls": ["https://example.com"]
+            },
+            {
+              "label": "A book with multiple buy/read links",
+              "kind": "Paid book",
+              "tier": "Essential",
+              "urls": [
+                "https://www.amazon.com/dp/REPLACE_ASIN",
+                "https://books.google.com/books?id=REPLACE_ID"
+              ]
             }
           ]
         },

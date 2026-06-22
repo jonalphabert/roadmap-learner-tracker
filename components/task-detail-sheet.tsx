@@ -39,6 +39,35 @@ const TIER_VARIANT: Record<string, "default" | "secondary" | "muted"> = {
   Optional: "muted",
 };
 
+/** Clean a resource's link list: drop empties, trim, and de-duplicate. */
+function effectiveUrls(urls?: string[]): string[] {
+  if (!urls) return [];
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const raw of urls) {
+    const url = raw?.trim();
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    out.push(url);
+  }
+  return out;
+}
+
+/** A friendly button label derived from a URL's hostname. */
+function linkLabel(url: string): string {
+  let host: string;
+  try {
+    host = new URL(url).hostname.toLowerCase();
+  } catch {
+    return url;
+  }
+  if (/(^|\.)amazon\./.test(host) || host === "a.co") return "Kindle";
+  if (/(^|\.)books\.google\./.test(host)) return "Google Books";
+  if (/(^|\.)play\.google\./.test(host)) return "Play Books";
+  if (/(^|\.)audible\./.test(host)) return "Audible";
+  return host.replace(/^www\./, "");
+}
+
 interface TaskDetailSheetProps {
   task: RoadmapTask | null;
   stageTitle: string;
@@ -129,45 +158,48 @@ export function TaskDetailSheet({
               </h4>
               <ul className="space-y-2">
                 {task.resources.map((r, i) => {
-                  const inner = (
-                    <>
-                      <div className="min-w-0">
-                        <p className="truncate text-sm font-medium">
-                          {r.label}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {r.kind}
-                          {r.url ? " · opens in new tab" : ""}
-                        </p>
-                      </div>
-                      <div className="flex shrink-0 items-center gap-2">
+                  const links = effectiveUrls(r.urls);
+                  return (
+                    <li
+                      key={i}
+                      className="rounded-lg border p-3"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <p className="text-sm font-medium">{r.label}</p>
+                          <p className="text-xs text-muted-foreground">
+                            {r.kind}
+                          </p>
+                        </div>
                         {r.tier ? (
-                          <Badge variant={TIER_VARIANT[r.tier] ?? "muted"}>
+                          <Badge
+                            variant={TIER_VARIANT[r.tier] ?? "muted"}
+                            className="shrink-0"
+                          >
                             {r.tier}
                           </Badge>
                         ) : null}
-                        {r.url ? (
-                          <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
-                        ) : null}
                       </div>
-                    </>
-                  );
-                  const base =
-                    "flex items-center justify-between gap-3 rounded-lg border p-3";
-                  return r.url ? (
-                    <li key={i}>
-                      <a
-                        href={r.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={cn(base, "transition-colors hover:bg-secondary")}
-                      >
-                        {inner}
-                      </a>
-                    </li>
-                  ) : (
-                    <li key={i} className={base}>
-                      {inner}
+                      {links.length > 0 ? (
+                        <div className="mt-2.5 flex flex-wrap gap-1.5">
+                          {links.map((url) => (
+                            <a
+                              key={url}
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={cn(
+                                "inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-xs font-medium text-primary",
+                                "transition-colors hover:bg-primary/10",
+                                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                              )}
+                            >
+                              <ExternalLink className="h-3 w-3" />
+                              {linkLabel(url)}
+                            </a>
+                          ))}
+                        </div>
+                      ) : null}
                     </li>
                   );
                 })}

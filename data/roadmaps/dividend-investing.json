@@ -40,7 +40,8 @@
             {
               "label": "The Psychology of Money — Morgan Housel",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B084HJSJJ2"]
             }
           ]
         },
@@ -58,7 +59,8 @@
             {
               "label": "The Little Book of Common Sense Investing — John C. Bogle",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B075Z6HSCJ"]
             }
           ]
         },
@@ -77,7 +79,8 @@
             {
               "label": "The Intelligent Investor — Benjamin Graham",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B0CTR2F7PT"]
             }
           ]
         },
@@ -153,7 +156,8 @@
             {
               "label": "The Little Book That Builds Wealth — Pat Dorsey",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B07MMYC9VT"]
             }
           ]
         },
@@ -167,7 +171,8 @@
             {
               "label": "Common Stocks and Uncommon Profits — Philip Fisher",
               "kind": "Paid book",
-              "tier": "Highly Recommended"
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/B00XCC5Y0O"]
             }
           ]
         },
@@ -184,7 +189,8 @@
             {
               "label": "The Essays of Warren Buffett — ed. Lawrence Cunningham",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/1118821157"]
             }
           ]
         },
@@ -254,7 +260,8 @@
             {
               "label": "Financial Statements — Thomas Ittelson",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/1632652072"]
             }
           ]
         },
@@ -268,7 +275,8 @@
             {
               "label": "Warren Buffett and the Interpretation of Financial Statements — Mary Buffett & David Clark",
               "kind": "Paid book",
-              "tier": "Highly Recommended"
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/1416573186"]
             }
           ]
         },
@@ -287,7 +295,7 @@
               "label": "SEC EDGAR — 10-K and 10-Q filings",
               "kind": "Website",
               "tier": "Essential",
-              "url": "https://www.sec.gov/edgar"
+              "urls": ["https://www.sec.gov/edgar"]
             }
           ]
         },
@@ -306,7 +314,7 @@
               "label": "Aswath Damodaran — free NYU lectures & spreadsheets",
               "kind": "Website",
               "tier": "Highly Recommended",
-              "url": "https://pages.stern.nyu.edu/~adamodar/"
+              "urls": ["https://pages.stern.nyu.edu/~adamodar/"]
             }
           ]
         },
@@ -366,7 +374,8 @@
             {
               "label": "The Single Best Investment — Lowell Miller",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/0965175081"]
             }
           ]
         },
@@ -380,13 +389,14 @@
             {
               "label": "The Ultimate Dividend Playbook — Josh Peters",
               "kind": "Paid book",
-              "tier": "Highly Recommended"
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/B08BZTZRC1"]
             },
             {
               "label": "Berkshire Hathaway shareholder letters",
               "kind": "Shareholder letter",
               "tier": "Essential",
-              "url": "https://www.berkshirehathaway.com/letters/letters.html"
+              "urls": ["https://www.berkshirehathaway.com/letters/letters.html"]
             }
           ]
         },
@@ -417,7 +427,7 @@
               "label": "Simply Safe Dividends — educational articles",
               "kind": "Website",
               "tier": "Optional",
-              "url": "https://www.simplysafedividends.com/"
+              "urls": ["https://www.simplysafedividends.com/"]
             }
           ]
         },
@@ -493,7 +503,8 @@
             {
               "label": "The Five Rules for Successful Stock Investing — Pat Dorsey",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B000SEIYBK"]
             }
           ]
         },
@@ -507,7 +518,8 @@
             {
               "label": "The Little Book of Valuation — Aswath Damodaran",
               "kind": "Paid book",
-              "tier": "Highly Recommended"
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/1394244401"]
             }
           ]
         },
@@ -542,7 +554,7 @@
               "label": "Aswath Damodaran — valuation spreadsheets",
               "kind": "Website",
               "tier": "Highly Recommended",
-              "url": "https://pages.stern.nyu.edu/~adamodar/"
+              "urls": ["https://pages.stern.nyu.edu/~adamodar/"]
             }
           ]
         },
@@ -590,13 +602,14 @@
             {
               "label": "The Most Important Thing — Howard Marks",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/9353022797"]
             },
             {
               "label": "Oaktree memos — Howard Marks",
               "kind": "Website",
               "tier": "Essential",
-              "url": "https://www.oaktreecapital.com/insights/memos"
+              "urls": ["https://www.oaktreecapital.com/insights/memos"]
             }
           ]
         },
@@ -610,7 +623,8 @@
             {
               "label": "Thinking, Fast and Slow — Daniel Kahneman",
               "kind": "Paid book",
-              "tier": "Highly Recommended"
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/0374533555"]
             }
           ]
         },
@@ -689,7 +703,8 @@
             {
               "label": "The Single Best Investment — Lowell Miller",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/0965175081"]
             }
           ]
         },
@@ -704,7 +719,7 @@
               "label": "Bogleheads wiki",
               "kind": "Website",
               "tier": "Highly Recommended",
-              "url": "https://www.bogleheads.org/wiki/Main_Page"
+              "urls": ["https://www.bogleheads.org/wiki/Main_Page"]
             }
           ]
         },
@@ -791,7 +806,8 @@
             {
               "label": "The Essays of Warren Buffett — ed. Lawrence Cunningham",
               "kind": "Paid book",
-              "tier": "Essential"
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/1118821157"]
             }
           ]
         },
