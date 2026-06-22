@@ -57,7 +57,9 @@ never imported unless you wire it up.
 | `label` | ✓ | string | e.g. `The Psychology of Money — Morgan Housel`. |
 | `kind` | ✓ | string | Freeform, e.g. `Paid book`, `Website`, `Shareholder letter`, `Free`. |
 | `tier` | · | enum | `Essential` · `Highly Recommended` · `Optional`. Renders as a badge. |
-| `url` | · | string | If present, the resource becomes a link that opens in a new tab. |
+| `urls` | · | string[] | Array of links. Each one renders as its own button (chip) below the label and opens in a new tab. The button label is auto-derived from the domain (e.g. `amazon.*`/`a.co` → "Kindle", `books.google.*` → "Google Books", `play.google.*` → "Play Books", `audible.*` → "Audible", otherwise the bare hostname). Use it to offer a book on, say, both Amazon/Kindle and Google Books. Omit it (or leave it empty) for a plain, link-less resource. |
+
+> The older single `url` field has been replaced by `urls`. If you have old data using `url`, wrap the value in an array: `"url": "https://x"` → `"urls": ["https://x"]`.
 
 ---
 

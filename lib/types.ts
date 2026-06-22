@@ -5,7 +5,8 @@ export interface ResourceLink {
   /** Free | Paid book | Shareholder letter | Website */
   kind: string;
   tier?: "Essential" | "Highly Recommended" | "Optional";
-  url?: string;
+  /** One or more links (e.g. a website plus a Kindle link). Each renders as its own chip. */
+  urls?: string[];
 }
 
 export interface RoadmapTask {
