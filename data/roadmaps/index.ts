@@ -1,33 +1,46 @@
-import type {
-  Roadmap,
-  RoadmapSummary,
-  CategoryGroup,
-} from "@/lib/types";
-import dividendInvesting from "./dividend-investing.json";
+import type { Roadmap, RoadmapSummary, CategoryGroup } from "@/lib/types";
+import { asLocale, defaultLocale, type Locale } from "@/lib/i18n/config";
+import { getDictionary, type Dictionary } from "@/lib/i18n/dictionaries";
+import dividendEn from "./dividend-investing.en.json";
+import dividendId from "./dividend-investing.id.json";
 
-// Every fully-authored roadmap lives here. Add new JSON files and register them
-// in this array to make them appear across the site automatically.
-const roadmaps: Roadmap[] = [dividendInvesting as Roadmap];
+// Per-locale roadmap content. A locale only needs entries for the roadmaps it
+// translates; anything missing falls back to the default-locale version below.
+const roadmapsByLocale: Record<Locale, Roadmap[]> = {
+  en: [dividendEn as Roadmap],
+  id: [dividendId as Roadmap],
+};
 
-const roadmapBySlug = new Map(roadmaps.map((r) => [r.slug, r]));
+// Default-locale list is canonical: it defines which roadmaps exist and their
+// order. Translations swap in per slug; untranslated ones fall back to default.
+function localeRoadmaps(lang: Locale): Roadmap[] {
+  const canonical = roadmapsByLocale[defaultLocale];
+  const bySlug = new Map((roadmapsByLocale[lang] ?? []).map((r) => [r.slug, r]));
+  return canonical.map((r) => bySlug.get(r.slug) ?? r);
+}
 
-export function getRoadmap(slug: string): Roadmap | undefined {
-  return roadmapBySlug.get(slug);
+export function getRoadmap(slug: string, lang: string): Roadmap | undefined {
+  return localeRoadmaps(asLocale(lang)).find((r) => r.slug === slug);
 }
 
 export function getAllRoadmapSlugs(): string[] {
-  return roadmaps.map((r) => r.slug);
+  return roadmapsByLocale[defaultLocale].map((r) => r.slug);
 }
 
 export function countTasks(roadmap: Roadmap): number {
   return roadmap.stages.reduce((sum, stage) => sum + stage.tasks.length, 0);
 }
 
-function toSummary(roadmap: Roadmap): RoadmapSummary {
+function categoryLabel(dict: Dictionary, key: string): string {
+  return dict.catalog.categories[key]?.name ?? key;
+}
+
+function toSummary(roadmap: Roadmap, dict: Dictionary): RoadmapSummary {
   return {
     slug: roadmap.slug,
     title: roadmap.title,
     category: roadmap.category,
+    categoryLabel: categoryLabel(dict, roadmap.category),
     tagline: roadmap.tagline,
     difficulty: roadmap.difficulty,
     duration: roadmap.duration,
@@ -37,67 +50,45 @@ function toSummary(roadmap: Roadmap): RoadmapSummary {
   };
 }
 
-// Placeholders communicate the intended structure without inventing content.
-// They render as locked "Planned" cards on the dashboard.
-const plannedRoadmaps: RoadmapSummary[] = [
-  {
-    slug: "value-investing",
-    title: "Value Investing Foundations",
-    category: "Finance",
-    tagline: "Margin of safety, intrinsic value, and the contrarian temperament.",
-    difficulty: "Intermediate",
-    duration: "—",
-    taskCount: 0,
-    stageCount: 0,
-    status: "coming-soon",
-  },
-  {
-    slug: "frontend-engineering",
-    title: "Frontend Engineering",
-    category: "Development",
-    tagline: "HTML, CSS, JavaScript, and modern frameworks from first principles.",
-    difficulty: "Beginner",
-    duration: "—",
-    taskCount: 0,
-    stageCount: 0,
-    status: "coming-soon",
-  },
-  {
-    slug: "backend-engineering",
-    title: "Backend Engineering",
-    category: "Development",
-    tagline: "APIs, databases, and systems that stay up under load.",
-    difficulty: "Intermediate",
-    duration: "—",
-    taskCount: 0,
-    stageCount: 0,
-    status: "coming-soon",
-  },
-  {
-    slug: "product-design",
-    title: "Product Design",
-    category: "Design",
-    tagline: "Research, interaction, and visual craft for real products.",
-    difficulty: "Beginner",
-    duration: "—",
-    taskCount: 0,
-    stageCount: 0,
-    status: "coming-soon",
-  },
+// Planned roadmaps render as locked "Planned" cards. Their stable metadata
+// lives here; the display copy (title/tagline) comes from the dictionary so it
+// localizes with the rest of the catalog.
+const plannedMeta: {
+  slug: string;
+  category: string;
+  difficulty: Roadmap["difficulty"];
+}[] = [
+  { slug: "value-investing", category: "Finance", difficulty: "Intermediate" },
+  { slug: "frontend-engineering", category: "Development", difficulty: "Beginner" },
+  { slug: "backend-engineering", category: "Development", difficulty: "Intermediate" },
+  { slug: "product-design", category: "Design", difficulty: "Beginner" },
 ];
 
-const categoryBlurbs: Record<string, string> = {
-  Finance: "Money, markets, and the long game of compounding.",
-  Development: "Build software that lasts, from the ground up.",
-  Design: "Make things people understand and want to use.",
-};
+function plannedSummaries(dict: Dictionary): RoadmapSummary[] {
+  return plannedMeta.map((m) => {
+    const copy = dict.catalog.planned[m.slug];
+    return {
+      slug: m.slug,
+      title: copy?.title ?? m.slug,
+      category: m.category,
+      categoryLabel: categoryLabel(dict, m.category),
+      tagline: copy?.tagline ?? "",
+      difficulty: m.difficulty,
+      duration: "—",
+      taskCount: 0,
+      stageCount: 0,
+      status: "coming-soon",
+    };
+  });
+}
 
 const categoryOrder = ["Finance", "Development", "Design"];
 
-export function getCategoryGroups(): CategoryGroup[] {
+export function getCategoryGroups(lang: string): CategoryGroup[] {
+  const dict = getDictionary(lang);
   const summaries: RoadmapSummary[] = [
-    ...roadmaps.map(toSummary),
-    ...plannedRoadmaps,
+    ...localeRoadmaps(asLocale(lang)).map((r) => toSummary(r, dict)),
+    ...plannedSummaries(dict),
   ];
 
   const byCategory = new Map<string, RoadmapSummary[]>();
@@ -107,16 +98,17 @@ export function getCategoryGroups(): CategoryGroup[] {
     byCategory.set(s.category, list);
   }
 
-  const orderedNames = [
+  const orderedKeys = [
     ...categoryOrder.filter((c) => byCategory.has(c)),
     ...Array.from(byCategory.keys()).filter((c) => !categoryOrder.includes(c)),
   ];
 
-  return orderedNames.map((name) => ({
-    name,
-    blurb: categoryBlurbs[name] ?? "",
+  return orderedKeys.map((key) => ({
+    key,
+    name: categoryLabel(dict, key),
+    blurb: dict.catalog.categories[key]?.blurb ?? "",
     // Available roadmaps first, then planned.
-    roadmaps: (byCategory.get(name) ?? []).sort((a, b) => {
+    roadmaps: (byCategory.get(key) ?? []).sort((a, b) => {
       if (a.status === b.status) return a.title.localeCompare(b.title);
       return a.status === "available" ? -1 : 1;
     }),
@@ -124,9 +116,10 @@ export function getCategoryGroups(): CategoryGroup[] {
 }
 
 export function getSiteStats() {
+  const roadmaps = roadmapsByLocale[defaultLocale];
   return {
     roadmapCount: roadmaps.length,
-    plannedCount: plannedRoadmaps.length,
+    plannedCount: plannedMeta.length,
     totalTasks: roadmaps.reduce((sum, r) => sum + countTasks(r), 0),
   };
 }

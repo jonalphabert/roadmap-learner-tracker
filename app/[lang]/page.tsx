@@ -2,14 +2,22 @@ import { getCategoryGroups, getSiteStats } from "@/data/roadmaps";
 import { SiteHeader } from "@/components/site-header";
 import { DashboardExplorer } from "@/components/dashboard-explorer";
 import { MomentumBanner } from "@/components/momentum-banner";
+import { asLocale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
 
-export default function DashboardPage() {
-  const groups = getCategoryGroups();
+export default function DashboardPage({
+  params,
+}: {
+  params: { lang: string };
+}) {
+  const lang = asLocale(params.lang);
+  const t = getDictionary(lang);
+  const groups = getCategoryGroups(lang);
   const stats = getSiteStats();
 
   return (
     <div className="min-h-screen">
-      <SiteHeader />
+      <SiteHeader lang={lang} />
 
       {/* Hero — the thesis: compounding over a long horizon */}
       <section className="relative overflow-hidden border-b border-border">
@@ -17,24 +25,22 @@ export default function DashboardPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" aria-hidden />
         <div className="container relative py-16 sm:py-24">
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            Self-guided learning · progress saved on this device
+            {t.home.eyebrow}
           </p>
           <h1 className="max-w-3xl text-balance font-display text-4xl font-medium leading-[1.05] tracking-tight sm:text-6xl">
-            Learn one durable skill at a time, and let it{" "}
-            <span className="text-primary">compound</span>.
+            {t.home.titleLead}{" "}
+            <span className="text-primary">{t.home.titleEmphasis}</span>.
           </h1>
           <p className="mt-5 max-w-xl text-lg text-muted-foreground">
-            Structured roadmaps that remember where you left off. Check off a
-            task, watch the path fill in, and earn each milestone. No login, no
-            account — your journey lives in your browser.
+            {t.home.subtitle}
           </p>
 
           <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
-            <Stat value={String(stats.roadmapCount)} label="Roadmap live" />
-            <Stat value={String(stats.totalTasks)} label="Tracked tasks" />
+            <Stat value={String(stats.roadmapCount)} label={t.home.statRoadmaps} />
+            <Stat value={String(stats.totalTasks)} label={t.home.statTasks} />
             <Stat
               value={String(stats.plannedCount)}
-              label="More in progress"
+              label={t.home.statPlanned}
             />
           </div>
         </div>
@@ -50,11 +56,8 @@ export default function DashboardPage() {
 
       <footer className="border-t border-border">
         <div className="container flex flex-col items-start justify-between gap-2 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center">
-          <p>
-            Compound — an open learning tracker. Educational only, not financial
-            advice.
-          </p>
-          <p className="font-mono text-xs">Progress stored in localStorage</p>
+          <p>{t.home.footerNote}</p>
+          <p className="font-mono text-xs">{t.home.footerStorage}</p>
         </div>
       </footer>
     </div>

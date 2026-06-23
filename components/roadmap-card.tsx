@@ -9,8 +9,10 @@ import { loadCompleted } from "@/lib/storage";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { useDictionary } from "@/lib/i18n/use-lang";
 
 export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
+  const { lang, t } = useDictionary();
   const [completed, setCompleted] = useState(0);
   const [hydrated, setHydrated] = useState(false);
 
@@ -25,7 +27,7 @@ export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
       <div className="flex h-full flex-col justify-between rounded-lg border border-dashed border-border bg-card/40 p-5">
         <div>
           <div className="mb-3 flex items-center justify-between">
-            <Badge variant="muted">Planned</Badge>
+            <Badge variant="muted">{t.card.planned}</Badge>
             <Lock className="h-4 w-4 text-muted-foreground/60" />
           </div>
           <h3 className="font-display text-lg font-medium text-foreground/70">
@@ -36,7 +38,7 @@ export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
           </p>
         </div>
         <p className="mt-4 text-xs text-muted-foreground">
-          Not yet published
+          {t.card.notPublished}
         </p>
       </div>
     );
@@ -51,7 +53,7 @@ export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
 
   return (
     <Link
-      href={`/roadmap/${roadmap.slug}`}
+      href={`/${lang}/roadmap/${roadmap.slug}`}
       className={cn(
         "group flex h-full flex-col justify-between rounded-lg border bg-card p-5 shadow-sm transition-all",
         "hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md",
@@ -61,7 +63,7 @@ export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
       <div>
         <div className="mb-3 flex items-center justify-between">
           <Badge variant={done ? "gold" : "secondary"}>
-            {done ? "Completed" : started ? "In progress" : "Start here"}
+            {done ? t.card.completed : started ? t.card.inProgress : t.card.startHere}
           </Badge>
           <TrendingUp className="h-4 w-4 text-primary/70" />
         </div>
@@ -76,8 +78,8 @@ export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
       <div className="mt-5">
         <div className="mb-1.5 flex items-center justify-between text-xs text-muted-foreground">
           <span>
-            {roadmap.difficulty} · {roadmap.duration} · {roadmap.stageCount}{" "}
-            stages
+            {roadmap.difficulty} · {roadmap.duration} ·{" "}
+            {t.card.stages(roadmap.stageCount)}
           </span>
           <span className="tabular font-mono">
             {hydrated ? `${percent}%` : "—"}
@@ -88,7 +90,7 @@ export function RoadmapCard({ roadmap }: { roadmap: RoadmapSummary }) {
           indicatorClassName={done ? "bg-gold" : undefined}
         />
         <div className="mt-3 flex items-center text-sm font-medium text-primary">
-          {started ? "Continue" : "Begin roadmap"}
+          {started ? t.card.continue : t.card.begin}
           <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </div>
       </div>

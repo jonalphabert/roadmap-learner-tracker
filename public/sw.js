@@ -13,12 +13,21 @@
  *
  * Bump CACHE_VERSION to invalidate everything on a breaking change.
  */
-const CACHE_VERSION = "compound-v1";
-const OFFLINE_URL = "/offline";
+const CACHE_VERSION = "compound-v2";
+// One offline fallback page per locale (pages live under /<locale>/...).
+const OFFLINE_URLS = ["/en/offline", "/id/offline"];
+const DEFAULT_OFFLINE_URL = "/en/offline";
+
+// Pick the offline fallback that matches the request's locale prefix.
+function offlineUrlFor(request) {
+  const path = new URL(request.url).pathname;
+  const match = OFFLINE_URLS.find((url) => path.startsWith(`/${url.split("/")[1]}/`));
+  return match || DEFAULT_OFFLINE_URL;
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_VERSION).then((cache) => cache.add(OFFLINE_URL)),
+    caches.open(CACHE_VERSION).then((cache) => cache.addAll(OFFLINE_URLS)),
   );
   self.skipWaiting();
 });
@@ -56,7 +65,7 @@ self.addEventListener("fetch", (event) => {
         } catch {
           const cache = await caches.open(CACHE_VERSION);
           const cached = await cache.match(request);
-          return cached || (await cache.match(OFFLINE_URL));
+          return cached || (await cache.match(offlineUrlFor(request)));
         }
       })(),
     );

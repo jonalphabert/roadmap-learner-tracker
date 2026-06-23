@@ -22,16 +22,20 @@ import {
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useDictionary } from "@/lib/i18n/use-lang";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 
-export const TASK_META: Record<
-  TaskType,
-  { label: string; icon: typeof BookOpen }
-> = {
-  reading: { label: "Reading", icon: BookOpen },
-  exercise: { label: "Exercise", icon: PencilRuler },
-  project: { label: "Milestone", icon: Target },
-  concept: { label: "Concept", icon: Lightbulb },
+// Icon per task type. The display label is localized — see taskLabel().
+export const TASK_ICONS: Record<TaskType, typeof BookOpen> = {
+  reading: BookOpen,
+  exercise: PencilRuler,
+  project: Target,
+  concept: Lightbulb,
 };
+
+export function taskLabel(t: Dictionary, type: TaskType): string {
+  return t.taskTypes[type];
+}
 
 const TIER_VARIANT: Record<string, "default" | "secondary" | "muted"> = {
   Essential: "default",
@@ -85,9 +89,9 @@ export function TaskDetailSheet({
   onOpenChange,
   onToggle,
 }: TaskDetailSheetProps) {
+  const { t } = useDictionary();
   if (!task) return null;
-  const meta = TASK_META[task.type];
-  const Icon = meta.icon;
+  const Icon = TASK_ICONS[task.type];
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -96,7 +100,7 @@ export function TaskDetailSheet({
           <div className="flex items-center gap-2">
             <Badge variant="secondary" className="gap-1.5">
               <Icon className="h-3 w-3" />
-              {meta.label}
+              {taskLabel(t, task.type)}
             </Badge>
             <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
               {stageTitle}
@@ -111,7 +115,7 @@ export function TaskDetailSheet({
             <section className="rounded-lg border border-gold/30 bg-gold/10 p-4">
               <h4 className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold-foreground">
                 <Sparkles className="h-3.5 w-3.5 text-gold" />
-                What you gain
+                {t.taskSheet.whatYouGain}
               </h4>
               <p className="text-sm leading-relaxed text-foreground/90">
                 {task.whatYouGain}
@@ -122,7 +126,7 @@ export function TaskDetailSheet({
           {task.details && task.details.length > 0 ? (
             <section>
               <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                What to do
+                {t.taskSheet.whatToDo}
               </h4>
               <ul className="space-y-2">
                 {task.details.map((d, i) => (
@@ -138,7 +142,7 @@ export function TaskDetailSheet({
           {task.checklist && task.checklist.length > 0 ? (
             <section>
               <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Checklist
+                {t.taskSheet.checklist}
               </h4>
               <ul className="space-y-2 rounded-lg border bg-secondary/40 p-4">
                 {task.checklist.map((c, i) => (
@@ -154,7 +158,7 @@ export function TaskDetailSheet({
           {task.resources && task.resources.length > 0 ? (
             <section>
               <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Resources
+                {t.taskSheet.resources}
               </h4>
               <ul className="space-y-2">
                 {task.resources.map((r, i) => {
@@ -218,12 +222,12 @@ export function TaskDetailSheet({
             {isDone ? (
               <>
                 <CircleDashed className="h-4 w-4" />
-                Mark as not done
+                {t.taskSheet.markNotDone}
               </>
             ) : (
               <>
                 <Check className="h-4 w-4" />
-                Mark complete
+                {t.taskSheet.markComplete}
               </>
             )}
           </Button>
