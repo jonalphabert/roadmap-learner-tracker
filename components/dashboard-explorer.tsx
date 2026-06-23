@@ -6,11 +6,13 @@ import { gsap } from "gsap";
 import type { CategoryGroup } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { CategorySection } from "@/components/category-section";
+import { useDictionary } from "@/lib/i18n/use-lang";
 
 const useIsoLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 export function DashboardExplorer({ groups }: { groups: CategoryGroup[] }) {
+  const { t } = useDictionary();
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = useMemo(() => groups.map((g) => g.name), [groups]);
@@ -36,7 +38,7 @@ export function DashboardExplorer({ groups }: { groups: CategoryGroup[] }) {
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
           <CategoryPill
-            label="All"
+            label={t.dashboard.all}
             count={totalCount}
             active={activeCategory === "all"}
             onClick={() => setActiveCategory("all")}
@@ -56,7 +58,7 @@ export function DashboardExplorer({ groups }: { groups: CategoryGroup[] }) {
         </div>
 
         <p className="font-mono text-xs text-muted-foreground" aria-live="polite">
-          Showing {resultCount} {resultCount === 1 ? "roadmap" : "roadmaps"}
+          {t.dashboard.showing(resultCount)}
         </p>
       </div>
 
@@ -108,11 +110,12 @@ function CategoryPill({ label, count, active, onClick }: CategoryPillProps) {
 }
 
 function EmptyState({ onClear }: { onClear: () => void }) {
+  const { t } = useDictionary();
   return (
     <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-border bg-card/40 px-6 py-16 text-center">
-      <p className="font-display text-lg font-medium">No roadmaps here yet</p>
+      <p className="font-display text-lg font-medium">{t.dashboard.emptyTitle}</p>
       <p className="mt-1.5 max-w-sm text-sm text-muted-foreground">
-        This category is empty. Reset to see every roadmap.
+        {t.dashboard.emptyBody}
       </p>
       <button
         type="button"
@@ -122,7 +125,7 @@ function EmptyState({ onClear }: { onClear: () => void }) {
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         )}
       >
-        Show all roadmaps
+        {t.dashboard.showAll}
       </button>
     </div>
   );

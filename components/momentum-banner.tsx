@@ -5,6 +5,7 @@ import { Flame, ArrowRight } from "lucide-react";
 
 import { useActivity } from "@/hooks/use-activity";
 import { cn } from "@/lib/utils";
+import { useDictionary } from "@/lib/i18n/use-lang";
 
 // The dashboard's retention nudge: a daily streak counter plus a "pick up where
 // you left off" pointer. Arriving here counts as today's activity (record=true),
@@ -14,6 +15,7 @@ import { cn } from "@/lib/utils";
 // a brand-new visitor with a streak of 1 and no history sees the clean hero
 // rather than an empty momentum shell.
 export function MomentumBanner() {
+  const { lang, t } = useDictionary();
   const { hydrated, activity } = useActivity(true);
 
   if (!hydrated || !activity) return null;
@@ -31,15 +33,15 @@ export function MomentumBanner() {
 
         {showResume && lastWorked ? (
           <Link
-            href={`/roadmap/${lastWorked.slug}`}
+            href={`/${lang}/roadmap/${lastWorked.slug}`}
             className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-secondary/40 px-4 py-3 transition-colors hover:border-primary/40 hover:bg-secondary sm:min-w-[20rem]"
           >
             <span className="min-w-0">
               <span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Pick up where you left off
+                {t.momentum.pickUp}
               </span>
               <span className="mt-0.5 block truncate text-sm font-medium text-foreground">
-                Stage {stageNumber(lastWorked.stageIndex)}: {lastWorked.stageTitle}
+                {t.momentum.stageLabel(stageNumber(lastWorked.stageIndex), lastWorked.stageTitle)}
               </span>
               <span className="block truncate text-xs text-muted-foreground">
                 {lastWorked.title}
@@ -54,6 +56,7 @@ export function MomentumBanner() {
 }
 
 function StreakBadge({ streak, longest }: { streak: number; longest: number }) {
+  const { t } = useDictionary();
   return (
     <div className="flex items-center gap-3">
       <span
@@ -66,14 +69,14 @@ function StreakBadge({ streak, longest }: { streak: number; longest: number }) {
       </span>
       <div>
         <p className="font-display text-lg font-medium leading-tight tracking-tight">
-          🔥 {streak}-day streak
+          {t.momentum.streakHeading(streak)}
         </p>
         <p className="text-sm text-muted-foreground">
           {streak === 1
-            ? "You're back — keep it rolling tomorrow."
+            ? t.momentum.streakFirst
             : longest > streak
-              ? `Best so far: ${longest} days. Keep going.`
-              : "This is your best streak yet. Don't break it."}
+              ? t.momentum.streakBest(longest)
+              : t.momentum.streakRecord}
         </p>
       </div>
     </div>

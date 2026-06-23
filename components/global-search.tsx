@@ -7,9 +7,10 @@ import { Search, X, ArrowRight, Lock } from "lucide-react";
 
 import type { RoadmapSummary } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { useDictionary } from "@/lib/i18n/use-lang";
 
 function matchesQuery(roadmap: RoadmapSummary, query: string): boolean {
-  const haystack = [roadmap.title, roadmap.tagline, roadmap.category]
+  const haystack = [roadmap.title, roadmap.tagline, roadmap.categoryLabel]
     .join("\n")
     .toLowerCase();
   return haystack.includes(query);
@@ -17,6 +18,7 @@ function matchesQuery(roadmap: RoadmapSummary, query: string): boolean {
 
 export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
   const router = useRouter();
+  const { lang, t } = useDictionary();
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -47,7 +49,7 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
     setOpen(false);
     setQuery("");
     inputRef.current?.blur();
-    router.push(`/roadmap/${roadmap.slug}`);
+    router.push(`/${lang}/roadmap/${roadmap.slug}`);
   }
 
   // Close the dropdown when clicking outside.
@@ -125,7 +127,7 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
         role="combobox"
         aria-expanded={showDropdown}
         aria-controls="global-search-results"
-        aria-label="Search roadmaps"
+        aria-label={t.nav.searchLabel}
         value={query}
         onChange={(e) => {
           setQuery(e.target.value);
@@ -133,7 +135,7 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
         }}
         onFocus={() => setOpen(true)}
         onKeyDown={onInputKeyDown}
-        placeholder="Search roadmaps…"
+        placeholder={t.nav.searchPlaceholder}
         className={cn(
           "h-9 w-full rounded-full border border-input bg-card pl-9 pr-16 text-sm shadow-sm",
           "placeholder:text-muted-foreground",
@@ -146,7 +148,7 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
           <button
             type="button"
             onClick={clearQuery}
-            aria-label="Clear search"
+            aria-label={t.nav.clearSearch}
             className={cn(
               "flex h-6 w-6 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
@@ -174,7 +176,7 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
         >
           {results.length === 0 ? (
             <p className="px-3 py-6 text-center text-sm text-muted-foreground">
-              No roadmaps match “{query.trim()}”.
+              {t.nav.noMatch(query.trim())}
             </p>
           ) : (
             <>
@@ -182,13 +184,15 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
                 className="px-2 pb-1 pt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground"
                 aria-live="polite"
               >
-                {results.length} {results.length === 1 ? "result" : "results"}
+                {t.nav.resultCount(results.length)}
               </p>
               <ul>
                 {results.map((roadmap, index) => (
                   <ResultRow
                     key={roadmap.slug}
                     roadmap={roadmap}
+                    lang={lang}
+                    plannedLabel={t.nav.planned}
                     active={index === activeIndex}
                     onHover={() => setActiveIndex(index)}
                     onSelect={() => goTo(roadmap)}
@@ -205,11 +209,15 @@ export function GlobalSearch({ roadmaps }: { roadmaps: RoadmapSummary[] }) {
 
 function ResultRow({
   roadmap,
+  lang,
+  plannedLabel,
   active,
   onHover,
   onSelect,
 }: {
   roadmap: RoadmapSummary;
+  lang: string;
+  plannedLabel: string;
   active: boolean;
   onHover: () => void;
   onSelect: () => void;
@@ -223,12 +231,12 @@ function ResultRow({
           {roadmap.title}
         </span>
         <span className="block truncate text-xs text-muted-foreground">
-          {roadmap.category} · {roadmap.tagline}
+          {roadmap.categoryLabel} · {roadmap.tagline}
         </span>
       </span>
       {planned ? (
         <span className="ml-2 flex shrink-0 items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-          <Lock className="h-3 w-3" /> Planned
+          <Lock className="h-3 w-3" /> {plannedLabel}
         </span>
       ) : (
         <ArrowRight className="ml-2 h-4 w-4 shrink-0 text-primary/70" />
@@ -256,7 +264,7 @@ function ResultRow({
   return (
     <li role="option" aria-selected={active}>
       <Link
-        href={`/roadmap/${roadmap.slug}`}
+        href={`/${lang}/roadmap/${roadmap.slug}`}
         className={cn(
           rowClass,
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",

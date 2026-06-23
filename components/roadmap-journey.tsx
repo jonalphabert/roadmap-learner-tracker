@@ -29,7 +29,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { CelebrationModal } from "@/components/celebration";
-import { TaskDetailSheet, TASK_META } from "@/components/task-detail-sheet";
+import {
+  TaskDetailSheet,
+  TASK_ICONS,
+  taskLabel,
+} from "@/components/task-detail-sheet";
+import { useDictionary } from "@/lib/i18n/use-lang";
 
 interface CelebrationState {
   open: boolean;
@@ -38,6 +43,7 @@ interface CelebrationState {
 }
 
 export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
+  const { lang, t } = useDictionary();
   const allTaskIds = useMemo(
     () => roadmap.stages.flatMap((s) => s.tasks.map((t) => t.id)),
     [roadmap],
@@ -232,12 +238,12 @@ export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
     if (roadmapDoneAfter && !roadmapDoneBefore) {
       setCelebration({
         open: true,
-        title: "Roadmap complete",
-        message: `You finished ${roadmap.title}. ${roadmap.outcome}`,
+        title: t.roadmap.roadmapCompleteTitle,
+        message: t.roadmap.roadmapCompleteMessage(roadmap.title, roadmap.outcome),
       });
     } else if (stageDoneAfter && !stageDoneBefore) {
       fireConfetti({ count: 70, spread: 0.9 });
-      showToast(`Stage complete — ${stage.title}`);
+      showToast(t.roadmap.stageComplete(stage.title));
       // Reveal the next stage so the journey keeps moving forward. Additive —
       // this never collapses a stage the user chose to open.
       const idx = roadmap.stages.findIndex((s) => s.id === stage.id);
@@ -257,13 +263,9 @@ export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
   }
 
   function handleReset() {
-    if (
-      window.confirm(
-        "Reset all progress for this roadmap? This clears your saved checkmarks on this device.",
-      )
-    ) {
+    if (window.confirm(t.roadmap.resetConfirm)) {
       progress.reset();
-      showToast("Progress reset");
+      showToast(t.roadmap.progressReset);
     }
   }
 
@@ -272,11 +274,11 @@ export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
   return (
     <div className="container max-w-4xl py-8 sm:py-10">
       <Link
-        href="/"
+        href={`/${lang}`}
         className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground sm:mb-8"
       >
         <ArrowLeft className="h-4 w-4" />
-        All roadmaps
+        {t.roadmap.back}
       </Link>
 
       {/* Header */}
@@ -302,21 +304,21 @@ export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
         <div className="flex items-end justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Your progress
+              {t.roadmap.yourProgress}
             </p>
             <p className="mt-1 font-mono text-3xl font-medium tabular">
               {progress.hydrated ? `${progress.percent}%` : "—"}
               <span className="ml-2 text-sm font-normal text-muted-foreground">
                 {progress.hydrated
-                  ? `${progress.completedCount} / ${progress.total} tasks`
-                  : `${progress.total} tasks`}
+                  ? t.roadmap.tasksOf(progress.completedCount, progress.total)
+                  : t.roadmap.tasksTotal(progress.total)}
               </span>
             </p>
           </div>
           {progress.completedCount > 0 ? (
             <Button variant="ghost" size="sm" onClick={handleReset}>
               <RotateCcw className="h-3.5 w-3.5" />
-              Reset
+              {t.roadmap.reset}
             </Button>
           ) : null}
         </div>
@@ -328,7 +330,7 @@ export function RoadmapJourney({ roadmap }: { roadmap: Roadmap }) {
         {done ? (
           <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-gold-foreground">
             <PartyPopper className="h-4 w-4 text-gold" />
-            Roadmap complete — you have built the full skill.
+            {t.roadmap.complete}
           </p>
         ) : null}
       </div>
@@ -424,6 +426,7 @@ function StageBlock({
   onOpen: (task: RoadmapTask) => void;
   markerRef?: (el: HTMLDivElement | null) => void;
 }) {
+  const { t } = useDictionary();
   const doneCount = stage.tasks.filter((t) => isDone(t.id)).length;
   const stageDone = hydrated && doneCount === stage.tasks.length;
   const started = doneCount > 0;
@@ -464,8 +467,8 @@ function StageBlock({
             </div>
             <Badge variant={stageDone ? "gold" : started ? "secondary" : "muted"}>
               {hydrated
-                ? `${doneCount}/${stage.tasks.length}`
-                : `${stage.tasks.length} tasks`}
+                ? t.roadmap.stageTasks(doneCount, stage.tasks.length)
+                : t.roadmap.stageTasksTotal(stage.tasks.length)}
             </Badge>
           </div>
         </AccordionTrigger>
@@ -482,7 +485,7 @@ function StageBlock({
               {stage.objectives?.length ? (
                 <StageInfo
                   icon={Target}
-                  label="What you'll be able to do"
+                  label={t.roadmap.objectives}
                   items={stage.objectives}
                   tone="primary"
                 />
@@ -490,7 +493,7 @@ function StageBlock({
               {stage.mistakes?.length ? (
                 <StageInfo
                   icon={AlertTriangle}
-                  label="Mistakes to avoid"
+                  label={t.roadmap.mistakes}
                   items={stage.mistakes}
                   tone="warning"
                 />
@@ -499,7 +502,7 @@ function StageBlock({
                 <div className="sm:col-span-2">
                   <StageInfo
                     icon={Microscope}
-                    label="Case studies"
+                    label={t.roadmap.caseStudies}
                     items={stage.caseStudies}
                     tone="muted"
                   />
@@ -588,8 +591,8 @@ function TaskRow({
   onToggle: () => void;
   onOpen: () => void;
 }) {
-  const meta = TASK_META[task.type];
-  const Icon = meta.icon;
+  const { t } = useDictionary();
+  const Icon = TASK_ICONS[task.type];
 
   return (
     <div
@@ -601,7 +604,7 @@ function TaskRow({
         type="button"
         onClick={onToggle}
         aria-pressed={done}
-        aria-label={done ? `Mark "${task.title}" not done` : `Mark "${task.title}" done`}
+        aria-label={done ? t.roadmap.markNotDone(task.title) : t.roadmap.markDone(task.title)}
         className={cn(
           "flex h-5 w-5 shrink-0 items-center justify-center rounded-[6px] border-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1",
           done
@@ -636,7 +639,7 @@ function TaskRow({
       </button>
 
       <span className="hidden shrink-0 font-mono text-[10px] uppercase tracking-wider text-muted-foreground sm:inline">
-        {meta.label}
+        {taskLabel(t, task.type)}
       </span>
     </div>
   );

@@ -1,0 +1,869 @@
+{
+  "slug": "dividend-investing",
+  "title": "Investasi Dividen Jangka Panjang",
+  "category": "Finance",
+  "tagline": "Menjadi investor dividend-growth yang mandiri dalam ~10 bulan.",
+  "description": "Jalur dari prinsip dasar untuk pemula total hingga analis mandiri. Anda belajar membaca bisnis, bukan kode saham: memahami uang dan pasar, membaca laporan keuangan, menguasai keamanan dan pertumbuhan dividen, menilai perusahaan secara wajar, mengelola risiko, membangun portofolio, dan menutupnya dengan menganalisis saham nyata sendiri. Dirancang untuk pemilik jangka panjang, bukan trader.",
+  "difficulty": "Beginner",
+  "duration": "10 bulan",
+  "outcome": "Menghasilkan laporan investasi lengkap setingkat keputusan atas tiga saham dividen nyata serta kerangka investasi pribadi yang Anda pegang seumur hidup.",
+  "stages": [
+    {
+      "id": "stage-1",
+      "index": "01",
+      "title": "Uang, Pasar & Pola Pikir Investor",
+      "duration": "Bulan 1",
+      "summary": "Bangun temperamen seorang pemilik dan pahami apa itu saham, pasar, dan dividen secara mendasar.",
+      "objectives": [
+        "Memahami penggandaan, inflasi, dan total return selama beberapa dekade.",
+        "Mengetahui apa yang sebenarnya diwakili oleh sebuah saham, indeks, dan dividen.",
+        "Membedakan investasi dari spekulasi dan trading."
+      ],
+      "mistakes": [
+        "Mengira yield tinggi sama dengan kualitas tinggi — yield 9% biasanya menandakan pemotongan yang akan datang, bukan uang gratis.",
+        "Percaya bahwa investasi adalah soal memprediksi harga ketimbang memiliki bisnis yang baik.",
+        "Meremehkan penggandaan karena pertumbuhan awal terlihat membosankan; keajaibannya ada di dekade terakhir.",
+        "Menganggap penurunan harga sebagai kerugian padahal, bagi pembeli neto jangka panjang, itu adalah peluang."
+      ],
+      "tasks": [
+        {
+          "id": "s1-t1",
+          "title": "Baca “The Psychology of Money”",
+          "type": "reading",
+          "summary": "Bentuk temperamen Anda sebelum menyentuh angka apa pun.",
+          "whatYouGain": "Temperamen yang tenang dan berorientasi jangka panjang — prediktor terbesar keberhasilan investasi, sekaligus baju zirah mental untuk bertahan di tengah ketakutan.",
+          "details": [
+            "Bacalah sebagai manusia, bukan analis. Buku ini membingkai perilaku, kesabaran, serta peran keberuntungan dan waktu.",
+            "Catat bab tentang penggandaan dan tentang ‘cukup’ — keduanya akan menjadi jangkar keputusan Anda selama berdekade."
+          ],
+          "resources": [
+            {
+              "label": "The Psychology of Money — Morgan Housel",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B084HJSJJ2"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t2",
+          "title": "Baca “The Little Book of Common Sense Investing”",
+          "type": "reading",
+          "summary": "Pahami mengapa kebanyakan orang gagal, dan indeks yang berusaha Anda kalahkan.",
+          "whatYouGain": "Kejelasan tentang mengapa kebanyakan investor aktif kalah dari indeks sederhana, sehingga setiap saham yang nanti Anda pilih harus melampaui ambang itu.",
+          "details": [
+            "Pelajaran Bogle tentang biaya, perputaran, dan emosi adalah pagar pengaman bagi setiap pemilih saham.",
+            "Bahkan sebagai calon pemilih saham, Anda harus memahami indeksasi berbiaya rendah sebagai tolok ukur Anda."
+          ],
+          "resources": [
+            {
+              "label": "The Little Book of Common Sense Investing — John C. Bogle",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B075Z6HSCJ"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t3",
+          "title": "Baca The Intelligent Investor, bab 8 & 20",
+          "type": "reading",
+          "summary": "Dua bab yang menjadi fondasi filosofis: Tuan Pasar dan margin keamanan.",
+          "whatYouGain": "Dua model mental yang akan Anda pakai selamanya: memperlakukan pasar sebagai rekan bisnis yang temperamental, dan tidak pernah membeli tanpa margin keamanan.",
+          "details": [
+            "Bab 8 — The Investor and Market Fluctuations: metafora ‘Tuan Pasar’.",
+            "Bab 20 — Margin of Safety: gagasan terpenting dalam investasi.",
+            "Lewati sisanya untuk sekarang; Anda akan kembali ke buku lengkapnya di Tahap 5."
+          ],
+          "resources": [
+            {
+              "label": "The Intelligent Investor — Benjamin Graham",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B0CTR2F7PT"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t4",
+          "title": "Bangun lembar kerja penggandaan",
+          "type": "exercise",
+          "summary": "Modelkan $10.000 pada 7% selama 30 vs 40 tahun dan rasakan perbedaannya.",
+          "whatYouGain": "Rasa nyata dan langsung tentang bagaimana penggandaan meledak di dekade terakhir — bukti bahwa lama berada di pasar mengalahkan menebak waktunya.",
+          "details": [
+            "Kolom: tahun, kontribusi, tingkat imbal hasil, dividen yang diinvestasikan ulang, saldo.",
+            "Bandingkan horizon 30 tahun vs 40 tahun untuk melihat betapa dominannya dekade terakhir.",
+            "Hitung Aturan 72 secara manual untuk imbal hasil 4%, 7%, dan 10% (tahun untuk menggandakan ≈ 72 ÷ imbal hasil%)."
+          ]
+        },
+        {
+          "id": "s1-t5",
+          "title": "Buka rekening sekuritas & jelajahi halaman kuotasi",
+          "type": "exercise",
+          "summary": "Temukan harga saham nyata, kapitalisasi pasar, yield dividen, dan tanggal ex-dividen.",
+          "whatYouGain": "Kefasihan dengan sekuritas dan halaman kuotasi nyata, sehingga istilah seperti yield, kapitalisasi pasar, dan tanggal ex-dividen tidak lagi abstrak.",
+          "details": [
+            "Jangan setor banyak dulu — ini sekadar pengintaian.",
+            "Temukan dan catat: harga, kapitalisasi pasar, yield dividen, frekuensi pembayaran, tanggal ex-dividen."
+          ]
+        },
+        {
+          "id": "s1-t6",
+          "title": "Tonggak: tulis Pernyataan Kebijakan Investasi Anda",
+          "type": "project",
+          "summary": "Pernyataan satu halaman berisi tujuan, horizon, kontribusi, dan rencana reaksi Anda saat pasar anjlok.",
+          "whatYouGain": "Konstitusi tertulis Anda sendiri — buku aturan yang menjaga Anda tetap rasional ketika pasar tidak.",
+          "details": [
+            "Cantumkan: tujuan, horizon waktu, target kontribusi bulanan, rencana perilaku Anda untuk penurunan 30%, dan filosofi satu kalimat.",
+            "Anda akan merevisi dokumen ini di akhir setiap tahap. Ini adalah Bintang Utara Anda dan pertahanan terhadap kepanikan di masa depan."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "index": "02",
+      "title": "Memahami Bisnis & Moat",
+      "duration": "Bulan 2",
+      "summary": "Belajar membaca model bisnis dan keunggulan kompetitif yang membuat dividen menjadi tahan lama.",
+      "objectives": [
+        "Menjelaskan bagaimana perusahaan mana pun menghasilkan uang dengan bahasa sederhana.",
+        "Mengidentifikasi jenis dan lebar moat: merek, biaya peralihan, efek jaringan, keunggulan biaya, skala.",
+        "Menilai daya penetapan harga dan intensitas modal."
+      ],
+      "caseStudies": [
+        "Coca-Cola — moat merek, daya penetapan harga, dan distribusi global tak tertandingi menjadikan produk sederhana sebagai pengganda hebat.",
+        "Procter & Gamble — portofolio merek harian tepercaya yang menghasilkan kas stabil untuk membiayai 65+ tahun kenaikan dividen."
+      ],
+      "mistakes": [
+        "Membeli produk yang Anda sukai alih-alih bisnis yang menghasilkan uang.",
+        "Menganggap moat hari ini permanen — moat bisa terkikis (Kodak punya moat lebar, dan film).",
+        "Mengabaikan intensitas modal: dua perusahaan dengan laba sama bisa punya arus kas bebas yang sangat berbeda.",
+        "Menyimpang dari lingkaran kompetensi Anda karena sebuah cerita terdengar menarik."
+      ],
+      "tasks": [
+        {
+          "id": "s2-t1",
+          "title": "Baca “The Little Book That Builds Wealth”",
+          "type": "reading",
+          "summary": "Buku terjelas yang pernah ditulis tentang moat ekonomi.",
+          "whatYouGain": "Lensa yang dapat dipakai berulang untuk mengenali keunggulan kompetitif tahan lama — hal yang membuat dividen terus tumbuh selama berdekade.",
+          "details": [
+            "Inilah lensa yang akan Anda pakai untuk menilai keunggulan kompetitif selamanya.",
+            "Pelajari lima sumber moat: aset tak berwujud, biaya peralihan, efek jaringan, keunggulan biaya, skala efisien."
+          ],
+          "resources": [
+            {
+              "label": "The Little Book That Builds Wealth — Pat Dorsey",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B07MMYC9VT"]
+            }
+          ]
+        },
+        {
+          "id": "s2-t2",
+          "title": "Baca “Common Stocks and Uncommon Profits”",
+          "type": "reading",
+          "summary": "Metode kualitatif ‘scuttlebutt’ ala Fisher melengkapi angka-angka.",
+          "whatYouGain": "Keterampilan kualitatif ‘scuttlebutt’: menilai bisnis dari apa yang diungkapkan pelanggan, pemasok, dan pesaing, bukan hanya angkanya.",
+          "resources": [
+            {
+              "label": "Common Stocks and Uncommon Profits — Philip Fisher",
+              "kind": "Buku berbayar",
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/B00XCC5Y0O"]
+            }
+          ]
+        },
+        {
+          "id": "s2-t3",
+          "title": "Mulai “The Essays of Warren Buffett”",
+          "type": "reading",
+          "summary": "Mulai bagian kualitas-bisnis dan owner-earnings — kitab rujukan Anda yang berkelanjutan.",
+          "whatYouGain": "Paparan langsung tentang bagaimana pengalokasi modal terbaik yang masih hidup memikirkan kepemilikan bisnis dan owner earnings.",
+          "details": [
+            "Buku ini dibaca bertahun-tahun, bukan satu akhir pekan. Mulailah dari bagian kualitas-bisnis sekarang."
+          ],
+          "resources": [
+            {
+              "label": "The Essays of Warren Buffett — ed. Lawrence Cunningham",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/1118821157"]
+            }
+          ]
+        },
+        {
+          "id": "s2-t4",
+          "title": "Analisis 3 perusahaan yang Anda pakai tiap minggu",
+          "type": "exercise",
+          "summary": "Bagaimana mereka menghasilkan uang? Siapa pelanggannya? Apa moatnya? Apa yang bisa mematikannya?",
+          "whatYouGain": "Kemampuan menjelaskan model bisnis apa pun dengan bahasa sederhana — dan menyadari ketika Anda tidak bisa, yang itu sendiri adalah sinyal bahaya.",
+          "details": [
+            "Pilih pembuat ponsel Anda, bank Anda, dan sebuah merek bahan makanan.",
+            "Tulis empat kalimat untuk masing-masing: model bisnis, pelanggan, moat, dan ancaman terbesar dalam 10 tahun."
+          ]
+        },
+        {
+          "id": "s2-t5",
+          "title": "Lakukan latihan pemeringkatan moat",
+          "type": "exercise",
+          "summary": "Beri nilai tiap perusahaan pada kelima jenis moat: tidak ada / sempit / lebar.",
+          "whatYouGain": "Cara berulang untuk menilai jenis dan lebar moat, mengubah firasat samar menjadi peringkat yang bisa dipertahankan.",
+          "details": [
+            "Justifikasi setiap nilai dalam satu kalimat. Terapkan uji ‘jelaskan dalam 3 kalimat tanpa jargon’."
+          ]
+        },
+        {
+          "id": "s2-t6",
+          "title": "Tonggak: ringkasan bisnis satu halaman",
+          "type": "project",
+          "summary": "Pilih satu perusahaan: model, lebar moat, daya penetapan harga, risiko, dan uji kepemilikan 20 tahun.",
+          "whatYouGain": "Analisis bisnis menyeluruh pertama Anda, dan kepekaan yang lebih tajam tentang perusahaan mana yang dengan senang hati Anda miliki selama 20 tahun.",
+          "details": [
+            "Ajukan pertanyaan Buffett: maukah Anda memiliki seluruh bisnis ini selama 20 tahun bahkan jika pasar tutup selama satu dekade?",
+            "Jika jawabannya tidak, Anda telah belajar sesuatu yang penting tentang perusahaan itu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-3",
+      "index": "03",
+      "title": "Membaca Laporan Keuangan",
+      "duration": "Bulan 3–4",
+      "summary": "Tahap fondasi terpanjang. Semua yang berikutnya bergantung pada kemampuan membaca ketiga laporan dengan fasih.",
+      "objectives": [
+        "Membaca dan menghubungkan laporan laba rugi, neraca, dan laporan arus kas.",
+        "Menghitung dan menafsirkan ROE, ROIC, rasio utang terhadap ekuitas, interest coverage, dan margin.",
+        "Membedakan laba akuntansi dari kas riil — perbedaan yang melindungi dividen."
+      ],
+      "caseStudies": [
+        "Johnson & Johnson — sebuah Dividend King; pelajari neraca bentengnya dan bagaimana arus kas bebas yang konsisten membiayai 60+ tahun kenaikan dividen.",
+        "Microsoft — bagaimana peralihan ke cloud/langganan mengubah laporan arus kas menjadi mesin arus kas bebas."
+      ],
+      "mistakes": [
+        "Lebih mempercayai laba bersih daripada arus kas — laba bisa direkayasa; kas yang berkelanjutan sulit dipalsukan.",
+        "Melihat satu tahun alih-alih tren 5–10 tahun.",
+        "Terpukau oleh ROE tinggi yang sebenarnya hanya leverage tinggi — periksa ROIC dan utang bersamaan.",
+        "Menganggap goodwill sebagai nilai riil yang likuid."
+      ],
+      "tasks": [
+        {
+          "id": "s3-t1",
+          "title": "Baca “Financial Statements” karya Thomas Ittelson",
+          "type": "reading",
+          "summary": "Membangun ketiga laporan dari transaksi pertama sebuah startup — buku terbaik untuk otak teknis.",
+          "whatYouGain": "Kefasihan sejati dalam ketiga laporan keuangan — literasi yang menjadi fondasi segala hal lain dalam investasi.",
+          "resources": [
+            {
+              "label": "Financial Statements — Thomas Ittelson",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/1632652072"]
+            }
+          ]
+        },
+        {
+          "id": "s3-t2",
+          "title": "Baca “Warren Buffett and the Interpretation of Financial Statements”",
+          "type": "reading",
+          "summary": "Baris-baris mana pada laporan yang menandakan keunggulan kompetitif tahan lama.",
+          "whatYouGain": "Kepekaan terhadap baris laporan spesifik yang membongkar, atau memalsukan, keunggulan kompetitif tahan lama.",
+          "resources": [
+            {
+              "label": "Warren Buffett and the Interpretation of Financial Statements — Mary Buffett & David Clark",
+              "kind": "Buku berbayar",
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/1416573186"]
+            }
+          ]
+        },
+        {
+          "id": "s3-t3",
+          "title": "Ambil 10-K dan bangun lembar arus kas bebas 5 tahun",
+          "type": "exercise",
+          "summary": "Dari SEC EDGAR, hitung sendiri FCF = Arus Kas Operasi − Belanja Modal.",
+          "whatYouGain": "Keterampilan langsung mengambil 10-K nyata dan menghitung arus kas bebas sendiri, alih-alih mempercayai angka sebuah situs.",
+          "details": [
+            "Baca Management's Discussion & Analysis (MD&A) lebih dulu — perusahaan menjelaskan dirinya dalam bahasa lugas.",
+            "Susun tabel 5 tahun pendapatan, laba bersih, arus kas operasi, capex, dan FCF hitungan Anda."
+          ],
+          "resources": [
+            {
+              "label": "SEC EDGAR — laporan 10-K dan 10-Q",
+              "kind": "Situs web",
+              "tier": "Essential",
+              "urls": ["https://www.sec.gov/edgar"]
+            }
+          ]
+        },
+        {
+          "id": "s3-t4",
+          "title": "Hitung set rasio lengkap selama 5 tahun",
+          "type": "exercise",
+          "summary": "ROE, ROIC, utang terhadap ekuitas, interest coverage, dan tiga margin — tren lebih penting daripada satu tahun mana pun.",
+          "whatYouGain": "Perangkat diagnostik berupa rasio — dan kebiasaan membaca tren 5 tahun ketimbang satu potret tunggal.",
+          "details": [
+            "ROIC di atas biaya modal, yang berkelanjutan, adalah sidik jari kuantitatif sebuah moat.",
+            "Interest coverage di bawah ~3x adalah tanda peringatan."
+          ],
+          "resources": [
+            {
+              "label": "Aswath Damodaran — kuliah & lembar kerja NYU gratis",
+              "kind": "Situs web",
+              "tier": "Highly Recommended",
+              "urls": ["https://pages.stern.nyu.edu/~adamodar/"]
+            }
+          ]
+        },
+        {
+          "id": "s3-t5",
+          "title": "Jalankan uji kualitas laba",
+          "type": "exercise",
+          "summary": "Plot laba bersih vs arus kas operasi selama 5 tahun — apakah keduanya bergerak bersama?",
+          "whatYouGain": "Pendeteksi kebohongan cepat untuk kualitas laba: apakah laba yang dilaporkan benar-benar didukung oleh kas.",
+          "details": [
+            "Jika laba naik tapi kas tidak, selidiki sebelum memercayai labanya."
+          ]
+        },
+        {
+          "id": "s3-t6",
+          "title": "Tonggak: cek kesehatan tiga laporan",
+          "type": "project",
+          "summary": "Tulisan 2–3 halaman tentang tren 5 tahun, rasio Anda, FCF Anda, dan vonis atas kapasitas dividen.",
+          "whatYouGain": "Keyakinan untuk menilai, secara mandiri, apakah sebuah perusahaan benar-benar menghasilkan kas untuk mempertahankan dan menumbuhkan dividennya.",
+          "details": [
+            "Akhiri dengan satu paragraf: apakah pembentukan kas perusahaan ini mampu mempertahankan dan menumbuhkan dividen?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "index": "04",
+      "title": "Inti Investasi Dividen",
+      "duration": "Bulan 5–6",
+      "summary": "Inti spesialisasi Anda: metrik dividen, keamanan, jebakan, sektor, pajak, dan inflasi.",
+      "objectives": [
+        "Menguasai yield, pertumbuhan, payout ratio, dan cakupan arus kas bebas — serta apa yang masing-masing tandakan.",
+        "Menilai keamanan dividen dan mengenali jebakan dividen sebelum dipotong.",
+        "Memahami bagaimana barang konsumsi pokok, utilitas, REIT, dan bank berperilaku berbeda."
+      ],
+      "caseStudies": [
+        "Realty Income — sebuah REIT yang dianalisis dengan AFFO, bukan EPS; mengapa payout ratio tinggi bersifat struktural, bukan berbahaya.",
+        "PepsiCo — sebuah Dividend King yang memadukan makanan ringan dan minuman; pertumbuhan dividen sektor barang konsumsi pokok.",
+        "Unilever & Nestlé — barang konsumsi pokok internasional; efek mata uang, pajak pemotongan asing, dan ketahanan geografis."
+      ],
+      "mistakes": [
+        "Mengejar yield — harga yang ambruk secara mekanis menggelembungkan yield tepat sebelum pemotongan.",
+        "Menilai REIT dan utilitas dengan metrik yang salah (gunakan AFFO/FFO untuk REIT, bukan EPS).",
+        "Mengutamakan yield awal di atas pertumbuhan dividen pada horizon 30 tahun.",
+        "Mengabaikan payout ratio berbasis arus kas bebas, yang lebih jujur daripada yang berbasis laba.",
+        "Menganggap rekor panjang menjamin keamanan — selalu nilai ulang bisnisnya."
+      ],
+      "tasks": [
+        {
+          "id": "s4-t1",
+          "title": "Baca “The Single Best Investment”",
+          "type": "reading",
+          "summary": "Artikulasi paling jelas atas filosofi dividend-growth: kualitas + yield + pertumbuhan.",
+          "whatYouGain": "Filosofi inti dividend-growth dalam satu tempat: beli kualitas, pada yield yang wajar, yang tumbuh — tulang punggung seluruh roadmap ini.",
+          "resources": [
+            {
+              "label": "The Single Best Investment — Lowell Miller",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/0965175081"]
+            }
+          ]
+        },
+        {
+          "id": "s4-t2",
+          "title": "Baca “The Ultimate Dividend Playbook”",
+          "type": "reading",
+          "summary": "Kerangka yang ketat dan praktis untuk mengevaluasi keamanan dan pertumbuhan dividen.",
+          "whatYouGain": "Kerangka yang ketat untuk memisahkan dividen yang aman dan tumbuh dari yang rapuh.",
+          "resources": [
+            {
+              "label": "The Ultimate Dividend Playbook — Josh Peters",
+              "kind": "Buku berbayar",
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/B08BZTZRC1"]
+            },
+            {
+              "label": "Surat pemegang saham Berkshire Hathaway",
+              "kind": "Surat pemegang saham",
+              "tier": "Essential",
+              "urls": ["https://www.berkshirehathaway.com/letters/letters.html"]
+            }
+          ]
+        },
+        {
+          "id": "s4-t3",
+          "title": "Hitung yield & payout ratio untuk 5 perusahaan",
+          "type": "exercise",
+          "summary": "Payout ratio berbasis laba maupun berbasis FCF di berbagai sektor.",
+          "whatYouGain": "Perhitungan persis di balik yield dan payout ratio, serta intuisi tentang seperti apa ‘normal’ di setiap sektor.",
+          "details": [
+            "Yield Dividen = Dividen Tahunan per Saham ÷ Harga Saham.",
+            "Payout Ratio = Dividen ÷ Laba Bersih; FCF Payout = Dividen ÷ Arus Kas Bebas.",
+            "Perhatikan bagaimana payout ratio ‘normal’ berbeda menurut sektor."
+          ]
+        },
+        {
+          "id": "s4-t4",
+          "title": "Bangun lembar kerja Pelacak Dividen",
+          "type": "exercise",
+          "summary": "Yield, yield on cost, payout ratio, rekor pertumbuhan, CAGR dividen 5 tahun, proyeksi pendapatan.",
+          "whatYouGain": "Pelacak dividen pribadi yang akan Anda pakai seumur hidup, mengubah data tersebar menjadi gambaran pendapatan yang jelas.",
+          "details": [
+            "Kolom: kode saham, jumlah saham, basis biaya, harga, dividen/saham, yield, yield on cost, payout ratio, FCF payout, rekor pertumbuhan, CAGR dividen 5 thn, proyeksi pendapatan tahunan.",
+            "Ini menjadi alat yang Anda pakai seumur hidup."
+          ],
+          "resources": [
+            {
+              "label": "Simply Safe Dividends — artikel edukatif",
+              "kind": "Situs web",
+              "tier": "Optional",
+              "urls": ["https://www.simplysafedividends.com/"]
+            }
+          ]
+        },
+        {
+          "id": "s4-t5",
+          "title": "Analisis arus kas untuk cakupan dividen",
+          "type": "exercise",
+          "summary": "Tampilkan 5 tahun arus kas bebas vs dividen yang dibayarkan untuk satu perusahaan.",
+          "whatYouGain": "Uji keamanan dividen yang paling jujur: apakah arus kas bebas dengan nyaman menutup pembayaran dividen.",
+          "details": [
+            "Apakah dividen tertutup dengan nyaman oleh kas? Apakah cakupannya cenderung makin aman atau makin berisiko?"
+          ]
+        },
+        {
+          "id": "s4-t6",
+          "title": "Lakukan latihan kenali-jebakan",
+          "type": "exercise",
+          "summary": "Temukan 3 saham dengan yield 8%+ dan diagnosis penyebabnya — tanpa membeli.",
+          "whatYouGain": "Radar jebakan — kemampuan melihat yield 8% yang menggiurkan dan mendiagnosis bahayanya sebelum dipotong.",
+          "details": [
+            "Apakah yield tinggi disebabkan harga yang turun menandakan kesulitan, atau pembayaran yang melebihi arus kas bebas?"
+          ]
+        },
+        {
+          "id": "s4-t7",
+          "title": "Tonggak: Kartu Skor Keamanan Dividen",
+          "type": "project",
+          "summary": "Beri skor 5 perusahaan di 3+ sektor pada lima dimensi keamanan dan peringkatkan.",
+          "whatYouGain": "Kartu skor yang dapat diulang untuk memeringkat keamanan dividen lintas perusahaan dan sektor, agar pilihan berbasis bukti, bukan harapan.",
+          "details": [
+            "Beri skor masing-masing 1–5, peringkatkan dari teraman ke paling berisiko, dan justifikasi nama teratas dan terbawah dalam satu paragraf masing-masing."
+          ],
+          "checklist": [
+            "Apakah FCF payout ratio nyaman untuk jenis bisnis ini?",
+            "Apakah neraca sehat, dengan interest coverage kuat?",
+            "Apakah model bisnis stabil/berulang ketimbang siklikal?",
+            "Apakah ada riwayat pertumbuhan dividen yang panjang dan tak terputus?",
+            "Apakah pendapatan dan arus kas bebas tumbuh, sehingga dividen bisa terus naik?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-5",
+      "index": "05",
+      "title": "Penilaian Bisnis",
+      "duration": "Bulan 7",
+      "summary": "Ketahui kira-kira apakah Anda membayar harga yang wajar, penuh, atau konyol. Konsep di atas matematika berat.",
+      "objectives": [
+        "Menafsirkan multiple: P/E, P/B, EV/EBITDA, PEG — dan keterbatasannya.",
+        "Memahami logika Dividend Discount Model dan Discounted Cash Flow.",
+        "Menggunakan margin keamanan sebagai jembatan antara nilai dan harga."
+      ],
+      "caseStudies": [
+        "Coca-Cola — bisnis hebat yang dibeli pada harga wajar dan ditahan selama berdekade; ‘wajar’ pun tetap punya batas atas.",
+        "Microsoft pada 2000 — bisnis hebat pada P/E ~60x tidak bergerak ke mana-mana selama lebih dari satu dekade. Harga selalu penting."
+      ],
+      "mistakes": [
+        "Presisi palsu — keluaran DCF ‘$147,32’ menyiratkan keyakinan yang tidak Anda miliki; berpikirlah dalam rentang.",
+        "Asumsi sampah-masuk yang direkayasa balik untuk membenarkan jawaban yang diinginkan.",
+        "Menggunakan multiple yang salah (P/B pada perusahaan merek; P/E pada siklikal saat laba puncak).",
+        "Mengira multiple rendah sama dengan murah — kadang ia secara tepat mencerminkan bisnis yang sekarat.",
+        "Membayar terlalu mahal untuk kualitas ‘karena ini bisnis terbaik’."
+      ],
+      "tasks": [
+        {
+          "id": "s5-t1",
+          "title": "Baca “The Five Rules for Successful Stock Investing”",
+          "type": "reading",
+          "summary": "Mengaitkan kualitas bisnis langsung dengan penilaian, tanpa matematika berat.",
+          "whatYouGain": "Intuisi untuk mengaitkan kualitas bisnis dengan harga yang masuk akal, tanpa tenggelam dalam lembar kerja.",
+          "resources": [
+            {
+              "label": "The Five Rules for Successful Stock Investing — Pat Dorsey",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/B000SEIYBK"]
+            }
+          ]
+        },
+        {
+          "id": "s5-t2",
+          "title": "Baca “The Little Book of Valuation”",
+          "type": "reading",
+          "summary": "Damodaran membuat DCF dan multiple menjadi intuitif; padukan dengan lembar kerja gratisnya.",
+          "whatYouGain": "Penguasaan praktis atas penilaian relatif maupun intrinsik, lengkap dengan alat gratis untuk melakukannya sendiri.",
+          "resources": [
+            {
+              "label": "The Little Book of Valuation — Aswath Damodaran",
+              "kind": "Buku berbayar",
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/1394244401"]
+            }
+          ]
+        },
+        {
+          "id": "s5-t3",
+          "title": "Bandingkan multiple di antara 3 pesaing",
+          "type": "exercise",
+          "summary": "P/E, P/B (jika relevan), EV/EBITDA, dan yield vs rata-rata 10 tahun setiap perusahaan.",
+          "whatYouGain": "Keterampilan menilai murah vs mahal terhadap sejarah perusahaan itu sendiri dan para pesaingnya — konteks, bukan sekadar multiple mentah.",
+          "details": [
+            "Siapa yang murah, wajar, atau mahal relatif terhadap sejarahnya sendiri — dan mengapa?"
+          ]
+        },
+        {
+          "id": "s5-t4",
+          "title": "Bangun Dividend Discount Model sederhana dan uji-tekan",
+          "type": "exercise",
+          "summary": "Nilai ≈ dividen berikutnya ÷ (imbal hasil disyaratkan − pertumbuhan). Ubah pertumbuhan ±1% dan lihat ayunannya.",
+          "whatYouGain": "Model penilaian sederhana untuk perusahaan yang tumbuh stabil, dan kerendahan hati yang sehat tentang betapa besar asumsi mengayunkan jawaban.",
+          "details": [
+            "Pelajarannya adalah kerendahan hati: perubahan asumsi kecil menggeser jawaban jauh. Hanya berlaku untuk perusahaan yang tumbuh stabil."
+          ]
+        },
+        {
+          "id": "s5-t5",
+          "title": "Bangun Discounted Cash Flow satu halaman",
+          "type": "exercise",
+          "summary": "Nilai sekarang dari arus kas bebas masa depan; pelajari mesinnya, lalu curigai DCF yang dipaksakan.",
+          "whatYouGain": "Pemahaman mesin DCF dari dalam — cukup untuk memakainya, dan cukup untuk mencurigai yang dipaksakan.",
+          "resources": [
+            {
+              "label": "Aswath Damodaran — lembar kerja penilaian",
+              "kind": "Situs web",
+              "tier": "Highly Recommended",
+              "urls": ["https://pages.stern.nyu.edu/~adamodar/"]
+            }
+          ]
+        },
+        {
+          "id": "s5-t6",
+          "title": "Tonggak: estimasi nilai wajar dua metode",
+          "type": "project",
+          "summary": "Satu penilaian relatif dan satu penilaian intrinsik, menghasilkan rentang dan harga beli bermargin keamanan.",
+          "whatYouGain": "Kemampuan menghasilkan rentang nilai wajar dan harga beli yang disiplin, yang Anda tunggu alih-alih dikejar.",
+          "details": [
+            "Akhiri dengan: dinilai wajar / kemahalan / kemurahan — dan harga beli yang akan Anda tunggu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-6",
+      "index": "06",
+      "title": "Manajemen Risiko & Makroekonomi",
+      "duration": "Bulan 8",
+      "summary": "Kenali risiko nyata (bukan volatilitas jangka pendek), pahami kekuatan makro yang menggerakkan saham dividen, dan bangun pertahanan perilaku.",
+      "objectives": [
+        "Memisahkan kehilangan modal permanen dari volatilitas sementara.",
+        "Memahami bagaimana suku bunga, inflasi, dan siklus memengaruhi saham dividen.",
+        "Membela diri dari bias Anda sendiri dengan proses tertulis dan otomatisasi."
+      ],
+      "caseStudies": [
+        "JPMorgan Chase — risiko siklikal/keuangan: dividen kuat saat baik, kerentanan nyata dalam krisis dan terhadap regulasi.",
+        "Kisah peringatan erosi moat (mis. Kodak atau GE) — nama terkenal dan rekor panjang tidak mencegah kerugian permanen."
+      ],
+      "mistakes": [
+        "Menyamakan volatilitas dengan risiko — bisnis tahan lama yang volatil lebih aman daripada bisnis tampak stabil yang melapuk.",
+        "Menjadi peramal makro dan utak-atik berdasarkan prediksi suku bunga.",
+        "Meremehkan perilaku Anda sendiri dalam kepanikan dan euforia.",
+        "Mengira ‘blue chip’ berarti ‘aman selamanya’."
+      ],
+      "tasks": [
+        {
+          "id": "s6-t1",
+          "title": "Baca “The Most Important Thing”",
+          "type": "reading",
+          "summary": "Buku paling dalam yang mudah diakses tentang risiko, siklus, dan pemikiran tingkat-kedua.",
+          "whatYouGain": "Definisi risiko yang lebih dalam — kehilangan permanen, bukan volatilitas — dan pemikiran tingkat-kedua yang melihat apa yang dilewatkan orang banyak.",
+          "resources": [
+            {
+              "label": "The Most Important Thing — Howard Marks",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/9353022797"]
+            },
+            {
+              "label": "Memo Oaktree — Howard Marks",
+              "kind": "Situs web",
+              "tier": "Essential",
+              "urls": ["https://www.oaktreecapital.com/insights/memos"]
+            }
+          ]
+        },
+        {
+          "id": "s6-t2",
+          "title": "Baca bagian kunci “Thinking, Fast and Slow”",
+          "type": "reading",
+          "summary": "Ilmu tentang bias kognitif yang menghancurkan investor.",
+          "whatYouGain": "Nama-nama untuk bias kognitif yang diam-diam menyabotase investor: langkah pertama untuk membela diri dari otak Anda sendiri.",
+          "resources": [
+            {
+              "label": "Thinking, Fast and Slow — Daniel Kahneman",
+              "kind": "Buku berbayar",
+              "tier": "Highly Recommended",
+              "urls": ["https://www.amazon.com/dp/0374533555"]
+            }
+          ]
+        },
+        {
+          "id": "s6-t3",
+          "title": "Lakukan latihan pengategorian risiko",
+          "type": "exercise",
+          "summary": "Untuk satu kepemilikan, daftar setiap cara ia bisa menjadi kerugian permanen vs penurunan sementara.",
+          "whatYouGain": "Pemisahan jelas antara penurunan harga sementara dan kehilangan modal yang nyata dan permanen — satu-satunya risiko yang penting dalam jangka panjang.",
+          "details": [
+            "Kehilangan permanen adalah satu-satunya risiko yang penting dalam jangka panjang. Pisahkan dengan jelas dari volatilitas."
+          ]
+        },
+        {
+          "id": "s6-t4",
+          "title": "Analisis sensitivitas suku bunga",
+          "type": "exercise",
+          "summary": "Jelaskan bagaimana kenaikan suku bunga akan memengaruhi utilitas, REIT, bank, dan barang konsumsi pokok — dan mengapa.",
+          "whatYouGain": "Pemahaman tentang bagaimana suku bunga menggerakkan sektor dividen yang berbeda, sehingga berita suku bunga menjadi terbaca, bukan menakutkan.",
+          "details": [
+            "Suku bunga adalah gravitasi dari semua harga aset dan menaikkan biaya pinjaman bagi perusahaan yang banyak utang."
+          ]
+        },
+        {
+          "id": "s6-t5",
+          "title": "Lakukan audit-diri perilaku",
+          "type": "exercise",
+          "summary": "Tinjau ulang rencana reaksi anjlok Anda; jujurlah tentang perasaan Anda pada penurunan terakhir.",
+          "whatYouGain": "Pembacaan jujur atas perilaku Anda sendiri di bawah tekanan, dan aturan tertulis yang lebih kuat untuk mengatur penurunan berikutnya.",
+          "details": [
+            "Perkuat aturan tertulis Anda agar proses, bukan emosi, yang mengatur penurunan Anda berikutnya."
+          ]
+        },
+        {
+          "id": "s6-t6",
+          "title": "Tonggak: pre-mortem atas saham “aman”",
+          "type": "project",
+          "summary": "Bayangkan kepemilikan kesayangan gagal dalam 10 tahun dan tuliskan apa yang salah.",
+          "whatYouGain": "Imunisasi terhadap percaya diri berlebihan — berlatih membantah kepemilikan favorit Anda sendiri sebelum pasar melakukannya.",
+          "details": [
+            "Membantah favorit Anda sendiri adalah imunisasi terbaik terhadap percaya diri berlebihan."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-7",
+      "index": "07",
+      "title": "Konstruksi Portofolio",
+      "duration": "Bulan 9",
+      "summary": "Rakit kepemilikan menjadi portofolio yang tangguh, terdiversifikasi, dan tumbuh pendapatannya dengan aturan yang jelas.",
+      "objectives": [
+        "Mendiversifikasi lintas sektor dan geografi tanpa mengencerkan menjadi medioker.",
+        "Menetapkan aturan ukuran posisi, reinvestasi (DRIP), penyeimbangan ulang, dan penjualan.",
+        "Menyeimbangkan pendapatan saat ini terhadap pertumbuhan dividen masa depan."
+      ],
+      "caseStudies": [
+        "Apple — dividen sederhana ditambah pembelian kembali saham yang sangat besar; contoh buku teks untuk shareholder yield dan alokasi modal.",
+        "Sebuah portofolio model penuh — rakit perusahaan studi kasus dan temukan celah sektor dan geografis."
+      ],
+      "mistakes": [
+        "Terlalu mendiversifikasi menjadi indeks terselubung berisi nama yang tak bisa Anda ikuti, atau kurang diversifikasi menjadi taruhan yang berkorelasi.",
+        "Membiarkan satu sektor mendominasi (mis. semua REIT dan utilitas berimbal-hasil tinggi).",
+        "Mengejar yield di level portofolio, menyeret naik risiko.",
+        "Menjual karena alasan yang salah — bereaksi pada harga, bukan pada bisnis.",
+        "Berdagang dan menyeimbangkan ulang berlebihan, menanggung pajak dan mengganggu penggandaan."
+      ],
+      "tasks": [
+        {
+          "id": "s7-t1",
+          "title": "Tinjau ulang bab portofolio “The Single Best Investment”",
+          "type": "reading",
+          "summary": "Panduan level portofolio untuk membangun mesin dividend-growth.",
+          "whatYouGain": "Pemikiran level portofolio: bagaimana masing-masing pilihan baik berpadu menjadi mesin pendapatan yang tangguh.",
+          "resources": [
+            {
+              "label": "The Single Best Investment — Lowell Miller",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/0965175081"]
+            }
+          ]
+        },
+        {
+          "id": "s7-t2",
+          "title": "Pelajari wiki Bogleheads",
+          "type": "reading",
+          "summary": "Materi abadi tanpa jargon tentang alokasi, penempatan akun, dan perilaku.",
+          "whatYouGain": "Prinsip abadi tanpa jargon tentang alokasi, penempatan akun, dan bertahan pada rencana.",
+          "resources": [
+            {
+              "label": "Wiki Bogleheads",
+              "kind": "Situs web",
+              "tier": "Highly Recommended",
+              "urls": ["https://www.bogleheads.org/wiki/Main_Page"]
+            }
+          ]
+        },
+        {
+          "id": "s7-t3",
+          "title": "Lakukan latihan pemetaan sektor",
+          "type": "exercise",
+          "summary": "Petakan 15–20 pembayar dividen berkualitas ke sektor; temukan konsentrasi berlebih dan celah.",
+          "whatYouGain": "Peta paparan sektor Anda yang mengungkap konsentrasi berlebih dan celah tersembunyi sebelum melukai Anda.",
+          "details": [
+            "Sebarkan secara sengaja ke barang konsumsi pokok, kesehatan, utilitas, keuangan, teknologi, dan REIT."
+          ]
+        },
+        {
+          "id": "s7-t4",
+          "title": "Rancang model ukuran posisi",
+          "type": "exercise",
+          "summary": "Bobot target dengan batas per-saham (~5–8%) dan batas per-sektor.",
+          "whatYouGain": "Aturan masuk akal tentang seberapa besar setiap posisi dan sektor boleh tumbuh — diversifikasi tanpa mengencerkan menjadi medioker.",
+          "details": [
+            "Hitung proyeksi yield gabungan dan tingkat pertumbuhan dividen tertimbang."
+          ]
+        },
+        {
+          "id": "s7-t5",
+          "title": "Proyeksikan skenario reinvestasi",
+          "type": "exercise",
+          "summary": "Modelkan 25 tahun dengan dividen diinvestasikan ulang dan tumbuh vs tanpa reinvestasi.",
+          "whatYouGain": "Angka konkret tentang roda gila reinvestasi, mengukur persis apa yang ditambahkan dividen yang diinvestasikan ulang selama berdekade.",
+          "details": [
+            "Kuantifikasi selisihnya. Roda gila dividen-membeli-saham-yang-membayar-dividen adalah tempat kekayaan dibangun."
+          ]
+        },
+        {
+          "id": "s7-t6",
+          "title": "Tulis aturan jual Anda",
+          "type": "exercise",
+          "summary": "Daftar bernomor yang akan Anda ikuti di bawah tekanan.",
+          "whatYouGain": "Daftar periksa jual yang sudah disepakati di muka, yang membiarkan proses, bukan kepanikan, memutuskan kapan Anda keluar.",
+          "checklist": [
+            "Jual ketika tesis awal patah (erosi moat, keuangan yang memburuk).",
+            "Jual ketika dividen dipotong atau keamanannya runtuh.",
+            "Jual ketika sangat kemahalan dengan penggunaan modal yang jelas lebih baik.",
+            "JANGAN jual karena harga turun dan tidak ada hal lain yang berubah.",
+            "JANGAN jual karena bosan, berita menakutkan, atau bisikan panas di tempat lain."
+          ]
+        },
+        {
+          "id": "s7-t7",
+          "title": "Tonggak: bangun portofolio model dividend-growth",
+          "type": "project",
+          "summary": "15–25 kepemilikan dengan bobot, batas, proyeksi yield dan pertumbuhan, plus kebijakan reinvestasi dan penyeimbangan ulang.",
+          "whatYouGain": "Portofolio model lengkap — gladi resik penuh untuk mengelola uang nyata dengan aturan nyata.",
+          "details": [
+            "Lampirkan daftar periksa aturan jual Anda. Ini adalah simulasi dari yang sesungguhnya."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-8",
+      "index": "08",
+      "title": "Analisis Mandiri & Kerangka Anda",
+      "duration": "Bulan 10",
+      "summary": "Padukan semuanya menjadi satu proses yang dapat diulang, lalu hasilkan laporan setingkat keputusan secara mandiri.",
+      "objectives": [
+        "Menjalankan satu alur kerja yang dapat diulang pada saham mana pun dari nol.",
+        "Menghasilkan laporan investasi lengkap secara mandiri.",
+        "Mengodifikasi filosofi investasi pribadi Anda."
+      ],
+      "mistakes": [
+        "Melewatkan sumber primer — baca sendiri 10-K dan surat pemegang saham.",
+        "Mencapai keputusan tanpa menuliskan satu alasan terpenting di baliknya.",
+        "Menganggap kerangka itu tetap — tinjau dan sempurnakan setiap tahun."
+      ],
+      "tasks": [
+        {
+          "id": "s8-t1",
+          "title": "Tinjau ulang “The Essays of Warren Buffett”",
+          "type": "reading",
+          "summary": "Baca lagi bagian alokasi modal — terasa berbeda sekarang.",
+          "whatYouGain": "Pembacaan kedua yang lebih bijak atas pemikiran alokasi modal Buffett, yang kini terbaca berbeda setelah Anda punya perkakasnya.",
+          "resources": [
+            {
+              "label": "The Essays of Warren Buffett — ed. Lawrence Cunningham",
+              "kind": "Buku berbayar",
+              "tier": "Essential",
+              "urls": ["https://www.amazon.com/dp/1118821157"]
+            }
+          ]
+        },
+        {
+          "id": "s8-t2",
+          "title": "Baca 10-K dan surat pemegang saham secara lengkap",
+          "type": "exercise",
+          "summary": "Kebiasaan yang memisahkan investor mandiri dari pengikut bisikan.",
+          "whatYouGain": "Kebiasaan yang mendefinisikan investor mandiri: membaca sendiri sumber primer alih-alih mengikuti bisikan.",
+          "details": [
+            "Lakukan ini untuk setiap perusahaan yang Anda pertimbangkan serius. Catat tentang moat, alokasi modal, dan risiko."
+          ]
+        },
+        {
+          "id": "s8-t3",
+          "title": "Internalisasi daftar periksa analisis saham mandiri",
+          "type": "concept",
+          "summary": "Gunakan ini untuk setiap saham, setiap kali. ‘Tidak’ atau ‘saya tak bisa pastikan’ pun adalah jawaban.",
+          "whatYouGain": "Satu daftar periksa yang dapat diulang yang bisa Anda jalankan pada saham mana pun, selamanya — mesin analitis pribadi Anda.",
+          "checklist": [
+            "Kualitas bisnis: bisakah saya menjelaskan cara ia menghasilkan uang dalam 3 kalimat lugas, dalam batas kompetensi saya?",
+            "Moat: jenis dan lebar apa, dan apakah melebar atau terkikis? Daya penetapan harga?",
+            "Manajemen: alokasi modal masuk akal, dividen diperlakukan sebagai komitmen, jujur kepada pemilik?",
+            "Kesehatan keuangan: tren 5–10 thn pendapatan, margin, ROIC, FCF; utang terkendali; kualitas laba baik?",
+            "Keberlanjutan dividen: FCF payout nyaman (AFFO untuk REIT); rekor pertumbuhan; tanpa sinyal jebakan?",
+            "Penilaian: multiple vs sejarah dan pesaing; estimasi intrinsik sebagai rentang; margin keamanan hari ini?",
+            "Risiko: 3 jalur teratas menuju kehilangan permanen; sensitivitas suku bunga dan siklus; risiko disrupsi?",
+            "Prospek pertumbuhan: dari mana pertumbuhan masa depan berasal, dan seberapa panjang landasannya?",
+            "Estimasi nilai wajar: rentang konservatif, dan harga beli saya dengan margin keamanan.",
+            "Keputusan: Beli, Tahan, atau Hindari — dan satu alasan terpentingnya."
+          ]
+        },
+        {
+          "id": "s8-t4",
+          "title": "Tulis Kerangka Investasi Pribadi Anda",
+          "type": "project",
+          "summary": "Satu sampai dua halaman: filosofi, apa yang Anda beli, berapa yang Anda bayar, ukuran posisi, aturan jual, perilaku, rutinitas.",
+          "whatYouGain": "Kerangka investasi tertulis Anda: perbedaan antara memiliki beberapa saham dividen dan memiliki proses yang menggandakan selama 40 tahun.",
+          "details": [
+            "Inilah keluaran akhir yang sesungguhnya — perbedaan antara memiliki beberapa saham dividen dan memiliki proses yang menggandakan selama 40 tahun."
+          ]
+        },
+        {
+          "id": "s8-t5",
+          "title": "Capstone: laporan investasi tiga saham",
+          "type": "project",
+          "summary": "Analisis tiga saham dividen nyata dari tiga sektor dan justifikasi Beli / Tahan / Hindari untuk masing-masing.",
+          "whatYouGain": "Bukti bahwa Anda bisa melakukannya sendiri — tiga analisis penuh setingkat keputusan dan keyakinan bahwa Anda tak lagi butuh bisikan saham siapa pun.",
+          "details": [
+            "Tiga perusahaan, tiga sektor berbeda (mis. barang konsumsi pokok, REIT atau utilitas, perusahaan keuangan atau teknologi yang tumbuh).",
+            "Bekerja dari sumber primer: baca 10-K dan surat pemegang saham terbaru masing-masing; ambil sendiri datanya.",
+            "Untuk masing-masing, laporan 2–4 halaman yang menjalankan seluruh daftar periksa: bisnis & moat, keuangan 5–10 thn, keamanan dividen, penilaian dua metode dengan harga beli, 3 risiko teratas dan pre-mortem, serta Beli/Tahan/Hindari yang berdasar.",
+            "Tutup dengan catatan portofolio setengah halaman: bagaimana ketiganya cocok bersama, dan mana yang akan Anda tindaki lebih dulu."
+          ]
+        }
+      ]
+    }
+  ]
+}

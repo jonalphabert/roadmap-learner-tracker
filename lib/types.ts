@@ -52,7 +52,10 @@ export interface Roadmap {
 export interface RoadmapSummary {
   slug: string;
   title: string;
+  /** Stable English category key, used for grouping/anchors. */
   category: string;
+  /** Localized category label, for display and search. */
+  categoryLabel: string;
   tagline: string;
   difficulty: Roadmap["difficulty"];
   duration: string;
@@ -62,6 +65,9 @@ export interface RoadmapSummary {
 }
 
 export interface CategoryGroup {
+  /** Stable English key, used for the section anchor and ordering. */
+  key: string;
+  /** Localized display name. */
   name: string;
   blurb: string;
   roadmaps: RoadmapSummary[];

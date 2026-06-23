@@ -6,6 +6,7 @@ import { Award, X } from "lucide-react";
 
 import { fireConfetti } from "@/lib/confetti";
 import { Button } from "@/components/ui/button";
+import { useDictionary } from "@/lib/i18n/use-lang";
 
 interface CelebrationModalProps {
   open: boolean;
@@ -20,6 +21,7 @@ export function CelebrationModal({
   title,
   message,
 }: CelebrationModalProps) {
+  const { t } = useDictionary();
   useEffect(() => {
     if (!open) return;
     // A first burst, then a couple of follow-ups from the sides.
@@ -54,11 +56,11 @@ export function CelebrationModal({
             {message}
           </Dialog.Description>
           <Button onClick={onClose} className="mt-6 w-full" size="lg">
-            Keep going
+            {t.celebration.keepGoing}
           </Button>
           <Dialog.Close className="absolute right-4 top-4 rounded-md p-1 text-muted-foreground opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring">
             <X className="h-4 w-4" />
-            <span className="sr-only">Close</span>
+            <span className="sr-only">{t.celebration.close}</span>
           </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>
