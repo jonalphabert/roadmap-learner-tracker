@@ -1,18 +1,18 @@
 import type { Roadmap, RoadmapSummary, CategoryGroup } from "@/lib/types";
-import { asLocale, defaultLocale, type Locale } from "@/lib/i18n/config";
+import { asLocale, defaultLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getDictionary, type Dictionary } from "@/lib/i18n/dictionaries";
-import dividendEn from "./dividend-investing.en.json";
-import dividendId from "./dividend-investing.id.json";
+import dividend from "./dividend-investing";
+import dsa from "./dsa-roadmap";
 
-// Per-locale roadmap content. A locale only needs entries for the roadmaps it
-// translates; anything missing falls back to the default-locale version below.
-const roadmapsByLocale: Record<Locale, Roadmap[]> = {
-  en: [dividendEn as Roadmap],
-  id: [dividendId as Roadmap],
-};
+const catalog: Partial<Record<Locale, Roadmap>>[] = [dividend, dsa];
 
-// Default-locale list is canonical: it defines which roadmaps exist and their
-// order. Translations swap in per slug; untranslated ones fall back to default.
+const roadmapsByLocale = Object.fromEntries(
+  locales.map((lang) => [
+    lang,
+    catalog.map((r) => r[lang]).filter((r): r is Roadmap => Boolean(r)),
+  ]),
+) as Record<Locale, Roadmap[]>;
+
 function localeRoadmaps(lang: Locale): Roadmap[] {
   const canonical = roadmapsByLocale[defaultLocale];
   const bySlug = new Map((roadmapsByLocale[lang] ?? []).map((r) => [r.slug, r]));
@@ -50,9 +50,6 @@ function toSummary(roadmap: Roadmap, dict: Dictionary): RoadmapSummary {
   };
 }
 
-// Planned roadmaps render as locked "Planned" cards. Their stable metadata
-// lives here; the display copy (title/tagline) comes from the dictionary so it
-// localizes with the rest of the catalog.
 const plannedMeta: {
   slug: string;
   category: string;
@@ -82,7 +79,7 @@ function plannedSummaries(dict: Dictionary): RoadmapSummary[] {
   });
 }
 
-const categoryOrder = ["Finance", "Development", "Design"];
+const categoryOrder = ["Finance", "Programming", "Development", "Design"];
 
 export function getCategoryGroups(lang: string): CategoryGroup[] {
   const dict = getDictionary(lang);

@@ -78,9 +78,11 @@ map of `slug → [completed task ids]`. Reset per-roadmap from the progress card
 
 ## Data model — roadmaps are JSON
 
-Each roadmap is a JSON file in `data/roadmaps/`, one file **per locale**. The
-dividend roadmap lives at `data/roadmaps/dividend-investing.en.json` and
-`dividend-investing.id.json`. Shape (see `lib/types.ts` for the full types):
+Each roadmap lives in its own folder under `data/roadmaps/`, with one JSON file
+**per locale** inside it. The dividend roadmap lives at
+`data/roadmaps/dividend-investing/dividend-investing.en.json` and
+`dividend-investing/dividend-investing.id.json`. Shape (see `lib/types.ts` for
+the full types):
 
 ```jsonc
 {
@@ -123,23 +125,42 @@ dividend roadmap lives at `data/roadmaps/dividend-investing.en.json` and
 
 ### Add a new roadmap
 
-1. Create `data/roadmaps/your-roadmap.en.json` using the shape above (start from
+1. Create a folder `data/roadmaps/your-roadmap/` and add
+   `your-roadmap.en.json` inside it using the shape above (start from
    `_template.json`). Keep every `id` unique within the file — task ids are what
    get stored as progress, and they must match across locales so progress carries
    over when the language is switched.
-2. Add any translations as `your-roadmap.<locale>.json`. A locale only needs
-   files for the roadmaps it translates; anything missing falls back to the
-   default-locale (`en`) version.
-3. Register it in `data/roadmaps/index.ts` under the matching locale:
+2. Add any translations as `your-roadmap/your-roadmap.<locale>.json`. A locale
+   only needs files for the roadmaps it translates; anything missing falls back
+   to the default-locale (`en`) version.
+3. Add an `index.ts` to the folder that bundles its locales (the default locale
+   is required, others optional):
 
    ```ts
-   import yourRoadmapEn from "./your-roadmap.en.json";
+   import type { Locale } from "@/lib/i18n/config";
+   import type { Roadmap } from "@/lib/types";
+   import en from "./your-roadmap.en.json";
+   import id from "./your-roadmap.id.json";
 
-   const roadmapsByLocale: Record<Locale, Roadmap[]> = {
-     en: [dividendEn, yourRoadmapEn as Roadmap],
-     id: [dividendId],
+   const roadmap: Partial<Record<Locale, Roadmap>> = {
+     en: en as Roadmap,
+     id: id as Roadmap,
    };
+   export default roadmap;
    ```
+
+4. Register it in `data/roadmaps/index.ts` by importing the folder and adding it
+   to the `catalog` array (its position sets the order within its category):
+
+   ```ts
+   import yourRoadmap from "./your-roadmap";
+
+   const catalog: Partial<Record<Locale, Roadmap>>[] = [dividend, dsa, yourRoadmap];
+   ```
+
+   If the roadmap uses a new `category`, add that category's display name and
+   blurb to each dictionary in `lib/i18n/dictionaries/` and, optionally, slot it
+   into `categoryOrder` in `index.ts`.
 
 That's it — it appears on the dashboard under its category, gets its own
 `/[lang]/roadmap/your-roadmap` page, and is included in static generation
@@ -217,7 +238,7 @@ lib/
   confetti.ts                dependency-free canvas confetti
   i18n/                      locale config, dictionaries, helpers
   types.ts, utils.ts
-data/roadmaps/               The "database": per-locale JSON per roadmap + index.ts
+data/roadmaps/               The "database": one folder per roadmap (per-locale JSON) + index.ts
 middleware.ts                Locale routing
 public/
   brand/                     Favicon, logo, and icon set

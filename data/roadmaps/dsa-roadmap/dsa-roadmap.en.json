@@ -1,0 +1,816 @@
+{
+  "slug": "mastering-dsa-for-programming",
+  "title": "Mastering Data Structures & Algorithms",
+  "category": "Programming",
+  "tagline": "Go from zero to confidently solving any interview-grade DSA problem.",
+  "description": "A complete, problem-first path through Data Structures and Algorithms for programmers preparing for technical interviews, competitive programming, or just deeper engineering skill. Every stage pairs a concept with an interactive VisuAlgo animation, written references (cp-algorithms, GeeksforGeeks, NeetCode), and a hand-picked set of LeetCode problems so you learn the idea and immediately drill it. Work top to bottom — each stage assumes the previous ones.",
+  "difficulty": "Beginner",
+  "duration": "10 months",
+  "outcome": "You can recognize the right data structure or algorithm for an unfamiliar problem, implement it correctly from scratch, reason about its time and space complexity, and solve medium-to-hard LeetCode problems under time pressure.",
+  "stages": [
+    {
+      "id": "stage-1",
+      "index": "01",
+      "title": "Foundations: Complexity & Problem-Solving",
+      "duration": "Month 1",
+      "summary": "Before touching any structure, you learn to measure how good a solution is. This stage builds the Big-O mindset and the habit of analyzing time and space — the lens you'll use for everything that follows.",
+      "objectives": [
+        "Express the time and space complexity of any loop, recursion, or built-in operation in Big-O notation.",
+        "Compare two solutions and explain which scales better and why.",
+        "Set up a clean coding workflow in one language (Python, Java, C++, or JavaScript)."
+      ],
+      "mistakes": [
+        "Memorizing Big-O of common operations without understanding where the cost comes from.",
+        "Optimizing constants instead of the asymptotic order of growth.",
+        "Skipping complexity analysis and jumping straight to code."
+      ],
+      "tasks": [
+        {
+          "id": "s1-t1",
+          "title": "Learn asymptotic analysis and Big-O notation",
+          "type": "reading",
+          "summary": "Understand order of growth, Big-O / Theta / Omega, and how to count operations.",
+          "whatYouGain": "A precise vocabulary for 'how fast' and 'how much memory' that you'll apply to every problem for the rest of the roadmap.",
+          "details": [
+            "Read the analysis section end to end and re-derive each example yourself.",
+            "Memorize the cost of common operations: array index, hash lookup, sort, append.",
+            "Practice writing the Big-O of nested loops and simple recursions by hand."
+          ],
+          "resources": [
+            {
+              "label": "Analysis of Algorithms — GeeksforGeeks",
+              "kind": "Article",
+              "tier": "Essential",
+              "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"]
+            },
+            {
+              "label": "Complexity / asymptotics primer — cp-algorithms",
+              "kind": "Reference",
+              "tier": "Highly Recommended",
+              "urls": ["https://cp-algorithms.com/index.html"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t2",
+          "title": "Set up your language and a daily practice loop",
+          "type": "exercise",
+          "summary": "Pick one language, set up a LeetCode account, and establish a repeatable solve-review rhythm.",
+          "whatYouGain": "A frictionless environment so the only thing you spend energy on is thinking, not tooling.",
+          "details": [
+            "Choose ONE language and stick with it for the whole roadmap.",
+            "Create a LeetCode account and bookmark the LeetCode 75 study plan as your warm-up track.",
+            "Write a tiny template (read input, call function, print output) you can reuse."
+          ],
+          "resources": [
+            {
+              "label": "LeetCode 75 — guided study plan",
+              "kind": "Free course",
+              "tier": "Highly Recommended",
+              "urls": ["https://leetcode.com/studyplan/leetcode-75/"]
+            },
+            {
+              "label": "NeetCode Roadmap — visual topic order",
+              "kind": "Website",
+              "tier": "Highly Recommended",
+              "urls": ["https://neetcode.io/roadmap"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t3",
+          "title": "Warm-up problem set",
+          "type": "exercise",
+          "summary": "Solve five gentle problems to lock in the workflow and start the analysis habit.",
+          "whatYouGain": "Confidence that your setup works and a first taste of stating complexity before and after coding.",
+          "details": [
+            "For each problem, write the brute-force Big-O first, then your final Big-O.",
+            "Re-read the editorial even when you pass — note one idea you didn't think of."
+          ],
+          "resources": [
+            { "label": "Two Sum", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/two-sum/"] },
+            { "label": "Best Time to Buy and Sell Stock", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"] },
+            { "label": "Contains Duplicate", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/contains-duplicate/"] },
+            { "label": "Valid Anagram", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/valid-anagram/"] },
+            { "label": "Plus One", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/plus-one/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "index": "02",
+      "title": "Arrays, Strings, Two Pointers & Sliding Window",
+      "duration": "Month 2",
+      "summary": "Arrays are the substrate of almost every problem. Here you master the two highest-leverage array techniques — two pointers and sliding window — plus prefix sums, which turn many O(n^2) ideas into O(n).",
+      "objectives": [
+        "Solve subarray and substring problems with sliding windows in linear time.",
+        "Use two pointers to scan sorted data and partition arrays in place.",
+        "Apply prefix sums to answer range-sum queries instantly."
+      ],
+      "caseStudies": [
+        "Sliding window converts 'longest substring without repeats' from a nested-loop scan into a single pass — the canonical efficiency win."
+      ],
+      "mistakes": [
+        "Forgetting to shrink the window when a constraint breaks.",
+        "Off-by-one errors at window or pointer boundaries.",
+        "Reaching for extra arrays when two indices would do."
+      ],
+      "tasks": [
+        {
+          "id": "s2-t1",
+          "title": "Array fundamentals and visualization",
+          "type": "reading",
+          "summary": "Review how arrays store data contiguously and watch operations animate.",
+          "whatYouGain": "An intuition for why indexing is O(1) and insertion in the middle is O(n).",
+          "details": [
+            "Play with the VisuAlgo Array module to see access, insert, and remove costs.",
+            "Read the GeeksforGeeks array guide for language-specific gotchas."
+          ],
+          "resources": [
+            { "label": "Array — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/array"] },
+            { "label": "Array Data Structure — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s2-t2",
+          "title": "Learn two pointers, sliding window, and prefix sums",
+          "type": "concept",
+          "summary": "The three patterns that solve most array and string problems efficiently.",
+          "whatYouGain": "A reusable mental checklist: when you see 'subarray', 'substring', or 'sorted', you'll know which pattern to try first."
+        },
+        {
+          "id": "s2-t3",
+          "title": "Two-pointer and sliding-window problem set",
+          "type": "exercise",
+          "summary": "Drill the patterns until the window-management code becomes automatic.",
+          "whatYouGain": "Fluency in linear-time scanning — the technique you'll reuse constantly.",
+          "details": [
+            "Name the pattern out loud before coding each one.",
+            "Track your window's invariant in a comment as you write it."
+          ],
+          "resources": [
+            { "label": "Valid Palindrome", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/valid-palindrome/"] },
+            { "label": "3Sum", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/3sum/"] },
+            { "label": "Container With Most Water", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/container-with-most-water/"] },
+            { "label": "Longest Substring Without Repeating Characters", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/longest-substring-without-repeating-characters/"] },
+            { "label": "Maximum Subarray (Kadane)", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/maximum-subarray/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-3",
+      "index": "03",
+      "title": "Hashing & Hash Tables",
+      "duration": "Month 2-3",
+      "summary": "Hash maps and sets trade memory for near-constant lookups, collapsing many quadratic solutions to linear. You learn how hashing works under the hood and when O(1) average is and isn't true.",
+      "objectives": [
+        "Use hash maps and sets to deduplicate, count, and index data in O(1) average time.",
+        "Explain collision handling (chaining vs open addressing) at a high level.",
+        "Recognize the 'hash it to look it up later' pattern across problem types."
+      ],
+      "mistakes": [
+        "Assuming O(1) worst case — adversarial keys can degrade hashing.",
+        "Using a hash map when a frequency array or two pointers is simpler.",
+        "Mutating keys after insertion."
+      ],
+      "tasks": [
+        {
+          "id": "s3-t1",
+          "title": "How hash tables work",
+          "type": "reading",
+          "summary": "See hashing, load factor, and collision resolution animated, then read the theory.",
+          "whatYouGain": "A clear model of why hashing is fast on average and how it can break down.",
+          "details": [
+            "Use the VisuAlgo Hash Table module to watch linear/quadratic probing resolve collisions.",
+            "Read the GeeksforGeeks hashing section for the chaining-vs-probing trade-offs."
+          ],
+          "resources": [
+            { "label": "Hash Table — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/hashtable"] },
+            { "label": "Hashing — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s3-t2",
+          "title": "Hash map / hash set problem set",
+          "type": "exercise",
+          "summary": "Solve five problems where a map or set is the unlock.",
+          "whatYouGain": "The reflex to ask 'what if I'd already seen this value?' — the heart of hashing problems.",
+          "resources": [
+            { "label": "Group Anagrams", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/group-anagrams/"] },
+            { "label": "Top K Frequent Elements", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/top-k-frequent-elements/"] },
+            { "label": "Longest Consecutive Sequence", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/longest-consecutive-sequence/"] },
+            { "label": "Two Sum II - Input Array Is Sorted", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"] },
+            { "label": "Subarray Sum Equals K", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/subarray-sum-equals-k/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "index": "04",
+      "title": "Linked Lists",
+      "duration": "Month 3",
+      "summary": "Pointers made visible. Linked lists teach you to manipulate references carefully — the fast/slow pointer trick, in-place reversal, and cycle detection are interview staples built here.",
+      "objectives": [
+        "Reverse, merge, and reorder linked lists in place.",
+        "Detect and locate cycles with Floyd's fast/slow pointers.",
+        "Use a dummy head node to simplify edge cases."
+      ],
+      "mistakes": [
+        "Losing the rest of the list by reassigning a next pointer too early.",
+        "Not handling empty lists or single-node lists.",
+        "Forgetting to advance pointers, causing infinite loops."
+      ],
+      "tasks": [
+        {
+          "id": "s4-t1",
+          "title": "Linked list mechanics, visualized",
+          "type": "reading",
+          "summary": "Watch singly, doubly, and circular lists update as nodes are inserted and removed.",
+          "whatYouGain": "A concrete picture of nodes and pointers so reference juggling stops feeling abstract.",
+          "details": [
+            "Step through insert/delete on the VisuAlgo Linked List module.",
+            "Note how a dummy/sentinel node removes special cases."
+          ],
+          "resources": [
+            { "label": "Linked List — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/list"] },
+            { "label": "Linked List — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s4-t2",
+          "title": "Linked list problem set",
+          "type": "exercise",
+          "summary": "Five problems covering reversal, merging, cycles, and reordering.",
+          "whatYouGain": "Steady hands with pointers and mastery of the fast/slow technique.",
+          "details": [
+            "Draw the list on paper before coding each pointer move.",
+            "Test on empty, one-node, and two-node inputs."
+          ],
+          "resources": [
+            { "label": "Reverse Linked List", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/reverse-linked-list/"] },
+            { "label": "Merge Two Sorted Lists", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/merge-two-sorted-lists/"] },
+            { "label": "Linked List Cycle", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/linked-list-cycle/"] },
+            { "label": "Remove Nth Node From End of List", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/remove-nth-node-from-end-of-list/"] },
+            { "label": "Reorder List", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/reorder-list/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-5",
+      "index": "05",
+      "title": "Stacks & Queues",
+      "duration": "Month 4",
+      "summary": "Two simple structures with outsized power. Stacks unlock monotonic-stack and parsing problems; queues (and deques) power BFS and sliding-window maxima later on.",
+      "objectives": [
+        "Use a stack for matching, parsing, and 'next greater element' problems.",
+        "Apply the monotonic stack pattern.",
+        "Understand queue/deque behavior for BFS and windowed extremes."
+      ],
+      "mistakes": [
+        "Popping from an empty stack without a guard.",
+        "Confusing when to push the index versus the value.",
+        "Using a list as a queue with O(n) pops from the front."
+      ],
+      "tasks": [
+        {
+          "id": "s5-t1",
+          "title": "Stack and queue behavior",
+          "type": "reading",
+          "summary": "Review LIFO/FIFO semantics and the deque, using the linked-list module's stack/queue views.",
+          "whatYouGain": "Clarity on which end you push and pop, and why deques matter for windows.",
+          "resources": [
+            { "label": "Stack/Queue (via Linked List) — VisuAlgo", "kind": "Visualization", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/list"] },
+            { "label": "Stack & Queue — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s5-t2",
+          "title": "Learn the monotonic stack pattern",
+          "type": "concept",
+          "summary": "A stack that stays sorted as you push — the key to 'next greater/smaller' problems.",
+          "whatYouGain": "A pattern that turns several O(n^2) scan problems into a single O(n) pass."
+        },
+        {
+          "id": "s5-t3",
+          "title": "Stack & queue problem set",
+          "type": "exercise",
+          "summary": "Five problems from parentheses matching up to histogram areas.",
+          "whatYouGain": "Comfort with stacks for parsing and the monotonic-stack trick.",
+          "resources": [
+            { "label": "Valid Parentheses", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/valid-parentheses/"] },
+            { "label": "Min Stack", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/min-stack/"] },
+            { "label": "Evaluate Reverse Polish Notation", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/evaluate-reverse-polish-notation/"] },
+            { "label": "Daily Temperatures (monotonic stack)", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/daily-temperatures/"] },
+            { "label": "Largest Rectangle in Histogram", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/largest-rectangle-in-histogram/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-6",
+      "index": "06",
+      "title": "Recursion & Backtracking",
+      "duration": "Month 4-5",
+      "summary": "Recursion is the gateway to trees, graphs, and dynamic programming. Backtracking is recursion that explores choices and undoes them — the engine for subsets, permutations, and constraint puzzles.",
+      "objectives": [
+        "Write recursive solutions with clear base and recursive cases.",
+        "Generate subsets, permutations, and combinations via backtracking.",
+        "Prune search trees to avoid exploring dead ends."
+      ],
+      "mistakes": [
+        "Missing or wrong base case causing infinite recursion.",
+        "Forgetting to undo a choice (the 'backtrack' step).",
+        "Mutating shared state across recursive branches."
+      ],
+      "tasks": [
+        {
+          "id": "s6-t1",
+          "title": "See recursion as a tree",
+          "type": "reading",
+          "summary": "Visualize the call tree / DAG of a recursion and connect it to the call stack.",
+          "whatYouGain": "The ability to picture recursive calls branching and returning — essential for trees and DP.",
+          "details": [
+            "Use the VisuAlgo Recursion module to watch a recursion tree expand and collapse.",
+            "Trace a small factorial and Fibonacci by hand alongside it."
+          ],
+          "resources": [
+            { "label": "Recursion Tree/DAG — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/recursion"] },
+            { "label": "Recursion — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s6-t2",
+          "title": "Backtracking problem set",
+          "type": "exercise",
+          "summary": "Five problems that build the choose / explore / un-choose muscle.",
+          "whatYouGain": "A reusable backtracking template you can adapt to almost any 'generate all valid X' problem.",
+          "details": [
+            "Write the template once: choose, recurse, un-choose.",
+            "Add pruning only after a correct brute-force version works."
+          ],
+          "resources": [
+            { "label": "Subsets", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/subsets/"] },
+            { "label": "Permutations", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/permutations/"] },
+            { "label": "Combination Sum", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/combination-sum/"] },
+            { "label": "Word Search", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/word-search/"] },
+            { "label": "N-Queens", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/n-queens/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-7",
+      "index": "07",
+      "title": "Searching & Sorting",
+      "duration": "Month 5",
+      "summary": "Binary search is the most underused interview tool — it shows up far beyond sorted arrays. You also learn the major sorts and, crucially, 'binary search on the answer'.",
+      "objectives": [
+        "Implement binary search bug-free, including on rotated and 2D arrays.",
+        "Apply binary search on a value range, not just an index.",
+        "Explain merge sort and quicksort and their complexities."
+      ],
+      "caseStudies": [
+        "Koko Eating Bananas reframes a speed question as binary search over possible speeds — the 'search the answer' pattern."
+      ],
+      "mistakes": [
+        "Infinite loops from wrong mid/low/high updates.",
+        "Integer overflow in mid computation in some languages.",
+        "Not confirming the search space is monotonic before binary searching it."
+      ],
+      "tasks": [
+        {
+          "id": "s7-t1",
+          "title": "Sorting algorithms, animated",
+          "type": "reading",
+          "summary": "Watch bubble, insertion, merge, quick, counting, and radix sort run side by side.",
+          "whatYouGain": "Intuition for why O(n log n) sorts beat O(n^2) ones and when linear-time sorts apply.",
+          "details": [
+            "Use the VisuAlgo Sorting module and compare merge vs quicksort behavior.",
+            "Read the cp-algorithms / GeeksforGeeks sorting notes for the recurrence math."
+          ],
+          "resources": [
+            { "label": "Sorting — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/sorting"] },
+            { "label": "Sorting Algorithms — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s7-t2",
+          "title": "Master binary search",
+          "type": "concept",
+          "summary": "Standard search, search on rotated arrays, and binary search on the answer.",
+          "whatYouGain": "One template that handles index search and answer search — a disproportionately high-yield skill."
+        },
+        {
+          "id": "s7-t3",
+          "title": "Search & sort problem set",
+          "type": "exercise",
+          "summary": "Five problems spanning plain search, rotated arrays, and search-on-answer.",
+          "whatYouGain": "A binary-search reflex that fires whenever the search space is monotonic.",
+          "resources": [
+            { "label": "Binary Search", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/binary-search/"] },
+            { "label": "Search in Rotated Sorted Array", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/search-in-rotated-sorted-array/"] },
+            { "label": "Find Minimum in Rotated Sorted Array", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"] },
+            { "label": "Koko Eating Bananas (search the answer)", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/koko-eating-bananas/"] },
+            { "label": "Search a 2D Matrix", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/search-a-2d-matrix/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-8",
+      "index": "08",
+      "title": "Trees: Binary Trees & BSTs",
+      "duration": "Month 6",
+      "summary": "Trees combine recursion and structure. You learn traversals (DFS variants and BFS level-order), binary search tree properties, and the recursive patterns that solve most tree problems.",
+      "objectives": [
+        "Traverse trees in preorder, inorder, postorder, and level-order.",
+        "Exploit BST ordering for O(log n) search, insert, and validation.",
+        "Solve tree problems by defining what each recursive call returns."
+      ],
+      "mistakes": [
+        "Confusing BST validation with merely checking parent-child pairs.",
+        "Forgetting the null base case in recursive tree functions.",
+        "Using global state where a return value would be cleaner."
+      ],
+      "tasks": [
+        {
+          "id": "s8-t1",
+          "title": "Binary search trees, visualized",
+          "type": "reading",
+          "summary": "Watch BST insert, search, delete, and self-balancing (AVL) operations.",
+          "whatYouGain": "A solid mental model of ordered trees and why balance keeps operations logarithmic.",
+          "details": [
+            "Use the VisuAlgo BST module; insert values and watch rotations on the AVL variant.",
+            "Trace an inorder traversal and confirm it yields sorted output."
+          ],
+          "resources": [
+            { "label": "Binary Search Tree / AVL — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/bst"] },
+            { "label": "Trees — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s8-t2",
+          "title": "Tree traversal & BST problem set",
+          "type": "exercise",
+          "summary": "Five problems across traversal, depth, validation, and ancestors.",
+          "whatYouGain": "The 'what does each recursive call return?' habit that makes tree problems tractable.",
+          "resources": [
+            { "label": "Maximum Depth of Binary Tree", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/maximum-depth-of-binary-tree/"] },
+            { "label": "Invert Binary Tree", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/invert-binary-tree/"] },
+            { "label": "Binary Tree Level Order Traversal", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/binary-tree-level-order-traversal/"] },
+            { "label": "Validate Binary Search Tree", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/validate-binary-search-tree/"] },
+            { "label": "Lowest Common Ancestor of a BST", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"] }
+          ]
+        },
+        {
+          "id": "s8-t3",
+          "title": "Build a small BST library",
+          "type": "project",
+          "summary": "Implement a BST with insert, search, delete, and inorder traversal from scratch.",
+          "whatYouGain": "Proof you understand trees deeply enough to build, not just use, one.",
+          "details": [
+            "Implement the four operations and test against a brute-force sorted list.",
+            "Print the tree at each step to verify structure."
+          ],
+          "checklist": [
+            "insert keeps BST ordering",
+            "search returns correct presence",
+            "delete handles leaf, one-child, and two-child cases",
+            "inorder traversal returns sorted output"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-9",
+      "index": "09",
+      "title": "Heaps & Priority Queues",
+      "duration": "Month 6-7",
+      "summary": "When you repeatedly need the smallest or largest item, a heap gives it in O(log n). Heaps power top-K problems, streaming medians, and Dijkstra's algorithm in the graph stage.",
+      "objectives": [
+        "Use a min-heap and max-heap for top-K and scheduling problems.",
+        "Maintain a running statistic (like a median) with two heaps.",
+        "Explain heapify and the O(log n) push/pop cost."
+      ],
+      "mistakes": [
+        "Sorting the whole array when a heap of size K is enough.",
+        "Mixing up min-heap and max-heap (and the negation trick).",
+        "Pushing more than needed and losing the O(n log k) advantage."
+      ],
+      "tasks": [
+        {
+          "id": "s9-t1",
+          "title": "Binary heap mechanics",
+          "type": "reading",
+          "summary": "Watch insert, extract-min, and heapify maintain the heap property.",
+          "whatYouGain": "A clear picture of the array-backed tree that makes priority queues fast.",
+          "details": [
+            "Use the VisuAlgo Binary Heap module to watch sift-up and sift-down.",
+            "Note how a heap is stored compactly in an array."
+          ],
+          "resources": [
+            { "label": "Binary Heap — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/heap"] },
+            { "label": "Heap / Priority Queue — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s9-t2",
+          "title": "Heap problem set",
+          "type": "exercise",
+          "summary": "Five problems on top-K, merging, scheduling, and streaming medians.",
+          "whatYouGain": "The instinct to reach for a heap whenever 'K largest/smallest' or 'next to process' appears.",
+          "resources": [
+            { "label": "Kth Largest Element in an Array", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/kth-largest-element-in-an-array/"] },
+            { "label": "Top K Frequent Elements", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/top-k-frequent-elements/"] },
+            { "label": "Merge k Sorted Lists", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/merge-k-sorted-lists/"] },
+            { "label": "Find Median from Data Stream", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/find-median-from-data-stream/"] },
+            { "label": "Task Scheduler", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/task-scheduler/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-10",
+      "index": "10",
+      "title": "Graphs",
+      "duration": "Month 7-8",
+      "summary": "The biggest and most rewarding stage. Graphs model networks, maps, dependencies, and states. You learn representations, BFS/DFS, topological sort, shortest paths, minimum spanning trees, and union-find.",
+      "objectives": [
+        "Represent graphs with adjacency lists and traverse them via BFS and DFS.",
+        "Order dependencies with topological sort and detect cycles.",
+        "Compute shortest paths (BFS, Dijkstra) and minimum spanning trees (Prim/Kruskal).",
+        "Use union-find to track connectivity efficiently."
+      ],
+      "caseStudies": [
+        "Course Schedule is dependency resolution as a graph — a topological sort / cycle-detection problem in disguise.",
+        "Number of Islands is connected-components counting via flood fill (BFS/DFS)."
+      ],
+      "mistakes": [
+        "Revisiting nodes because you forgot a visited set.",
+        "Using Dijkstra on graphs with negative edges (use Bellman-Ford).",
+        "Confusing 'shortest path in unweighted graph' (BFS) with weighted (Dijkstra)."
+      ],
+      "tasks": [
+        {
+          "id": "s10-t1",
+          "title": "Graph representations & traversal, visualized",
+          "type": "reading",
+          "summary": "See graph structures and watch BFS and DFS sweep across them.",
+          "whatYouGain": "Fluency with adjacency lists and the two traversals that underlie every graph algorithm.",
+          "details": [
+            "Explore the VisuAlgo Graph Structures and Graph Traversal modules.",
+            "Read the cp-algorithms BFS and DFS articles for clean reference implementations."
+          ],
+          "resources": [
+            { "label": "Graph Structures — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/graphds"] },
+            { "label": "Graph Traversal (BFS/DFS) — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/dfsbfs"] },
+            { "label": "Breadth-First Search — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/breadth-first-search.html"] },
+            { "label": "Depth-First Search — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/depth-first-search.html"] }
+          ]
+        },
+        {
+          "id": "s10-t2",
+          "title": "Shortest paths & spanning trees, visualized",
+          "type": "reading",
+          "summary": "Watch Dijkstra/Bellman-Ford and Prim/Kruskal build paths and trees, then read the theory.",
+          "whatYouGain": "A working grasp of the weighted-graph algorithms that show up constantly in interviews and CP.",
+          "details": [
+            "Use the VisuAlgo SSSP and MST modules to watch the algorithms relax edges.",
+            "Read the cp-algorithms Dijkstra and Kruskal articles."
+          ],
+          "resources": [
+            { "label": "Single-Source Shortest Paths — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/sssp"] },
+            { "label": "Minimum Spanning Tree — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Essential", "urls": ["https://visualgo.net/en/mst"] },
+            { "label": "Dijkstra — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/dijkstra.html"] },
+            { "label": "Kruskal MST — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/mst_kruskal.html"] }
+          ]
+        },
+        {
+          "id": "s10-t3",
+          "title": "Union-Find (Disjoint Set Union)",
+          "type": "concept",
+          "summary": "Path compression and union by rank make connectivity queries nearly O(1).",
+          "whatYouGain": "A go-to structure for connectivity, cycle detection in undirected graphs, and Kruskal's MST.",
+          "details": [
+            "Watch the VisuAlgo Union-Find module, then read the cp-algorithms DSU article."
+          ],
+          "resources": [
+            { "label": "Union-Find DS — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/ufds"] },
+            { "label": "Disjoint Set Union — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/data_structures/disjoint_set_union.html"] }
+          ]
+        },
+        {
+          "id": "s10-t4",
+          "title": "Graph problem set",
+          "type": "exercise",
+          "summary": "Five problems across flood fill, cloning, topological sort, and shortest path.",
+          "whatYouGain": "The ability to model a word problem as a graph and pick the right traversal.",
+          "resources": [
+            { "label": "Number of Islands", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/number-of-islands/"] },
+            { "label": "Clone Graph", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/clone-graph/"] },
+            { "label": "Course Schedule (topological sort)", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/course-schedule/"] },
+            { "label": "Rotting Oranges (multi-source BFS)", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/rotting-oranges/"] },
+            { "label": "Network Delay Time (Dijkstra)", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/network-delay-time/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-11",
+      "index": "11",
+      "title": "Dynamic Programming",
+      "duration": "Month 8-9",
+      "summary": "The stage everyone fears and everyone needs. DP solves problems by reusing answers to overlapping subproblems. You learn to spot the structure, define a state, write a recurrence, and convert recursion to tabulation.",
+      "objectives": [
+        "Identify overlapping subproblems and optimal substructure.",
+        "Define a DP state and recurrence, then memoize it.",
+        "Convert top-down memoization to bottom-up tabulation and optimize space."
+      ],
+      "caseStudies": [
+        "Coin Change is the canonical unbounded-knapsack-style DP: minimum coins as a recurrence over remaining amount.",
+        "Longest Common Subsequence is the template for nearly all two-string DP (edit distance, etc.)."
+      ],
+      "mistakes": [
+        "Jumping to tabulation before you can state the recurrence.",
+        "Wrong or missing base cases in the DP table.",
+        "Not recognizing a problem is DP because it looks like greedy."
+      ],
+      "tasks": [
+        {
+          "id": "s11-t1",
+          "title": "From recursion to DP",
+          "type": "reading",
+          "summary": "Revisit the recursion tree to see repeated subproblems, then learn memoization and tabulation.",
+          "whatYouGain": "The core insight that DP is just recursion plus a cache — demystifying the whole topic.",
+          "details": [
+            "Reopen the VisuAlgo Recursion module and find the repeated subtrees in Fibonacci.",
+            "Read a DP-focused reference (cp-algorithms / GeeksforGeeks) and reproduce one example top-down and bottom-up."
+          ],
+          "resources": [
+            { "label": "Recursion → DP (repeated subproblems) — VisuAlgo", "kind": "Visualization", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/recursion"] },
+            { "label": "Dynamic Programming — GeeksforGeeks", "kind": "Article", "tier": "Essential", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] },
+            { "label": "DP references — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/index.html"] }
+          ]
+        },
+        {
+          "id": "s11-t2",
+          "title": "1-D DP problem set",
+          "type": "exercise",
+          "summary": "Five one-dimensional DP problems to build the state-and-recurrence habit.",
+          "whatYouGain": "A repeatable process: define state, write recurrence, set base case, fill the table.",
+          "resources": [
+            { "label": "Climbing Stairs", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/climbing-stairs/"] },
+            { "label": "House Robber", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/house-robber/"] },
+            { "label": "Coin Change", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/coin-change/"] },
+            { "label": "Longest Increasing Subsequence", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/longest-increasing-subsequence/"] },
+            { "label": "Word Break", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/word-break/"] }
+          ]
+        },
+        {
+          "id": "s11-t3",
+          "title": "2-D DP problem set",
+          "type": "exercise",
+          "summary": "Five grid and two-sequence DP problems — the harder, higher-value tier.",
+          "whatYouGain": "Comfort with 2-D states, the gateway to most hard DP interview questions.",
+          "resources": [
+            { "label": "Unique Paths", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/unique-paths/"] },
+            { "label": "Longest Common Subsequence", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/longest-common-subsequence/"] },
+            { "label": "Edit Distance", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/edit-distance/"] },
+            { "label": "Coin Change II", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/coin-change-ii/"] },
+            { "label": "Maximum Product Subarray", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/maximum-product-subarray/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-12",
+      "index": "12",
+      "title": "Greedy Algorithms & Intervals",
+      "duration": "Month 9",
+      "summary": "Greedy makes the locally best choice and hopes it's globally optimal — and proving when that's valid is the real skill. Interval scheduling problems are the classic proving ground.",
+      "objectives": [
+        "Recognize when a greedy choice is provably optimal versus when DP is needed.",
+        "Sort-then-sweep to solve interval merging and scheduling.",
+        "Justify a greedy strategy with an exchange argument."
+      ],
+      "mistakes": [
+        "Applying greedy where it gives a wrong answer (should have been DP).",
+        "Forgetting to sort before the greedy sweep.",
+        "Choosing the wrong sort key (start vs end time)."
+      ],
+      "tasks": [
+        {
+          "id": "s12-t1",
+          "title": "When greedy works",
+          "type": "concept",
+          "summary": "Greedy-choice property, exchange arguments, and how interval problems exploit sorting.",
+          "whatYouGain": "A way to decide quickly whether to trust a greedy idea or fall back to DP.",
+          "resources": [
+            { "label": "Greedy Algorithms — GeeksforGeeks", "kind": "Article", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s12-t2",
+          "title": "Greedy & intervals problem set",
+          "type": "exercise",
+          "summary": "Five problems on jumps, gas, and interval scheduling.",
+          "whatYouGain": "The sort-then-sweep template and a feel for which greedy key is correct.",
+          "resources": [
+            { "label": "Jump Game", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/jump-game/"] },
+            { "label": "Jump Game II", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/jump-game-ii/"] },
+            { "label": "Gas Station", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/gas-station/"] },
+            { "label": "Merge Intervals", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/merge-intervals/"] },
+            { "label": "Non-overlapping Intervals", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/non-overlapping-intervals/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-13",
+      "index": "13",
+      "title": "Advanced: Tries, Bits & Range Structures",
+      "duration": "Month 10",
+      "summary": "The capstone. You add tries for prefix problems, bit manipulation for compact state, and range-query structures (segment tree, Fenwick tree) plus a string-matching algorithm — the tools that separate strong solvers from average ones.",
+      "objectives": [
+        "Build and use a trie for prefix search and word problems.",
+        "Manipulate bits for sets, masks, and constant-space tricks.",
+        "Answer range queries with a segment tree or Fenwick tree.",
+        "Match patterns in linear time with a string algorithm (KMP / prefix function)."
+      ],
+      "mistakes": [
+        "Reaching for advanced structures when a hash map suffices.",
+        "Sign and overflow bugs in bit manipulation.",
+        "Off-by-one errors in segment-tree indexing."
+      ],
+      "tasks": [
+        {
+          "id": "s13-t1",
+          "title": "Range-query structures, visualized",
+          "type": "reading",
+          "summary": "Watch segment trees and Fenwick trees answer and update range queries.",
+          "whatYouGain": "Intuition for log-time range sum/min/max with updates — a competitive-programming staple.",
+          "details": [
+            "Use the VisuAlgo Segment Tree and Fenwick Tree modules.",
+            "Read the cp-algorithms segment tree and Fenwick articles for implementations."
+          ],
+          "resources": [
+            { "label": "Segment Tree — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/segmenttree"] },
+            { "label": "Fenwick Tree — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/fenwicktree"] },
+            { "label": "Segment Tree — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/data_structures/segment_tree.html"] },
+            { "label": "Fenwick Tree — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/data_structures/fenwick.html"] }
+          ]
+        },
+        {
+          "id": "s13-t2",
+          "title": "Bit manipulation & string matching",
+          "type": "concept",
+          "summary": "Bitmask tricks plus the KMP prefix function for linear-time pattern search.",
+          "whatYouGain": "Two specialist tools that crack problems brute force can't touch.",
+          "details": [
+            "Watch the VisuAlgo Bitmask module, then read the cp-algorithms prefix-function (KMP) article."
+          ],
+          "resources": [
+            { "label": "Bitmask — VisuAlgo (interactive)", "kind": "Visualization", "tier": "Optional", "urls": ["https://visualgo.net/en/bitmask"] },
+            { "label": "Prefix Function / KMP — cp-algorithms", "kind": "Reference", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/string/prefix-function.html"] }
+          ]
+        },
+        {
+          "id": "s13-t3",
+          "title": "Advanced problem set",
+          "type": "exercise",
+          "summary": "Five problems across tries, bits, and design.",
+          "whatYouGain": "Hands-on reps with the structures that show up in the hardest interview rounds.",
+          "resources": [
+            { "label": "Implement Trie (Prefix Tree)", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/implement-trie-prefix-tree/"] },
+            { "label": "Design Add and Search Words Data Structure", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/design-add-and-search-words-data-structure/"] },
+            { "label": "Word Search II (trie + backtracking)", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/word-search-ii/"] },
+            { "label": "Single Number (bit manipulation)", "kind": "Practice problem", "tier": "Essential", "urls": ["https://leetcode.com/problems/single-number/"] },
+            { "label": "Sum of Two Integers (bit manipulation)", "kind": "Practice problem", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/sum-of-two-integers/"] }
+          ]
+        },
+        {
+          "id": "s13-t4",
+          "title": "Capstone: timed mixed mock",
+          "type": "project",
+          "summary": "Simulate an interview: solve a random medium and hard under time pressure, then review.",
+          "whatYouGain": "Proof the roadmap stuck — you can now identify and apply the right tool cold.",
+          "details": [
+            "Pick one random Medium and one random Hard you haven't seen.",
+            "Give yourself 45 minutes total, no hints.",
+            "Afterward, write which structure/algorithm each needed and why."
+          ],
+          "checklist": [
+            "Stated the approach and complexity before coding",
+            "Reached a working solution within the time box",
+            "Identified the core pattern for each problem",
+            "Wrote down one thing to revisit"
+          ]
+        }
+      ]
+    }
+  ]
+}

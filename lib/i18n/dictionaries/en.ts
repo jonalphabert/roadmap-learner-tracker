@@ -117,6 +117,10 @@ const en = {
         name: "Finance",
         blurb: "Money, markets, and the long game of compounding.",
       },
+      Programming: {
+        name: "Programming",
+        blurb: "Algorithms, data structures, and the craft of problem-solving.",
+      },
       Development: {
         name: "Development",
         blurb: "Build software that lasts, from the ground up.",
