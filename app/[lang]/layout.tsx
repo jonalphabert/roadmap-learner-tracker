@@ -6,6 +6,7 @@ import "@fontsource-variable/fraunces";
 import "@fontsource-variable/jetbrains-mono";
 import "../globals.css";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
+import { ThemeSync } from "@/components/theme-sync";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import { locales, asLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -78,6 +79,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen font-sans antialiased">
         {children}
+        <ThemeSync />
         <ServiceWorkerRegister />
       </body>
     </html>
