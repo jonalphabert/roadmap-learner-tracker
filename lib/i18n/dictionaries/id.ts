@@ -116,6 +116,10 @@ const id: Dictionary = {
         name: "Keuangan",
         blurb: "Uang, pasar, dan permainan panjang penggandaan.",
       },
+      Programming: {
+        name: "Pemrograman",
+        blurb: "Algoritma, struktur data, dan seni memecahkan masalah.",
+      },
       Development: {
         name: "Pengembangan",
         blurb: "Bangun perangkat lunak yang tahan lama, dari dasar.",

@@ -1,0 +1,816 @@
+{
+  "slug": "mastering-dsa-for-programming",
+  "title": "Menguasai Struktur Data & Algoritma",
+  "category": "Programming",
+  "tagline": "Dari nol hingga percaya diri memecahkan soal DSA setingkat wawancara apa pun.",
+  "description": "Jalur lengkap berbasis pemecahan masalah menembus Struktur Data dan Algoritma bagi programmer yang bersiap menghadapi wawancara teknis, pemrograman kompetitif, atau sekadar memperdalam keterampilan rekayasa. Setiap tahap memasangkan sebuah konsep dengan animasi interaktif VisuAlgo, referensi tertulis (cp-algorithms, GeeksforGeeks, NeetCode), dan kumpulan soal LeetCode pilihan sehingga Anda memahami idenya lalu langsung melatihnya. Kerjakan dari atas ke bawah — setiap tahap mengandaikan tahap sebelumnya sudah dikuasai.",
+  "difficulty": "Beginner",
+  "duration": "10 bulan",
+  "outcome": "Anda mampu mengenali struktur data atau algoritma yang tepat untuk soal yang belum pernah ditemui, mengimplementasikannya dengan benar dari nol, menalar kompleksitas waktu dan ruangnya, serta memecahkan soal LeetCode tingkat sedang hingga sulit di bawah tekanan waktu.",
+  "stages": [
+    {
+      "id": "stage-1",
+      "index": "01",
+      "title": "Fondasi: Kompleksitas & Pemecahan Masalah",
+      "duration": "Bulan 1",
+      "summary": "Sebelum menyentuh struktur apa pun, Anda belajar mengukur seberapa baik sebuah solusi. Tahap ini membangun pola pikir Big-O dan kebiasaan menganalisis waktu dan ruang — lensa yang akan Anda pakai untuk segala hal berikutnya.",
+      "objectives": [
+        "Menyatakan kompleksitas waktu dan ruang dari setiap perulangan, rekursi, atau operasi bawaan dalam notasi Big-O.",
+        "Membandingkan dua solusi dan menjelaskan mana yang lebih skalabel beserta alasannya.",
+        "Menyiapkan alur kerja koding yang rapi dalam satu bahasa (Python, Java, C++, atau JavaScript)."
+      ],
+      "mistakes": [
+        "Menghafal Big-O operasi umum tanpa memahami dari mana biayanya berasal.",
+        "Mengoptimalkan konstanta alih-alih orde pertumbuhan asimtotik.",
+        "Melewati analisis kompleksitas dan langsung melompat ke kode."
+      ],
+      "tasks": [
+        {
+          "id": "s1-t1",
+          "title": "Pelajari analisis asimtotik dan notasi Big-O",
+          "type": "reading",
+          "summary": "Pahami orde pertumbuhan, Big-O / Theta / Omega, dan cara menghitung operasi.",
+          "whatYouGain": "Kosakata yang presisi untuk 'seberapa cepat' dan 'seberapa banyak memori' yang akan Anda terapkan pada setiap soal sepanjang sisa roadmap.",
+          "details": [
+            "Baca bagian analisis dari awal sampai akhir dan turunkan ulang setiap contoh sendiri.",
+            "Hafalkan biaya operasi umum: pengindeksan array, pencarian hash, pengurutan, penambahan.",
+            "Latih menuliskan Big-O dari perulangan bersarang dan rekursi sederhana secara manual."
+          ],
+          "resources": [
+            {
+              "label": "Analisis Algoritma — GeeksforGeeks",
+              "kind": "Artikel",
+              "tier": "Essential",
+              "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"]
+            },
+            {
+              "label": "Primer kompleksitas / asimtotik — cp-algorithms",
+              "kind": "Referensi",
+              "tier": "Highly Recommended",
+              "urls": ["https://cp-algorithms.com/index.html"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t2",
+          "title": "Siapkan bahasa Anda dan rutinitas latihan harian",
+          "type": "exercise",
+          "summary": "Pilih satu bahasa, buat akun LeetCode, dan bangun ritme solve-review yang berulang.",
+          "whatYouGain": "Lingkungan tanpa hambatan sehingga satu-satunya hal yang menguras energi Anda adalah berpikir, bukan perkakas.",
+          "details": [
+            "Pilih SATU bahasa dan setia memakainya sepanjang roadmap.",
+            "Buat akun LeetCode dan tandai study plan LeetCode 75 sebagai jalur pemanasan.",
+            "Tulis template kecil (baca input, panggil fungsi, cetak output) yang bisa Anda pakai ulang."
+          ],
+          "resources": [
+            {
+              "label": "LeetCode 75 — study plan terpandu",
+              "kind": "Kursus gratis",
+              "tier": "Highly Recommended",
+              "urls": ["https://leetcode.com/studyplan/leetcode-75/"]
+            },
+            {
+              "label": "NeetCode Roadmap — urutan topik visual",
+              "kind": "Situs web",
+              "tier": "Highly Recommended",
+              "urls": ["https://neetcode.io/roadmap"]
+            }
+          ]
+        },
+        {
+          "id": "s1-t3",
+          "title": "Kumpulan soal pemanasan",
+          "type": "exercise",
+          "summary": "Selesaikan lima soal ringan untuk mengunci alur kerja dan memulai kebiasaan analisis.",
+          "whatYouGain": "Keyakinan bahwa setup Anda berfungsi dan cicipan pertama menyatakan kompleksitas sebelum dan sesudah mengoding.",
+          "details": [
+            "Untuk setiap soal, tuliskan Big-O brute-force dulu, lalu Big-O akhir Anda.",
+            "Baca ulang editorial bahkan ketika lolos — catat satu ide yang tak terpikir oleh Anda."
+          ],
+          "resources": [
+            { "label": "Two Sum", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/two-sum/"] },
+            { "label": "Best Time to Buy and Sell Stock", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"] },
+            { "label": "Contains Duplicate", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/contains-duplicate/"] },
+            { "label": "Valid Anagram", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/valid-anagram/"] },
+            { "label": "Plus One", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/plus-one/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "index": "02",
+      "title": "Array, String, Two Pointers & Sliding Window",
+      "duration": "Bulan 2",
+      "summary": "Array adalah substrat hampir setiap soal. Di sini Anda menguasai dua teknik array dengan daya ungkit tertinggi — two pointers dan sliding window — ditambah prefix sum, yang mengubah banyak ide O(n^2) menjadi O(n).",
+      "objectives": [
+        "Memecahkan soal subarray dan substring dengan sliding window dalam waktu linear.",
+        "Menggunakan two pointers untuk memindai data terurut dan mempartisi array di tempat.",
+        "Menerapkan prefix sum untuk menjawab kueri jumlah rentang secara instan."
+      ],
+      "caseStudies": [
+        "Sliding window mengubah 'substring terpanjang tanpa pengulangan' dari pemindaian perulangan bersarang menjadi satu kali lintasan — kemenangan efisiensi yang kanonik."
+      ],
+      "mistakes": [
+        "Lupa mengecilkan window ketika sebuah batasan terlanggar.",
+        "Galat off-by-one di batas window atau pointer.",
+        "Meraih array tambahan padahal dua indeks sudah cukup."
+      ],
+      "tasks": [
+        {
+          "id": "s2-t1",
+          "title": "Fundamental array dan visualisasi",
+          "type": "reading",
+          "summary": "Tinjau cara array menyimpan data secara berdekatan dan saksikan operasinya beranimasi.",
+          "whatYouGain": "Intuisi mengapa pengindeksan itu O(1) dan penyisipan di tengah itu O(n).",
+          "details": [
+            "Bermainlah dengan modul Array VisuAlgo untuk melihat biaya akses, sisip, dan hapus.",
+            "Baca panduan array GeeksforGeeks untuk jebakan khas tiap bahasa."
+          ],
+          "resources": [
+            { "label": "Array — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/array"] },
+            { "label": "Struktur Data Array — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s2-t2",
+          "title": "Pelajari two pointers, sliding window, dan prefix sum",
+          "type": "concept",
+          "summary": "Tiga pola yang memecahkan sebagian besar soal array dan string secara efisien.",
+          "whatYouGain": "Daftar periksa mental yang bisa dipakai ulang: ketika melihat 'subarray', 'substring', atau 'terurut', Anda tahu pola mana yang dicoba lebih dulu."
+        },
+        {
+          "id": "s2-t3",
+          "title": "Kumpulan soal two-pointer dan sliding-window",
+          "type": "exercise",
+          "summary": "Latih polanya sampai kode pengelolaan window menjadi otomatis.",
+          "whatYouGain": "Kelancaran dalam pemindaian waktu-linear — teknik yang akan terus Anda pakai ulang.",
+          "details": [
+            "Sebutkan nama polanya dengan lantang sebelum mengoding tiap soal.",
+            "Lacak invarian window Anda dalam komentar saat menulisnya."
+          ],
+          "resources": [
+            { "label": "Valid Palindrome", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/valid-palindrome/"] },
+            { "label": "3Sum", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/3sum/"] },
+            { "label": "Container With Most Water", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/container-with-most-water/"] },
+            { "label": "Longest Substring Without Repeating Characters", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/longest-substring-without-repeating-characters/"] },
+            { "label": "Maximum Subarray (Kadane)", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/maximum-subarray/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-3",
+      "index": "03",
+      "title": "Hashing & Hash Table",
+      "duration": "Bulan 2-3",
+      "summary": "Hash map dan set menukar memori dengan pencarian nyaris konstan, meruntuhkan banyak solusi kuadratik menjadi linear. Anda belajar bagaimana hashing bekerja di balik layar dan kapan O(1) rata-rata itu benar dan kapan tidak.",
+      "objectives": [
+        "Menggunakan hash map dan set untuk menghilangkan duplikat, menghitung, dan mengindeks data dalam waktu rata-rata O(1).",
+        "Menjelaskan penanganan collision (chaining vs open addressing) secara garis besar.",
+        "Mengenali pola 'hash dulu agar bisa dicari nanti' di berbagai jenis soal."
+      ],
+      "mistakes": [
+        "Mengira O(1) sebagai kasus terburuk — kunci yang adversarial bisa menurunkan performa hashing.",
+        "Memakai hash map padahal frequency array atau two pointers lebih sederhana.",
+        "Mengubah kunci setelah disisipkan."
+      ],
+      "tasks": [
+        {
+          "id": "s3-t1",
+          "title": "Cara kerja hash table",
+          "type": "reading",
+          "summary": "Saksikan hashing, load factor, dan resolusi collision beranimasi, lalu baca teorinya.",
+          "whatYouGain": "Model yang jelas mengapa hashing cepat secara rata-rata dan bagaimana ia bisa rusak.",
+          "details": [
+            "Gunakan modul Hash Table VisuAlgo untuk menyaksikan linear/quadratic probing menyelesaikan collision.",
+            "Baca bagian hashing GeeksforGeeks untuk trade-off chaining vs probing."
+          ],
+          "resources": [
+            { "label": "Hash Table — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/hashtable"] },
+            { "label": "Hashing — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s3-t2",
+          "title": "Kumpulan soal hash map / hash set",
+          "type": "exercise",
+          "summary": "Selesaikan lima soal yang kuncinya adalah sebuah map atau set.",
+          "whatYouGain": "Refleks bertanya 'bagaimana jika nilai ini sudah pernah kulihat?' — inti dari soal-soal hashing.",
+          "resources": [
+            { "label": "Group Anagrams", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/group-anagrams/"] },
+            { "label": "Top K Frequent Elements", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/top-k-frequent-elements/"] },
+            { "label": "Longest Consecutive Sequence", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/longest-consecutive-sequence/"] },
+            { "label": "Two Sum II - Input Array Is Sorted", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"] },
+            { "label": "Subarray Sum Equals K", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/subarray-sum-equals-k/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "index": "04",
+      "title": "Linked List",
+      "duration": "Bulan 3",
+      "summary": "Pointer yang dibuat terlihat. Linked list mengajarkan Anda memanipulasi referensi dengan hati-hati — trik fast/slow pointer, pembalikan di tempat, dan deteksi siklus adalah andalan wawancara yang dibangun di sini.",
+      "objectives": [
+        "Membalik, menggabungkan, dan menata ulang linked list di tempat.",
+        "Mendeteksi dan menemukan siklus dengan fast/slow pointer ala Floyd.",
+        "Menggunakan dummy head node untuk menyederhanakan kasus tepi."
+      ],
+      "mistakes": [
+        "Kehilangan sisa list karena menetapkan ulang pointer next terlalu dini.",
+        "Tidak menangani list kosong atau list satu node.",
+        "Lupa memajukan pointer sehingga terjadi perulangan tak terhingga."
+      ],
+      "tasks": [
+        {
+          "id": "s4-t1",
+          "title": "Mekanika linked list, divisualisasikan",
+          "type": "reading",
+          "summary": "Saksikan list singly, doubly, dan circular ter-update saat node disisipkan dan dihapus.",
+          "whatYouGain": "Gambaran konkret tentang node dan pointer sehingga mengelola referensi tak lagi terasa abstrak.",
+          "details": [
+            "Telusuri sisip/hapus pada modul Linked List VisuAlgo.",
+            "Perhatikan bagaimana dummy/sentinel node menghapus kasus khusus."
+          ],
+          "resources": [
+            { "label": "Linked List — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/list"] },
+            { "label": "Linked List — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s4-t2",
+          "title": "Kumpulan soal linked list",
+          "type": "exercise",
+          "summary": "Lima soal mencakup pembalikan, penggabungan, siklus, dan penataan ulang.",
+          "whatYouGain": "Tangan yang mantap dengan pointer dan penguasaan teknik fast/slow.",
+          "details": [
+            "Gambar list di kertas sebelum mengoding tiap gerakan pointer.",
+            "Uji pada input kosong, satu node, dan dua node."
+          ],
+          "resources": [
+            { "label": "Reverse Linked List", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/reverse-linked-list/"] },
+            { "label": "Merge Two Sorted Lists", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/merge-two-sorted-lists/"] },
+            { "label": "Linked List Cycle", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/linked-list-cycle/"] },
+            { "label": "Remove Nth Node From End of List", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/remove-nth-node-from-end-of-list/"] },
+            { "label": "Reorder List", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/reorder-list/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-5",
+      "index": "05",
+      "title": "Stack & Queue",
+      "duration": "Bulan 4",
+      "summary": "Dua struktur sederhana dengan kekuatan luar biasa. Stack membuka soal monotonic-stack dan parsing; queue (dan deque) menggerakkan BFS dan maksima sliding-window nanti.",
+      "objectives": [
+        "Menggunakan stack untuk soal pencocokan, parsing, dan 'next greater element'.",
+        "Menerapkan pola monotonic stack.",
+        "Memahami perilaku queue/deque untuk BFS dan ekstrem berjendela."
+      ],
+      "mistakes": [
+        "Mengeluarkan (pop) dari stack kosong tanpa penjaga.",
+        "Bingung kapan harus mem-push indeks versus nilai.",
+        "Memakai list sebagai queue dengan pop O(n) dari depan."
+      ],
+      "tasks": [
+        {
+          "id": "s5-t1",
+          "title": "Perilaku stack dan queue",
+          "type": "reading",
+          "summary": "Tinjau semantik LIFO/FIFO dan deque, memakai tampilan stack/queue pada modul linked list.",
+          "whatYouGain": "Kejelasan tentang ujung mana yang Anda push dan pop, dan mengapa deque penting untuk window.",
+          "resources": [
+            { "label": "Stack/Queue (lewat Linked List) — VisuAlgo", "kind": "Visualisasi", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/list"] },
+            { "label": "Stack & Queue — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s5-t2",
+          "title": "Pelajari pola monotonic stack",
+          "type": "concept",
+          "summary": "Sebuah stack yang tetap terurut saat Anda push — kunci untuk soal 'next greater/smaller'.",
+          "whatYouGain": "Pola yang mengubah beberapa soal pemindaian O(n^2) menjadi satu kali lintasan O(n)."
+        },
+        {
+          "id": "s5-t3",
+          "title": "Kumpulan soal stack & queue",
+          "type": "exercise",
+          "summary": "Lima soal dari pencocokan tanda kurung hingga luas histogram.",
+          "whatYouGain": "Kenyamanan dengan stack untuk parsing dan trik monotonic-stack.",
+          "resources": [
+            { "label": "Valid Parentheses", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/valid-parentheses/"] },
+            { "label": "Min Stack", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/min-stack/"] },
+            { "label": "Evaluate Reverse Polish Notation", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/evaluate-reverse-polish-notation/"] },
+            { "label": "Daily Temperatures (monotonic stack)", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/daily-temperatures/"] },
+            { "label": "Largest Rectangle in Histogram", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/largest-rectangle-in-histogram/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-6",
+      "index": "06",
+      "title": "Rekursi & Backtracking",
+      "duration": "Bulan 4-5",
+      "summary": "Rekursi adalah gerbang menuju tree, graf, dan dynamic programming. Backtracking adalah rekursi yang menjelajahi pilihan lalu membatalkannya — mesin untuk subset, permutasi, dan teka-teki berbatasan.",
+      "objectives": [
+        "Menulis solusi rekursif dengan kasus dasar dan kasus rekursif yang jelas.",
+        "Membangkitkan subset, permutasi, dan kombinasi via backtracking.",
+        "Memangkas pohon pencarian untuk menghindari jalan buntu."
+      ],
+      "mistakes": [
+        "Kasus dasar hilang atau salah sehingga menyebabkan rekursi tak terhingga.",
+        "Lupa membatalkan pilihan (langkah 'backtrack').",
+        "Mengubah state bersama lintas cabang rekursif."
+      ],
+      "tasks": [
+        {
+          "id": "s6-t1",
+          "title": "Lihat rekursi sebagai sebuah pohon",
+          "type": "reading",
+          "summary": "Visualisasikan pohon panggilan / DAG sebuah rekursi dan kaitkan dengan call stack.",
+          "whatYouGain": "Kemampuan membayangkan panggilan rekursif bercabang dan kembali — esensial untuk tree dan DP.",
+          "details": [
+            "Gunakan modul Recursion VisuAlgo untuk menyaksikan pohon rekursi mengembang dan menyusut.",
+            "Telusuri factorial dan Fibonacci kecil secara manual berdampingan dengannya."
+          ],
+          "resources": [
+            { "label": "Recursion Tree/DAG — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/recursion"] },
+            { "label": "Recursion — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s6-t2",
+          "title": "Kumpulan soal backtracking",
+          "type": "exercise",
+          "summary": "Lima soal yang membangun otot pilih / jelajah / batal-pilih.",
+          "whatYouGain": "Template backtracking yang bisa dipakai ulang dan diadaptasi ke hampir semua soal 'bangkitkan semua X yang valid'.",
+          "details": [
+            "Tulis templatenya sekali: pilih, rekursi, batal-pilih.",
+            "Tambahkan pemangkasan hanya setelah versi brute-force yang benar berfungsi."
+          ],
+          "resources": [
+            { "label": "Subsets", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/subsets/"] },
+            { "label": "Permutations", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/permutations/"] },
+            { "label": "Combination Sum", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/combination-sum/"] },
+            { "label": "Word Search", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/word-search/"] },
+            { "label": "N-Queens", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/n-queens/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-7",
+      "index": "07",
+      "title": "Pencarian & Pengurutan",
+      "duration": "Bulan 5",
+      "summary": "Binary search adalah alat wawancara yang paling kurang dimanfaatkan — ia muncul jauh melampaui array terurut. Anda juga mempelajari sort-sort utama dan, yang krusial, 'binary search atas jawaban'.",
+      "objectives": [
+        "Mengimplementasikan binary search bebas bug, termasuk pada array terotasi dan array 2D.",
+        "Menerapkan binary search atas rentang nilai, bukan sekadar indeks.",
+        "Menjelaskan merge sort dan quicksort beserta kompleksitasnya."
+      ],
+      "caseStudies": [
+        "Koko Eating Bananas membingkai ulang pertanyaan kecepatan menjadi binary search atas kemungkinan kecepatan — pola 'cari jawabannya'."
+      ],
+      "mistakes": [
+        "Perulangan tak terhingga akibat pembaruan mid/low/high yang salah.",
+        "Integer overflow pada perhitungan mid di sejumlah bahasa.",
+        "Tidak memastikan ruang pencarian bersifat monoton sebelum mem-binary-search-nya."
+      ],
+      "tasks": [
+        {
+          "id": "s7-t1",
+          "title": "Algoritma pengurutan, beranimasi",
+          "type": "reading",
+          "summary": "Saksikan bubble, insertion, merge, quick, counting, dan radix sort berjalan berdampingan.",
+          "whatYouGain": "Intuisi mengapa sort O(n log n) mengalahkan O(n^2) dan kapan sort waktu-linear berlaku.",
+          "details": [
+            "Gunakan modul Sorting VisuAlgo dan bandingkan perilaku merge vs quicksort.",
+            "Baca catatan sorting cp-algorithms / GeeksforGeeks untuk matematika rekurensinya."
+          ],
+          "resources": [
+            { "label": "Sorting — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/sorting"] },
+            { "label": "Algoritma Pengurutan — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s7-t2",
+          "title": "Kuasai binary search",
+          "type": "concept",
+          "summary": "Pencarian standar, pencarian pada array terotasi, dan binary search atas jawaban.",
+          "whatYouGain": "Satu template yang menangani pencarian indeks dan pencarian jawaban — keterampilan berimbal-hasil tinggi yang tak proporsional."
+        },
+        {
+          "id": "s7-t3",
+          "title": "Kumpulan soal pencarian & pengurutan",
+          "type": "exercise",
+          "summary": "Lima soal mencakup pencarian biasa, array terotasi, dan cari-atas-jawaban.",
+          "whatYouGain": "Refleks binary-search yang menyala setiap kali ruang pencarian bersifat monoton.",
+          "resources": [
+            { "label": "Binary Search", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/binary-search/"] },
+            { "label": "Search in Rotated Sorted Array", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/search-in-rotated-sorted-array/"] },
+            { "label": "Find Minimum in Rotated Sorted Array", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"] },
+            { "label": "Koko Eating Bananas (cari jawabannya)", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/koko-eating-bananas/"] },
+            { "label": "Search a 2D Matrix", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/search-a-2d-matrix/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-8",
+      "index": "08",
+      "title": "Tree: Binary Tree & BST",
+      "duration": "Bulan 6",
+      "summary": "Tree memadukan rekursi dan struktur. Anda mempelajari traversal (varian DFS dan BFS level-order), properti binary search tree, dan pola rekursif yang memecahkan sebagian besar soal tree.",
+      "objectives": [
+        "Mentraversal tree secara preorder, inorder, postorder, dan level-order.",
+        "Memanfaatkan pengurutan BST untuk search, insert, dan validasi O(log n).",
+        "Memecahkan soal tree dengan mendefinisikan apa yang dikembalikan tiap panggilan rekursif."
+      ],
+      "mistakes": [
+        "Mengacaukan validasi BST dengan sekadar memeriksa pasangan parent-child.",
+        "Lupa kasus dasar null dalam fungsi tree rekursif.",
+        "Memakai state global padahal nilai kembalian lebih bersih."
+      ],
+      "tasks": [
+        {
+          "id": "s8-t1",
+          "title": "Binary search tree, divisualisasikan",
+          "type": "reading",
+          "summary": "Saksikan operasi insert, search, delete, dan self-balancing (AVL) pada BST.",
+          "whatYouGain": "Model mental yang kokoh tentang tree terurut dan mengapa keseimbangan menjaga operasi tetap logaritmik.",
+          "details": [
+            "Gunakan modul BST VisuAlgo; sisipkan nilai dan saksikan rotasi pada varian AVL.",
+            "Telusuri traversal inorder dan pastikan ia menghasilkan output terurut."
+          ],
+          "resources": [
+            { "label": "Binary Search Tree / AVL — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/bst"] },
+            { "label": "Tree — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s8-t2",
+          "title": "Kumpulan soal traversal tree & BST",
+          "type": "exercise",
+          "summary": "Lima soal mencakup traversal, kedalaman, validasi, dan leluhur (ancestor).",
+          "whatYouGain": "Kebiasaan 'apa yang dikembalikan tiap panggilan rekursif?' yang membuat soal tree dapat dipecahkan.",
+          "resources": [
+            { "label": "Maximum Depth of Binary Tree", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/maximum-depth-of-binary-tree/"] },
+            { "label": "Invert Binary Tree", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/invert-binary-tree/"] },
+            { "label": "Binary Tree Level Order Traversal", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/binary-tree-level-order-traversal/"] },
+            { "label": "Validate Binary Search Tree", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/validate-binary-search-tree/"] },
+            { "label": "Lowest Common Ancestor of a BST", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"] }
+          ]
+        },
+        {
+          "id": "s8-t3",
+          "title": "Bangun pustaka BST kecil",
+          "type": "project",
+          "summary": "Implementasikan BST dengan insert, search, delete, dan traversal inorder dari nol.",
+          "whatYouGain": "Bukti Anda memahami tree cukup dalam untuk membangun, bukan sekadar memakai, satu.",
+          "details": [
+            "Implementasikan keempat operasi dan uji terhadap list terurut brute-force.",
+            "Cetak tree di tiap langkah untuk memverifikasi strukturnya."
+          ],
+          "checklist": [
+            "insert menjaga pengurutan BST",
+            "search mengembalikan keberadaan yang benar",
+            "delete menangani kasus leaf, satu anak, dan dua anak",
+            "traversal inorder mengembalikan output terurut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-9",
+      "index": "09",
+      "title": "Heap & Priority Queue",
+      "duration": "Bulan 6-7",
+      "summary": "Ketika Anda berulang kali membutuhkan item terkecil atau terbesar, heap memberikannya dalam O(log n). Heap menggerakkan soal top-K, median streaming, dan algoritma Dijkstra di tahap graf.",
+      "objectives": [
+        "Menggunakan min-heap dan max-heap untuk soal top-K dan penjadwalan.",
+        "Memelihara statistik berjalan (seperti median) dengan dua heap.",
+        "Menjelaskan heapify dan biaya push/pop O(log n)."
+      ],
+      "mistakes": [
+        "Mengurutkan seluruh array padahal heap berukuran K sudah cukup.",
+        "Mencampuradukkan min-heap dan max-heap (serta trik negasi).",
+        "Mem-push lebih dari yang diperlukan dan kehilangan keunggulan O(n log k)."
+      ],
+      "tasks": [
+        {
+          "id": "s9-t1",
+          "title": "Mekanika binary heap",
+          "type": "reading",
+          "summary": "Saksikan insert, extract-min, dan heapify mempertahankan properti heap.",
+          "whatYouGain": "Gambaran jelas tentang tree berbasis array yang membuat priority queue cepat.",
+          "details": [
+            "Gunakan modul Binary Heap VisuAlgo untuk menyaksikan sift-up dan sift-down.",
+            "Perhatikan bagaimana heap disimpan ringkas dalam sebuah array."
+          ],
+          "resources": [
+            { "label": "Binary Heap — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/heap"] },
+            { "label": "Heap / Priority Queue — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s9-t2",
+          "title": "Kumpulan soal heap",
+          "type": "exercise",
+          "summary": "Lima soal tentang top-K, penggabungan, penjadwalan, dan median streaming.",
+          "whatYouGain": "Naluri meraih heap setiap kali muncul 'K terbesar/terkecil' atau 'berikutnya untuk diproses'.",
+          "resources": [
+            { "label": "Kth Largest Element in an Array", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/kth-largest-element-in-an-array/"] },
+            { "label": "Top K Frequent Elements", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/top-k-frequent-elements/"] },
+            { "label": "Merge k Sorted Lists", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/merge-k-sorted-lists/"] },
+            { "label": "Find Median from Data Stream", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/find-median-from-data-stream/"] },
+            { "label": "Task Scheduler", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/task-scheduler/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-10",
+      "index": "10",
+      "title": "Graf",
+      "duration": "Bulan 7-8",
+      "summary": "Tahap terbesar dan paling memuaskan. Graf memodelkan jaringan, peta, dependensi, dan state. Anda mempelajari representasi, BFS/DFS, topological sort, shortest path, minimum spanning tree, dan union-find.",
+      "objectives": [
+        "Merepresentasikan graf dengan adjacency list dan mentraversalnya via BFS dan DFS.",
+        "Mengurutkan dependensi dengan topological sort dan mendeteksi siklus.",
+        "Menghitung shortest path (BFS, Dijkstra) dan minimum spanning tree (Prim/Kruskal).",
+        "Menggunakan union-find untuk melacak konektivitas secara efisien."
+      ],
+      "caseStudies": [
+        "Course Schedule adalah penyelesaian dependensi sebagai graf — soal topological sort / deteksi siklus yang menyamar.",
+        "Number of Islands adalah penghitungan komponen terhubung via flood fill (BFS/DFS)."
+      ],
+      "mistakes": [
+        "Mengunjungi ulang node karena lupa visited set.",
+        "Memakai Dijkstra pada graf bersisi negatif (gunakan Bellman-Ford).",
+        "Mengacaukan 'shortest path pada graf tak berbobot' (BFS) dengan yang berbobot (Dijkstra)."
+      ],
+      "tasks": [
+        {
+          "id": "s10-t1",
+          "title": "Representasi & traversal graf, divisualisasikan",
+          "type": "reading",
+          "summary": "Lihat struktur graf dan saksikan BFS dan DFS menyapu melintasinya.",
+          "whatYouGain": "Kelancaran dengan adjacency list dan dua traversal yang mendasari setiap algoritma graf.",
+          "details": [
+            "Jelajahi modul Graph Structures dan Graph Traversal VisuAlgo.",
+            "Baca artikel BFS dan DFS cp-algorithms untuk implementasi referensi yang bersih."
+          ],
+          "resources": [
+            { "label": "Graph Structures — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/graphds"] },
+            { "label": "Graph Traversal (BFS/DFS) — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/dfsbfs"] },
+            { "label": "Breadth-First Search — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/breadth-first-search.html"] },
+            { "label": "Depth-First Search — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/depth-first-search.html"] }
+          ]
+        },
+        {
+          "id": "s10-t2",
+          "title": "Shortest path & spanning tree, divisualisasikan",
+          "type": "reading",
+          "summary": "Saksikan Dijkstra/Bellman-Ford dan Prim/Kruskal membangun path dan tree, lalu baca teorinya.",
+          "whatYouGain": "Pemahaman kerja atas algoritma graf berbobot yang terus muncul di wawancara dan CP.",
+          "details": [
+            "Gunakan modul SSSP dan MST VisuAlgo untuk menyaksikan algoritmanya merelaksasi edge.",
+            "Baca artikel Dijkstra dan Kruskal cp-algorithms."
+          ],
+          "resources": [
+            { "label": "Single-Source Shortest Paths — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/sssp"] },
+            { "label": "Minimum Spanning Tree — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Essential", "urls": ["https://visualgo.net/en/mst"] },
+            { "label": "Dijkstra — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/dijkstra.html"] },
+            { "label": "Kruskal MST — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/graph/mst_kruskal.html"] }
+          ]
+        },
+        {
+          "id": "s10-t3",
+          "title": "Union-Find (Disjoint Set Union)",
+          "type": "concept",
+          "summary": "Path compression dan union by rank membuat kueri konektivitas nyaris O(1).",
+          "whatYouGain": "Struktur andalan untuk konektivitas, deteksi siklus pada graf tak berarah, dan MST Kruskal.",
+          "details": [
+            "Saksikan modul Union-Find VisuAlgo, lalu baca artikel DSU cp-algorithms."
+          ],
+          "resources": [
+            { "label": "Union-Find DS — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/ufds"] },
+            { "label": "Disjoint Set Union — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/data_structures/disjoint_set_union.html"] }
+          ]
+        },
+        {
+          "id": "s10-t4",
+          "title": "Kumpulan soal graf",
+          "type": "exercise",
+          "summary": "Lima soal mencakup flood fill, kloning, topological sort, dan shortest path.",
+          "whatYouGain": "Kemampuan memodelkan soal cerita sebagai graf dan memilih traversal yang tepat.",
+          "resources": [
+            { "label": "Number of Islands", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/number-of-islands/"] },
+            { "label": "Clone Graph", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/clone-graph/"] },
+            { "label": "Course Schedule (topological sort)", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/course-schedule/"] },
+            { "label": "Rotting Oranges (multi-source BFS)", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/rotting-oranges/"] },
+            { "label": "Network Delay Time (Dijkstra)", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/network-delay-time/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-11",
+      "index": "11",
+      "title": "Dynamic Programming",
+      "duration": "Bulan 8-9",
+      "summary": "Tahap yang ditakuti semua orang dan dibutuhkan semua orang. DP memecahkan soal dengan memakai ulang jawaban subproblem yang tumpang tindih. Anda belajar mengenali strukturnya, mendefinisikan state, menulis rekurensi, dan mengubah rekursi menjadi tabulasi.",
+      "objectives": [
+        "Mengidentifikasi subproblem yang tumpang tindih dan substruktur optimal.",
+        "Mendefinisikan state dan rekurensi DP, lalu memoize-nya.",
+        "Mengubah memoization top-down menjadi tabulasi bottom-up dan mengoptimalkan ruang."
+      ],
+      "caseStudies": [
+        "Coin Change adalah DP gaya unbounded-knapsack yang kanonik: jumlah koin minimum sebagai rekurensi atas sisa nominal.",
+        "Longest Common Subsequence adalah template untuk hampir semua DP dua-string (edit distance, dll.)."
+      ],
+      "mistakes": [
+        "Melompat ke tabulasi sebelum bisa menyatakan rekurensinya.",
+        "Kasus dasar yang salah atau hilang dalam tabel DP.",
+        "Tidak menyadari sebuah soal adalah DP karena terlihat seperti greedy."
+      ],
+      "tasks": [
+        {
+          "id": "s11-t1",
+          "title": "Dari rekursi ke DP",
+          "type": "reading",
+          "summary": "Tinjau kembali pohon rekursi untuk melihat subproblem berulang, lalu pelajari memoization dan tabulasi.",
+          "whatYouGain": "Wawasan inti bahwa DP hanyalah rekursi plus cache — meruntuhkan misteri seluruh topik ini.",
+          "details": [
+            "Buka kembali modul Recursion VisuAlgo dan temukan subtree berulang di Fibonacci.",
+            "Baca referensi berfokus DP (cp-algorithms / GeeksforGeeks) dan reproduksi satu contoh top-down dan bottom-up."
+          ],
+          "resources": [
+            { "label": "Recursion → DP (subproblem berulang) — VisuAlgo", "kind": "Visualisasi", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/recursion"] },
+            { "label": "Dynamic Programming — GeeksforGeeks", "kind": "Artikel", "tier": "Essential", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] },
+            { "label": "Referensi DP — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/index.html"] }
+          ]
+        },
+        {
+          "id": "s11-t2",
+          "title": "Kumpulan soal DP 1-D",
+          "type": "exercise",
+          "summary": "Lima soal DP satu dimensi untuk membangun kebiasaan state-dan-rekurensi.",
+          "whatYouGain": "Proses yang berulang: definisikan state, tulis rekurensi, tetapkan kasus dasar, isi tabel.",
+          "resources": [
+            { "label": "Climbing Stairs", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/climbing-stairs/"] },
+            { "label": "House Robber", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/house-robber/"] },
+            { "label": "Coin Change", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/coin-change/"] },
+            { "label": "Longest Increasing Subsequence", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/longest-increasing-subsequence/"] },
+            { "label": "Word Break", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/word-break/"] }
+          ]
+        },
+        {
+          "id": "s11-t3",
+          "title": "Kumpulan soal DP 2-D",
+          "type": "exercise",
+          "summary": "Lima soal DP grid dan dua-barisan — tingkat yang lebih sulit dan bernilai lebih tinggi.",
+          "whatYouGain": "Kenyamanan dengan state 2-D, gerbang menuju sebagian besar soal DP wawancara yang sulit.",
+          "resources": [
+            { "label": "Unique Paths", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/unique-paths/"] },
+            { "label": "Longest Common Subsequence", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/longest-common-subsequence/"] },
+            { "label": "Edit Distance", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/edit-distance/"] },
+            { "label": "Coin Change II", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/coin-change-ii/"] },
+            { "label": "Maximum Product Subarray", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/maximum-product-subarray/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-12",
+      "index": "12",
+      "title": "Algoritma Greedy & Interval",
+      "duration": "Bulan 9",
+      "summary": "Greedy membuat pilihan terbaik secara lokal dan berharap itu optimal secara global — dan membuktikan kapan itu valid adalah keterampilan yang sebenarnya. Soal penjadwalan interval adalah lahan uji klasiknya.",
+      "objectives": [
+        "Mengenali kapan sebuah pilihan greedy terbukti optimal versus kapan DP dibutuhkan.",
+        "Sort-lalu-sweep untuk memecahkan penggabungan dan penjadwalan interval.",
+        "Membenarkan strategi greedy dengan exchange argument."
+      ],
+      "mistakes": [
+        "Menerapkan greedy di tempat yang memberi jawaban salah (seharusnya DP).",
+        "Lupa mengurutkan sebelum sweep greedy.",
+        "Memilih kunci pengurutan yang salah (waktu mulai vs waktu selesai)."
+      ],
+      "tasks": [
+        {
+          "id": "s12-t1",
+          "title": "Kapan greedy berhasil",
+          "type": "concept",
+          "summary": "Properti greedy-choice, exchange argument, dan bagaimana soal interval memanfaatkan pengurutan.",
+          "whatYouGain": "Cara memutuskan dengan cepat apakah memercayai ide greedy atau jatuh kembali ke DP.",
+          "resources": [
+            { "label": "Algoritma Greedy — GeeksforGeeks", "kind": "Artikel", "tier": "Highly Recommended", "urls": ["https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/"] }
+          ]
+        },
+        {
+          "id": "s12-t2",
+          "title": "Kumpulan soal greedy & interval",
+          "type": "exercise",
+          "summary": "Lima soal tentang lompatan, bahan bakar, dan penjadwalan interval.",
+          "whatYouGain": "Template sort-lalu-sweep dan kepekaan terhadap kunci greedy mana yang benar.",
+          "resources": [
+            { "label": "Jump Game", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/jump-game/"] },
+            { "label": "Jump Game II", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/jump-game-ii/"] },
+            { "label": "Gas Station", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/gas-station/"] },
+            { "label": "Merge Intervals", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/merge-intervals/"] },
+            { "label": "Non-overlapping Intervals", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/non-overlapping-intervals/"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage-13",
+      "index": "13",
+      "title": "Lanjutan: Trie, Bit & Struktur Rentang",
+      "duration": "Bulan 10",
+      "summary": "Puncaknya. Anda menambahkan trie untuk soal prefix, manipulasi bit untuk state ringkas, dan struktur kueri rentang (segment tree, Fenwick tree) plus sebuah algoritma pencocokan string — perkakas yang memisahkan pemecah tangguh dari yang rata-rata.",
+      "objectives": [
+        "Membangun dan menggunakan trie untuk pencarian prefix dan soal kata.",
+        "Memanipulasi bit untuk set, mask, dan trik ruang-konstan.",
+        "Menjawab kueri rentang dengan segment tree atau Fenwick tree.",
+        "Mencocokkan pola dalam waktu linear dengan algoritma string (KMP / prefix function)."
+      ],
+      "mistakes": [
+        "Meraih struktur lanjutan padahal hash map sudah cukup.",
+        "Bug tanda dan overflow dalam manipulasi bit.",
+        "Galat off-by-one dalam pengindeksan segment tree."
+      ],
+      "tasks": [
+        {
+          "id": "s13-t1",
+          "title": "Struktur kueri rentang, divisualisasikan",
+          "type": "reading",
+          "summary": "Saksikan segment tree dan Fenwick tree menjawab dan memperbarui kueri rentang.",
+          "whatYouGain": "Intuisi untuk sum/min/max rentang waktu-log dengan pembaruan — andalan pemrograman kompetitif.",
+          "details": [
+            "Gunakan modul Segment Tree dan Fenwick Tree VisuAlgo.",
+            "Baca artikel segment tree dan Fenwick cp-algorithms untuk implementasinya."
+          ],
+          "resources": [
+            { "label": "Segment Tree — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/segmenttree"] },
+            { "label": "Fenwick Tree — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Highly Recommended", "urls": ["https://visualgo.net/en/fenwicktree"] },
+            { "label": "Segment Tree — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/data_structures/segment_tree.html"] },
+            { "label": "Fenwick Tree — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/data_structures/fenwick.html"] }
+          ]
+        },
+        {
+          "id": "s13-t2",
+          "title": "Manipulasi bit & pencocokan string",
+          "type": "concept",
+          "summary": "Trik bitmask plus prefix function KMP untuk pencarian pola waktu-linear.",
+          "whatYouGain": "Dua perkakas spesialis yang memecahkan soal yang tak tersentuh brute force.",
+          "details": [
+            "Saksikan modul Bitmask VisuAlgo, lalu baca artikel prefix-function (KMP) cp-algorithms."
+          ],
+          "resources": [
+            { "label": "Bitmask — VisuAlgo (interaktif)", "kind": "Visualisasi", "tier": "Optional", "urls": ["https://visualgo.net/en/bitmask"] },
+            { "label": "Prefix Function / KMP — cp-algorithms", "kind": "Referensi", "tier": "Highly Recommended", "urls": ["https://cp-algorithms.com/string/prefix-function.html"] }
+          ]
+        },
+        {
+          "id": "s13-t3",
+          "title": "Kumpulan soal lanjutan",
+          "type": "exercise",
+          "summary": "Lima soal mencakup trie, bit, dan desain.",
+          "whatYouGain": "Latihan langsung dengan struktur yang muncul di babak wawancara tersulit.",
+          "resources": [
+            { "label": "Implement Trie (Prefix Tree)", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/implement-trie-prefix-tree/"] },
+            { "label": "Design Add and Search Words Data Structure", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/design-add-and-search-words-data-structure/"] },
+            { "label": "Word Search II (trie + backtracking)", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/word-search-ii/"] },
+            { "label": "Single Number (manipulasi bit)", "kind": "Soal latihan", "tier": "Essential", "urls": ["https://leetcode.com/problems/single-number/"] },
+            { "label": "Sum of Two Integers (manipulasi bit)", "kind": "Soal latihan", "tier": "Highly Recommended", "urls": ["https://leetcode.com/problems/sum-of-two-integers/"] }
+          ]
+        },
+        {
+          "id": "s13-t4",
+          "title": "Capstone: mock campuran berbatas waktu",
+          "type": "project",
+          "summary": "Simulasikan wawancara: pecahkan satu medium dan satu hard acak di bawah tekanan waktu, lalu tinjau.",
+          "whatYouGain": "Bukti roadmap ini membekas — Anda kini bisa mengenali dan menerapkan perkakas yang tepat tanpa persiapan.",
+          "details": [
+            "Pilih satu Medium dan satu Hard acak yang belum pernah Anda lihat.",
+            "Beri diri Anda total 45 menit, tanpa petunjuk.",
+            "Setelahnya, tuliskan struktur/algoritma apa yang dibutuhkan tiap soal dan mengapa."
+          ],
+          "checklist": [
+            "Menyatakan pendekatan dan kompleksitas sebelum mengoding",
+            "Mencapai solusi yang berfungsi dalam batas waktu",
+            "Mengidentifikasi pola inti tiap soal",
+            "Menuliskan satu hal untuk ditinjau ulang"
+          ]
+        }
+      ]
+    }
+  ]
+}
